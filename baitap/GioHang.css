@@ -64,6 +64,13 @@ a:link{
     color: #ccc;
     
 }
+.submit-button{
+    background-color: green;
+    width: 65px;
+    height: 30px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
 .divider{
     margin-left: 1em;
     top: 2px;
@@ -72,4 +79,113 @@ a:link{
 .wrapper {
     padding-bottom: 30px;
     padding-top: 30px;
+}
+.cart-auto{
+    max-width: 100%;
+    flex-basis: 100%;
+}
+.shop_table thead th {
+    border-width: 3px;
+    
+}
+table{
+    border-color: #ececec;
+    border-spacing: 0;
+    margin-bottom: 1em;
+    width: 100%;
+}
+th{
+    border-bottom: 1px solid #ececec;
+    font-size: .9em;
+    line-height: 1.3;
+    padding: 0.5em;
+    letter-spacing: .05em;
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+th td {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+    text-align: left;
+}
+thead>th{
+    text-align: center;
+}
+
+.product{
+width: 60%;
+}
+.product-img{
+    width: 30px;
+}
+.total-1{
+    padding-right: 0;
+    width: 10%;
+}
+.price .quality .total > th {
+  padding-right:0 ;
+}
+tbody{
+    margin-top: 1em;
+}
+td.product-img{
+    max-width: 90px;
+    min-width: 60px;
+    width: 90px;
+}
+td div .remove{
+    padding: 0;
+    width: 20px;
+}
+.product-img  >img{  
+   width: 15%;
+   height: 20%;
+   position: relative;
+   padding-left: 2em;
+}
+
+td.product-remove{
+    display: flex;
+    left: 0;
+    width: 5%;
+}
+tbody td{
+    padding-top:1em !important;
+}
+.quantity input[type=number] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    border-radius: 0!important;
+    font-size: 1em;
+    max-width: 2.5em;
+    text-align: center;
+    width: 2.5em;
+    text-align: center;
+    border-radius: 10px;
+}
+.quantity{
+    white-space: nowrap;
+
+}
+input[type='button']{
+    border-radius: 10px;
+}
+.price{
+    color: green;
+    font-size: 1.3em;
+}
+.icon-remove{
+    color: #ccc;
+}
+.icon-remove:hover{
+    color: black;
+}
+.product-text{
+    color: black;
+    font-size: 1em;
+    text-align: center;
+    padding-left: 0.5em!important;
 }
