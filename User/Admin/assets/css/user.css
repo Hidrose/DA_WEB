@@ -1,0 +1,164 @@
+/* table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  } */
+/*   
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  } */
+
+  /* Css cho lockUser */
+  /* body {
+    font-family: Arial, sans-serif;
+}
+
+.user-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 100px;
+    text-align: center;
+}
+
+.lock-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.lock-button:hover {
+    background-color: #45a049;
+}
+
+.modal {
+    display: none;
+    text-align: center;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 30%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+  text-align: center;
+  max-width: 350px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+   */
+   table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #45a049;
+}
+
+tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.btn-secondary {
+    background-color: #5bc0de;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background-color: #4398b8;
+}
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  form {
+    display: none;
+    margin-top: 20px;
+  }
+  /* css cho js form */
+  
+  #editForm {
+    display: none;
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  
+  #editForm label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  #editForm input,
+  #editForm select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  #editForm button {
+ 
+  
+    padding-bottom: 0px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #editForm button:hover {
+    background-color: #45a049;
+  }
+  

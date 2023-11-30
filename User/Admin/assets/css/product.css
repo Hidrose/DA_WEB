@@ -1,0 +1,65 @@
+.add-prd{
+    padding-right: 40px;
+    text-align: right;
+    right:20px;
+}
+/* styles.css */
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.modal {
+     
+    
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 30%;
+    height: 100%;
+    
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    text-align: center;
+    max-width: 300px;
+}
+
+.close {
+    color: #aaa;
+    top:0;
+    right:0;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+thead-dark{
+    background-color: green;
+    color:white;
+}
+/* css cho xem chi tiết */
+#productDetailContent {
+    font-size: 16px; /* Kích thước font chữ */
+    max-width: 100%; /* Độ rộng tối đa của nội dung */
+    padding: 20px; /* Khoảng cách giữa nội dung và viền modal */
+    box-sizing: border-box; /* Giữ cho padding không làm thay đổi chiều rộng tối đa */
+  }
+  
+  #productDetailContent p {
+    margin-bottom: 10px; /* Khoảng cách giữa các đoạn văn bản */
+  }
+  
