@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cây trầu bà đế vương</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="thong-tin-cay.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!-- Owl Carousel CSS -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+</head>
+<body>
+
+
+
+    <header class="dinh container-fluid"> 
+        <div class="container">
+         <div class="row">
+             <!--LOGO-->
+             <div class="col-sm-3 logo ">
+                 <a href="index.html"><img width="100" height="100" src="./images/image_XPK8tAeI_1699515318362_raw.png" alt="LOGO "></a>
+ 
+             </div>
+              <!--LOGO-->
+ 
+              <!--FORM-->
+            
+            <div class=" col-sm-7 order-sm-1">
+                <form class="searchform" method="get" role="search" >
+                    <!--QUAN_LI-->
+                 <div class="d-flex  p-3 justify-content-center">
+                     <!--LUA_CHON_1-->
+                     <div class="flex "> 
+                        <div class="flex-column flex-grow order-sm-2  ">
+ 
+                            <input type="search" class="search-field md-0  " value placeholder="Tìm kiếm danh mục, sản phẩm...." size="30" >
+                         
+                            <input type="hidden" name="post_type">
+                            
+                          
+                     </div>
+                      </div> <!--LUA_CHON_1-->
+                        <div class="flex-column">
+                         <button type="submit" class="submit-button">
+                            <i class="bi bi-search" style="color: antiquewhite;"></i>
+                         </button>
+                        </div>
+                  </div><!--QUAN_LI-->  
+                </form>
+                <script>
+                   const onSearch = () =>{
+                      const input = document.querySelector("#search");
+                      const filter = input.value.toUpperCase();
+                      const list =document.querySelectorAll("#menu1 li");
+                      list.forEach((el) => {
+                         const text = el.textContent.toUpperCase();
+ 
+                       el.style.display = text.includes(filter)?"":"none";
+                      });
+                   };
+               </script>
+             </div> <!--FORM-->
+              <!--CART-->
+              <div class=" col-sm-2 order-sm-2" >
+                <div class="dropdown-end p-3">
+                    <div class="hover-text icon-user">
+                     <h1 class="bi bi-person-circle" data-bs-toggle="collapse" href="#user" role="button" aria-expanded="false" aria-controls="user"></h1>
+                    </div> 
+                    <div class="collapse user" id="user">
+                     <ul class="dropdown-end">
+                         <h3></h3>
+                        <li><a class="dropdown-item-text" href="user.html">Xem Thông tin </a></li>
+                        
+                        <li>
+                         <a class="dropdown-item-text" href="index.html">Đăng Xuất </a></li>
+                     </ul>
+                    </div>
+             </div>          
+         </div>
+               <!--CART-->
+         
+        </div>
+        </div>
+        <div class="p-3"></div>
+      <div class="container-fluid bg-1">
+         <div class="row nav-right">
+             <div class="col-sm-3 ">
+               <div class="d-flex" >
+                <div class="" >
+                   <ul class="nav-justified nav p-1 bg-success" >
+                     <h5 style="color: white;" class="bi bi-list p-2 "></h5>   
+                      <li class="nav-item">
+                      <a class="nav-link active text-uppercase" data-bs-toggle="collapse" href="#menu1" role="button" aria-expanded="false" aria-controls="menu1"> <Strong style="color: white;"> Danh sách sản phẩm  </Strong> </a> 
+                      </li>
+                   </ul>
+                   <div class="collapse" id="menu1">
+                    <ul class="dropdown-end">
+                        <li><a class="dropdown-item-text" href="Caytrongnha.html">Cây Để Trong Nhà </a></li>
+                        <li><a class="dropdown-item-text" href="#">Cây Văn Phòng </a></li>
+                        <li><a class="dropdown-item-text" href="#">Cây Sen Đá</a></li>
+                        <li><a class="dropdown-item-text" href="#">Cây Xương Rồng</a></li>
+                        <li><a class="dropdown-item-text" href="#">Tiểu Cảnh Terrarium </a></li>
+                    </ul>
+                   </div>
+                </div>
+               </div>          
+               </div><!--LIST-->
+                
+               
+             <div class="col-sm-9">
+                <ul class="nav text-uppercase">
+                 <li class="nav-item ">
+                    <a  class="nav-link"href= "index.html"> <Strong style="color: black;">Trang Chủ</Strong></a> 
+                    
+                 </li>
+                 <li class="nav-item">
+                     <a  class="nav-link "href="Caytrongnha.html"> <Strong style="color: black;">Cây Trong Nhà  </Strong> </a>
+                  </li>
+                  <li class="nav-item">
+                     <a  class="nav-link"href="#"><Strong style="color: black;">Cây Ngoài Trời </Strong> </a>
+                  </li>
+                  <li class="nav-item dropdown"><!--menu-->
+                     <a class="nav-link  dropdown-toggle " data-bs-toggle="dropdown" href="#" role="button"> <Strong style="color: black;">Hướng Dẫn</Strong></a>
+                     <ul class="dropdown-menu">
+                     <li><a class="dropdown-item" href="#">Thông Tin Cây </a></li>
+                     <li><a class="dropdown-item" href="#">Cách Chăm Sóc Cây </a></li>
+                     <li><a class="dropdown-item" href="#">Cảm Hứng và Ý Tưởng</a></li>
+                     </ul>
+                     </li><!--menu-->
+                     <li class="nav-item">
+                         <a  class="nav-link  "href="#"> <Strong style="color: black;">Liên Hệ</Strong> </a>
+                      </li>
+                      <li class="nav-item">
+                         <a  class="nav-link "href="#">
+                            <i width="500%" class="bi bi-cart-plus" style="color: black;"></i>
+                            <Strong style="color: green;">Giỏ Hàng</Strong>
+                         </a>
+                      </li>
+                  </ul>
+             </div><!--Liet_ke-->
+         </div><!--Luoi-->
+      </div><!--nav-->
+    </header><!--END-->
+    <div class="p-5"></div>
+    <div class="p-5"></div>
+    
+<section class="header"></section>
+    <section class="body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 py-3">
+                    <a href="/">
+                        <img width="350" height="350"  src="images/cay-trau-ba-de-vuong-xanh.jpg" alt="images">
+                    </a>
+                </div>
+                <div class="col-md-5 py-3">
+                    <h3>Cây trầu bà đế vương xanh chậu mặt cool </h3>
+                    <div class="is-divider"></div>
+                    <div class="text-success"><h3>120.000₫</h3></div>
+                    
+                    <div class="btn-group" role="group" aria-label="Basic outlined example">
+                       
+                        <input type="number" class="btn btn-outline-primary" value="1" min="1">
+                      
+                      </div>
+                      <br><br>
+                   <!--Thêm Sản Phẩm -->
+                   <div>
+                    <button type="button" class="btn btn-success py-2" id="liveToastBtn">THÊM VÀO GIỎ HÀNG</button>
+                    <div class=" toast-container position-fixed top-0 end-0 p-3">
+                    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                     <div class="toast-header">
+                    <i class=" fa fa-check-circle"></i>
+                    <strong class="me-auto" >Thành Công </strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                     </div>
+                    <div class="toast-body">
+                        Đã Thêm Sản Phẩm Vào Giỏ Hàng
+                    </div>
+                    </div>
+                    </div>
+                   </div>
+                    <br>
+                    <p>Trầu Bà Đế Vương Xanh (Philodendron Imperial Green) là một giống cây rất ưu chuộng để trồng với ý nghĩa phong thủy mà nó mang lại. Nên đặt cây tại các vị trí như trong phòng khách, phòng làm việc, văn phòng hoặc sảnh ra vào cơ quan.</p>
+                    <table>
+                    <tbody>
+                        <tr style="height: 21px;border-bottom: 1px groove gainsboro;">
+                            <td style="width: 50%; height: 21px;">
+                                <span style="color: #224229;">
+                                    <strong>TÊN KHOA HỌC</strong>
+                                </span>
+                            </td>
+                            <td style="width: 50%; height: 21px;">
+                                <span style="color: #224229;">
+                                    Philodendron Imperial Green
+                                </span>
+                            </td>
+                        </tr>
+                        <tr style="height: 21px;border-bottom: 1px groove gainsboro;">
+                            <td style="width: 50%; height: 21px;">
+                                <span style="color: #224229;">
+                                    <strong>TÊN GỌI KHÁC</strong>
+                                </span>
+                            </td>
+                            <td style="width: 50%; height: 21px;">
+                                <span style="color: #224229;">
+                                    Trầu bà đế vương xanh
+                                </span>
+                            </td>
+                        </tr>
+                        <tr style="height: 21px;border-bottom: 1px groove gainsboro;">
+                            <td style="width: 50%; height: 21px;">
+                                <span style="color: #224229;">
+                                    <strong>KÍCH THƯỚC CÂY</strong>
+                                </span>
+                            </td>
+                            <td style="width: 50%; height: 21px;">
+                                <span style="color: #224229;">
+                                    • Kích thước chậu: 18x14cm (DxC)
+                                    <br>
+                                    • Chiều cao tổng: 25 – 35 cm
+                                </span>
+                            </td>
+                        </tr>
+                        <tr style="height: 21px;border-bottom: 1px groove gainsboro;">
+                            <td style="width: 50%; height: 21px;">
+                                <span style="color: #224229;">
+                                    <strong>ĐỘ KHÓ</strong>
+                                </span>
+                            </td>
+                            <td style="width: 50%; height: 21px;">
+                                <span style="color: #224229;">
+                                    Rất dễ chăm sóc
+                                </span>
+                            </td>
+                        </tr>
+                        <tr style="height: 21px;border-bottom: 1px groove gainsboro;">
+                            <td style="width: 50%; height: 21px;">
+                                <span style="color: #224229;">
+                                    <strong>YÊU CẦU ÁNH SÁNG</strong>
+                                </span>
+                            </td>
+                            <td style="width: 50%; height: 21px;">
+                                <span style="color: #224229;">
+                                    Nắng tán xạ
+                                </span>
+                            </td>
+                        </tr>
+                        <tr style="height: 21px;border-bottom: 1px groove gainsboro;">
+                            <td style="width: 50%; height: 21px;">
+                                <span style="color: #224229;">
+                                    <strong>NHU CẦU NƯỚC</strong>
+                                </span>
+                            </td>
+                            <td style="width: 50%; height: 21px;">
+                                <span style="color: #224229;">
+                                    Tưới nước 3 – 5 lần/tháng
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <h4><span class="box40 border border-danger">
+                                <i class="fa-brands fa-facebook"></i>
+                            </span>
+                            <span class="box40 border border-danger text-primary">
+                                <i class="fa-brands fa-twitter"></i>
+                            </span>
+                            <span class="box40 border border-danger">
+                                <i class="fa-brands fa-instagram"></i>
+                            </span>
+                            <span class="box40 border border-danger text-danger">
+                                <i class="fa-brands fa-youtube"></i>
+                            </span></h4>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                    
+                </div>
+                <div class="col-md-3 border rounded my-3">
+                    <span style="color: #224229;">
+                        <strong>Đặt hàng nhanh qua Hotline (8h - 21h)</strong>
+                    </span>
+                    <ul>
+                        <li>
+                            <span style="color: #224229;">
+                                • Hotline 1: <strong> 0823807054</strong>
+                            </span>
+                        </li>
+                        <li>
+                            <span style="color: #224229;">
+                                • Hotline 2: <strong> 0823807054</strong>
+                            </span>
+                        </li>
+                        <li>
+                            <span style="color: #224229;">
+                                • Hotline 3: <strong> 0823807054</strong>
+                            </span>
+                        </li>
+                    </ul>
+                    <div class="border rounded my-3 p-3">
+                        <ul>
+                            <li>
+                                <span style="color: #224229;">
+                                    • Miễn phí giao hàng các đơn từ <strong>1000k</strong> (tối đa 50k)
+                                </span>
+                            </li>
+                            <li>
+                                <span style="color: #224229;">
+                                    • Thời gian giao hàng dự kiến từ <strong>1 – 7 ngày</strong>
+                                </span>
+                            </li>
+                            <li>
+                                <span style="color: #224229;">
+                                    • Các sản phẩm cây gồm chậu: <strong>Chỉ giao hàng tại Tp.HCM</strong>
+                                </span>
+                            </li>
+                            <li>
+                                <span style="color: #224229;">
+                                    Các sản phẩm cây nhỏ, chậu, phụ kiện, vật tư: <strong>Giao hàng toàn quốc</strong>
+                                </span>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                   <p> <i class="fa-solid fa-lock"> </i> &nbsp; <a href="/" style="text-decoration: none ; color: #224229;">Chính sách bảo mật</a></p>
+                   <p> <i class="fa-regular fa-credit-card"></i> &nbsp; <a href="/" style="text-decoration: none ; color: #224229;">Phương thức thanh toán</a></p>
+                   <div style="color: #224229;" class="p-3">
+                    <strong>Garden</strong> hiểu rằng, tâm lý e ngại khi <strong>mua hàng Online</strong>, do đó chúng tôi sẽ gửi <strong>ảnh thực tế</strong> trước khi giao hàng. Khi có sự <strong>đồng ý</strong> từ quý khách mới giao hàng. Nhằm đảm chất lượng dịch vụ và quyền lợi của khách hàng.
+                   </div>
+                </div>
+                <hr>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <div style="color: #224229;">Đánh giá</div>
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body" style="color: #224229;">
+                          <p class="fw-bolder">Đánh giá</p>
+                          <p class="fw-light">Chưa có đánh giá nào.</p>
+                          <div class="p-3" style="border: 1px solid;"> 
+                            <div class="stars">
+                                <label for="stars">Đánh giá của bạn</label>
+                                <form action="">
+                                  <input class="star star-5" id="star-5" type="radio" name="star"/>
+                                  <label class="star star-5" for="star-5"></label>
+                                  <input class="star star-4" id="star-4" type="radio" name="star"/>
+                                  <label class="star star-4" for="star-4"></label>
+                                  <input class="star star-3" id="star-3" type="radio" name="star"/>
+                                  <label class="star star-3" for="star-3"></label>
+                                  <input class="star star-2" id="star-2" type="radio" name="star"/>
+                                  <label class="star star-2" for="star-2"></label>
+                                  <input class="star star-1" id="star-1" type="radio" name="star"/>
+                                  <label class="star star-1" for="star-1"></label>
+                                </form>
+                              </div>
+                            <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label p-1 ">Nhận xét của bạn*</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <div class="row py-3">
+                                <div class="col">
+                                    <label>Tên*</label>
+                                  <input type="text" class="form-control" aria-label="First name">
+                                </div>
+                                <div class="col">
+                                    <label>Email*</label>
+                                  <input type="text" class="form-control" aria-label="Last name">
+                                </div>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Lưu tên của tôi, email, và trang web trong trình duyệt này cho lần bình luận kế tiếp của tôi.
+                                </label>
+                              </div>
+                          </div>
+                          <span class="p-2 text-white bg-success" ;"><b>GỬI ĐI</b></span>
+                          <br><br>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <section class="p-4">
+                    <div class="container-lg ">
+                       <div class="row">
+                         <div class="text-center text-uppercase p-3">
+                          <h3>Sản Phẩm Bán Chạy </h3>
+                          <span class="bg-image"></span>
+                         </div>
+                             <div class="row" id="product-list">
+                                <div  id="myCarousel" class="owl-carousel owl-theme" style="z-index: 0;">
+                                 
+                                      <div class=card>
+                                         <div class="card-body-1">
+                                            <img width="100%"  src="./image/Caydeban/25.jpg">
+                                            <div class="card-img-bottom">
+                                               <div class="">
+                                                     <ul class="box">
+                                                        <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
+                                                           <p>Cây bàng Singapore để bàn tiểu cảnh Uyên Ương</p>
+                                                        </div>
+                                                        <div class="price-box">
+                                                           <span class="price text-uppercase text-center" style="margin-right: 3rem;">
+                                                              <bdi>
+                                                                 250.000₫
+                                                              </bdi>
+                                                           </span>
+                                                        </div>
+                                                     </ul>
+                                               </div>
+                                            </div>
+                                            <div class="w-100 image-tool-1 h-10 text-center show-on hover-in" >
+                                               <!--Thêm Sản Phẩm -->
+                                               <div  class="add-product">
+                                                <button type="button" class="btn btn-success py-2" >THÊM VÀO GIỎ HÀNG</button>
+                                               
+                                               </div>
+                                            </div>
+                                         </div> 
+                                   </div>
+                                <!--Ban1-->
+              
+                                <div class=card>
+                                   <div class="card-body-1">
+                                      <img width="100%"  src="./image/Caydeban/19.jpg">
+                                      <div class="card-img-bottom">
+                                         <div class="">
+                                               <ul class="box">
+                                                  <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
+                                                     <p>Cây cau tiểu trâm  mèo đi học chậu đất nung </p>
+                                                  </div>
+                                                  <div class="price-box">
+                                                     <span class="price text-uppercase text-center" style="margin-right: 3rem;">
+                                                        <bdi>
+                                                           250.000₫
+                                                        </bdi>
+                                                     </span>
+                                                  </div>
+                                               </ul>
+                                         </div>
+                                      </div>
+                                      <div class="w-100 image-tool-1 h-10 text-center show-on hover-in" >
+                                         <!--Thêm Sản Phẩm -->
+                                         <div  class="add-product">
+                                          <button type="button" class="btn btn-success py-2" >THÊM VÀO GIỎ HÀNG</button>
+                                         
+                                         </div>
+                                      </div>
+                                   </div>
+                                   
+                             </div>
+                          <!--Ban2-->
+              
+              
+                                
+                          <div class=card>
+                             <div class="card-body-1">
+                                <img width="100%"  src="./image/Caydeban/21.jpg">
+                                <div class="card-img-bottom">
+                                   <div class="">
+                                         <ul class="box">
+                                            <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
+                                               <p>Cây kim ngân bính để bàn chậu sứ có hình</p>
+                                            </div>
+                                            <div class="price-box">
+                                               <span class="price text-uppercase text-center" style="margin-right: 3rem;">
+                                                  <bdi>
+                                                     250.000₫
+                                                  </bdi>
+                                               </span>
+                                            </div>
+                                         </ul>
+                                   </div>
+                                </div>
+                                <div class="w-100 image-tool-1 h-10 text-center show-on hover-in" >
+                                   <!--Thêm Sản Phẩm -->
+                                   <div  class="add-product">
+                                    <button type="button" class="btn btn-success py-2" >THÊM VÀO GIỎ HÀNG</button>
+                                   
+                                   </div>
+                                </div>
+                             </div>
+                             
+                       </div>
+                    <!--Ban3-->
+                    <div class=card>
+                       <div class="card-body-1">
+                          <img width="100%"  src="./image/Caydeban/22.jpg">
+                          <div class="card-img-bottom">
+                             <div class="">
+                                   <ul class="box">
+                                      <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
+                                         <p>Cây kim tiền để bàn tiểu cảnh ông bà chậu sứ </p>
+                                      </div>
+                                      <div class="price-box">
+                                         <span class="price text-uppercase text-center" style="margin-right: 3rem;">
+                                            <bdi>
+                                               220.000₫
+                                            </bdi>
+                                         </span>
+                                      </div>
+                                   </ul>
+                             </div>
+                          </div>
+                          <div class="w-100 image-tool-1 h-10 text-center show-on hover-in" >
+                             <!--Thêm Sản Phẩm -->
+                             <div  class="add-product">
+                              <button type="button" class="btn btn-success py-2" >THÊM VÀO GIỎ HÀNG</button>
+                             
+                             </div>
+                          </div>
+                       </div>
+                      
+                 </div>
+              <!--Ban4-->
+              
+              <div class=card>
+                 <div class="card-body-1">
+                    <img width="100%"  src="./image/Caydeban/20.jpg">
+                    <div class="card-img-bottom">
+                       <div class="">
+                             <ul class="box">
+                                <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
+                                   <p>Cây kim tiền để bàn chậu men sứ </p>
+                                </div>
+                                <div class="price-box">
+                                   <span class="price text-uppercase text-center" style="margin-right: 3rem;">
+                                      <bdi>
+                                         350.000₫
+                                      </bdi>
+                                   </span>
+                                </div>
+                             </ul>
+                       </div>
+                    </div>
+                    <div class="w-100 image-tool-1 h-10 text-center show-on hover-in" >
+                       <!--Thêm Sản Phẩm -->
+                       <div  class="add-product">
+                        <button type="button" class="btn btn-success py-2" >THÊM VÀO GIỎ HÀNG</button>
+                       
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <!--Ban5-->
+              
+              <div class=card>
+                 <div class="card-body-1">
+                    <img width="100%"  src="./image/Caydeban/23.jpg">
+                    <div class="card-img-bottom">
+                       <div class="">
+                             <ul class="box">
+                                <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
+                                   <p>Cây cỏ lan chi để bàn chậu gốm trắng </p>
+                                </div>
+                                <div class="price-box">
+                                   <span class="price text-uppercase text-center" style="margin-right: 3rem;">
+                                      <bdi>
+                                         125.000₫
+                                      </bdi>
+                                   </span>
+                                </div>
+                             </ul>
+                       </div>
+                    </div>
+                    <div class="w-100 image-tool-1 h-10 text-center show-on hover-in" >
+                       <!--Thêm Sản Phẩm -->
+                       <div  class="add-product">
+                        <button type="button" class="btn btn-success py-2" >THÊM VÀO GIỎ HÀNG</button>
+                       
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <!--Ban6-->
+              
+              <div class=card>
+                 <div class="card-body-1">
+                    <img width="100%"  src="./image/Caydeban/24.jpg">
+                    <div class="card-img-bottom">
+                       <div class="">
+                             <ul class="box">
+                                <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
+                                   <p>Cây lưỡi hổ xanh mini ‘Black Gold’ chậu sứ</p>
+                                </div>
+                                <div class="price-box">
+                                   <span class="price text-uppercase text-center" style="margin-right: 3rem;">
+                                      <bdi>
+                                         115.000₫
+                                      </bdi>
+                                   </span>
+                                </div>
+                             </ul>
+                       </div>
+                    </div>
+                    <div class="w-100 image-tool-1 h-10 text-center show-on hover-in" >
+                       <!--Thêm Sản Phẩm -->
+                       <div  class="add-product">
+                        <button type="button" class="btn btn-success py-2" >THÊM VÀO GIỎ HÀNG</button>
+                       
+                       </div>
+                    </div>
+                    
+                 </div>
+              </div>
+              <!--Ban7-->
+              
+              
+              
+                             </div><!--OWL-->
+                             <script>
+                                $(document).ready(function(){
+                                  $("#myCarousel").owlCarousel({
+                                    items: 3, // Number of cards shown in each slide
+                                    loop: true, // Continuously loop the carousel
+                                    margin: 20, // Space between cards
+                                    nav: true, // Show navigation buttons
+                                    navText: [], // Custom navigation icons
+                                    responsive: {
+                                      0: {
+                                        items: 1 // Number of cards shown in the carousel for smaller screens
+                                      },
+                                      768: {
+                                        items: 2 // Number of cards shown in the carousel for medium screens
+                                      },
+                                      992: {
+                                        items: 4 // Number of cards shown in the carousel for large screens
+                                      }
+                                    }
+                                  });
+                                });
+                              </script>
+                         </div>
+                       </div>
+                       </div>
+                    </div>
+                   </section>
+                  
+                <div class="container text-center py-5">
+                    <h4>
+                        <b></b>
+                        <span>CHÍNH SÁCH ĐỔI TRẢ</span>
+                        <b></b>
+                    </h4>
+                </div>
+                <p style="color: #224229; text-align: justify;"><strong> Garden</strong> muốn mang đến trải nghiệm mua sắm tuyệt vời nhất tới khách hàng của mình. Chính vì vậy mà tất cả các sản phẩm được mua  tại <strong>Garden</strong> đều sẽ được <strong>đảm bảo chất lượng</strong> trước khi tới tay khách hàng. Hy vọng rằng bạn sẽ không chỉ hài lòng về sản phẩm mà về chất lượng phục vụ. Nếu có bất kì vấn đề nào gặp phải, bạn hãy liên hệ ngay với <strong>Garden</strong> để được giải quyết nhé.</p>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <p style="color: #224229;"><strong>Sản phẩm không phải là cây</strong></p>
+                            <p style="color: #224229; text-align: justify ;">Đối với các mặt hàng không phải là <strong>cây xanh</strong>, quý khách hoàn toàn có thể đổi trả <strong>trong vòng 30 ngày</strong> kể từ ngày nhận được hàng, nếu như sản phẩm gặp phải vấn đề lỗi từ nhà sản xuất.</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <p style="color: #224229;"><strong>Đối với cây có kích thước nhỏ</strong></p>
+                            <p style="color: #224229; text-align: justify ;">Tất cả những loại cây xanh có kích thước nhỏ (dưới 100cm) sẽ được <strong>Garden</strong> bảo hành <strong>trong vòng 30 ngày</strong>. Nếu như cây mà bạn nhận được gặp phải vấn đề suy yếu không thể hồi phục thì hay liên hệ ngay để được đổi cây mới.</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <p style="color: #224229;"><strong>Đối với cây lớn trên 100cm</strong></p>
+                            <p style="color: #224229; text-align: justify ;">Đối với những loại cây xanh có kích thước lớn <b>trên 100cm</b>, khi được giao tới mà bị các vấn đề <b>hư hại, héo rủ hoặc suy yếu</b>, quý khách vui lòng liên hệ ngay với <b>Garden</b> để được đổi cây mới <b>trong vòng 7 ngày</b>.</p>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div style="color: #224229;">
+                        Để thực hiện đổi trả, quý khách có thể liên hệ với <strong>Garden</strong> thông qua số hotline (<b>12 3456 7890</b> hoặc <b>12 3456 7890</b>),<a href="https://www.facebook.com/" style="text-decoration: underline;color: #224229;"><b>fanpage</b></a> hoặc gửi <b>email</b> tới <b>hoquockhoi.114@gmail.com</b> và cung cấp đầy đủ thông tin qua form sau:
+                        <ul class="py-3">
+                            <li>
+                                •  Mã đơn hàng:
+                            </li>
+                            <br>
+                            <li>
+                                •  Thông tin khách hàng:
+                            </li>
+                            <br>
+                            <li>
+                                •  Vấn đề gặp phải:
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="container text-center py-3">
+                        <h4>
+                            <b></b>
+                            <span>ĐĂNG KÍ ĐỂ NHẬN ƯU ĐÃI</span>
+                            <b></b>
+                        </h4>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-6">
+                            <label>Tên*</label>
+                          <input type="text" class="form-control" aria-label="First name">
+                        </div>
+                        <div class="col-6">
+                            <label>Email*</label>
+                          <input type="text" class="form-control" aria-label="Last name">
+                        </div>
+                      </div>
+                      <br>
+                      <span class="rounded-pill text-white text-center p-3 bg-success" style=" margin-left: 46.35%;">
+                        <b>ĐĂNG KÝ</b>
+                    </span>
+                    <br><br><br>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer bg-bot py-4 text-white">
+        <div class="container">
+         <div class="row">
+             <div class="col-md-2 p-4">
+                 <img width="90px" height="90px" src="images/image_XPK8tAeI_1699515318362_raw.png" alt="logo">
+                 <p class="fs-5">Chúng tôi mong rằng có thể mang đến cho bạn một cảm giác, trải nghiệm thật là mới mẻ và xanh xao</p>
+                 <br>
+                 <img src="https://images.dmca.com/Badges/dmca-badge-w200-5x1-09.png?ID=599ee744-724b-42c8-8dc6-de873fceb19c" alt="DMCA.com Protection Status">
+                 <br><br>
+                 <h5><strong>Công ty TNHH một thành viên Khôi Hồ Quốc</strong></h5>
+             </div>
+             <div class="col-md-3  p-4" >
+                 <h4 style="text-align: center;">VỀ CHÚNG TÔI</h4>
+                 <ul class="list-menu fs-5" style="margin-left: 30%;">
+                     <li class="li_menu"><a href="/" title="Giới thiệu">Giới thiệu</a></li>
+                     <li class="li_menu"><a href="/" title="Liên hệ">Liên hệ</a></li>
+                     <li class="li_menu"><a href="/" title="Chính sách bảo mật">Chính sách bảo mật</a></li>
+                     <li class="li_menu"><a href="/" title="Chính sách bảo hành">Chính sách bảo hành</a></li>
+                     <li class="li_menu"><a href="/" title="Phương thức thanh toán">Phương thức thanh tóan</a></li>
+                     <li class="li_menu"><a href="/" title="Phương thức vận chuyển">Phương thức vận chuyển</a></li>
+                 </ul>
+                 <br>
+                 <img style="margin-left: 30% ;" width="150" height="56" src="https://mowgarden.com/wp-content/uploads/2021/04/logo-da-thong-bao-voi-bo-cong-thuong.png" alt="images">
+                 
+             </div>
+             <div class="col-md-3 p-4">
+                 <h4 style="text-align: center;">LIÊN HỆ</h4>
+                 <ul class="list-menu fs-5" style="margin-left: 35%;">
+                     <li class="li_menu"><a href="/" title="Hotline 1: 1 ">Hotline 1: 1</a></li>
+                     <li class="li_menu"><a href="/" title="Hotline 2: 2">Hotline 2: 2</a></li>
+                     <li class="li_menu"><a href="/" title="Hotline 3: 3">Hotline 3: 3</a></li>
+                     <li class="li_menu"><a href="/" title="Email:">Email:</a></li>
+                     <li class="li_menu"><a href="/" title="Địa chỉ">Địa chỉ</a></li>
+                     <br>
+                     
+                 </ul>
+                 
+             </div>
+             <div class="col-md-4 p-4 text-center">
+                 <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
+                 <h1><span class="box40 ">
+                     <i class="fa-brands fa-facebook"></i>
+                 </span>
+                 <span class="box40 ">
+                     <i class="fa-brands fa-twitter"></i>
+                 </span>
+                 <span class="box40 ">
+                     <i class="fa-brands fa-instagram"></i>
+                 </span>
+                 <span class="box40 ">
+                     <i class="fa-brands fa-youtube"></i>
+                 </span></h1>
+             </div>
+         </div>
+         <div id="backtop">
+             <i class="fa-solid fa-arrow-up"></i>
+         </div>
+         <hr>
+         <div class="container text-center">
+             <div class="row">
+                 <div class="col-md">
+                     <p>Copyright 2023 ©</p>
+                 </div>
+             </div>
+         </div>
+        </div>
+    </section>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>  
+ </body>
+ 
+ <script>
+     $(document).ready(function(){
+         $(window).scroll(function(){
+             if ($(this).scrollTop()){
+                 $('#backtop').fadeIn();
+ 
+             }else{
+                 $('#backtop').fadeOut();
+             }
+         });
+         $("#backtop").click(function(){
+             $('html, body').animate({
+                 scrollTop:0
+             }, 500);
+         });
+     });
+ </script>
+<!--Them san pham -->
+<script>
+    const toastTrigger = document.getElementById('liveToastBtn')
+    const toastLiveExample = document.getElementById('liveToast')
+  
+    if (toastTrigger) {
+    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+    toastTrigger.addEventListener('click', () => {
+    toastBootstrap.show()
+    })
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+      // Lấy tất cả các nút "Thêm vào giỏ hàng"
+      const addToCartButtons = document.querySelectorAll('.add-product');
+  
+      // Lặp qua mỗi nút và thêm sự kiện click
+      addToCartButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          // Hiển thị toast khi nút được nhấp
+          const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+          toastBootstrap.show();
+        });
+      });
+    });
+   </script>
+ 
+</html> 
