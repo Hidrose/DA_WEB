@@ -156,7 +156,7 @@
                 <div class="page-title text-center">
                   <ul class="nav-1 text-uppercase nav">
                      <li class="nav-item ">
-                        <a  class="nav-link"href="Giohang.html"> 
+                        <a  class="nav-link"href="Giohang-user.html"> 
                            <Strong style="color: black;">GIỎ HÀNG</Strong>
                            <span class="divider">
                               <i class="fa fa-angle-right"></i>
@@ -280,7 +280,7 @@
          <div class="container p-5">
             <div class="row">
                <div class="text-check text-center ">
-                  <a class="btn btn-success add-check" href="#">
+                  <a class="btn btn-success add-check" href="Thanhtoan.html">
                   <span class="text-uppercase">Thanh Toán</span>
                    </a>
                </div>
@@ -288,18 +288,7 @@
          </div>
       </section>
      </main>
-     <div class="toast-container position-fixed top-0 end-0 p-3">
-      <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-header">
-          <i class="bi bi-exclamation-circle"></i>
-          <strong class="me-auto">Cảnh Báo</strong>
-          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-        </div>
-        <div class="toast-body">
-          Bạn cần đăng nhập để mua hàng
-        </div>
-      </div>
-    </div>
+    
     <footer class="footer bg-bot py-4 text-white">
       <div class="container">
        <div class="row">
@@ -385,31 +374,7 @@
 </script>
     </footer>
 </body>
-<!--Cảnh báo -->
-<script>
-   const toastTrigger = document.getElementById('liveToastBtn')
-   const toastLiveExample = document.getElementById('liveToast')
- 
-   if (toastTrigger) {
-   const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-   toastTrigger.addEventListener('click', () => {
-   toastBootstrap.show()
-   })
- }
- document.addEventListener('DOMContentLoaded', function () {
-     // Lấy tất cả các nút "Thêm vào giỏ hàng"
-     const addToCartButtons = document.querySelectorAll('.add-check');
- 
-     // Lặp qua mỗi nút và thêm sự kiện click
-     addToCartButtons.forEach(function (button) {
-       button.addEventListener('click', function () {
-         // Hiển thị toast khi nút được nhấp
-         const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
-         toastBootstrap.show();
-       });
-     });
-   });
- </script>
+
  <!-- Tăng giảm sp -->
  <script>
    function increaseValue() {
