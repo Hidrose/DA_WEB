@@ -1,0 +1,60 @@
+/* CSS cho trang web giao diện admin */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    display: block;
+    margin-top: 5px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+   
+    color: #fff;
+    border: none;
+    padding: 5 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* Để thêm một số kiểu CSS tùy chỉnh cho nút hoặc hiển thị hình ảnh đã tải lên, bạn có thể sử dụng các lớp (class) hoặc id trong HTML và đặt CSS cho chúng. */

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="./assets/css/product.css">
+    <link rel="stylesheet" href="./assets/css/addproduct.css">
+    <link rel="stylesheet"  type="text/css" href="./bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Thêm sản phẩm</title>
+</head>
+<body>
+    <script type ="text/javascript" src="./bootstrap/js/bootstrap.js"></script>
+	<script src="./main.js"></script>
+    
+    <div id="mySidenav" class="sidenav">
+        <div class="head-logo">
+		<p class="logo"><span>T</span>eam-15</p>
+        </div>
+	  
+		<a href="index.html"class="icon-a"><i class="fa fa-dashboard icons"></i>  Trang chủ</a>
+		<a href="user.html"class="icon-a"><i class="fa fa-users icons"></i> Khách hàng</a>
+		<a  href="product.html"class="icon-a"><i class="fa fa-list icons"></i> Sản phẩm  </a>
+	 	<a href="./donhang.html"class="icon-a"><i class="fa fa-shopping-bag icons"></i> Thống kê</a>
+	  	
+	  
+		
+	
+
+	</div>
+	<div id="main">
+
+		<div class="head">
+			<div class="col-div-6">
+	<span style="font-size:25px;cursor:pointer; color: black;" class="nav"  >☰ Sản phẩm</span>
+	<span style="font-size:25px;cursor:pointer; color: #000000;" class="nav2"  >☰ Sản phẩm </span>
+       <p style="opacity: 0.5; font-size: 20px; ">Thêm,sửa,xóa sản phẩm...</p>
+   
+	</div>
+		
+		<div class="col-div-6">
+		<div class="profile">
+
+			<a href="javascript:void(0)"><img style="width: 25px;"src="./assets/img/avata.png" class="pro-img"  /></a>
+			<p style="color:black">Admin</p>
+			<div class="dropdown-content">
+				
+				<a style="color:black"href="#">Cài đặt</a>
+				<a style="color:black" href="loginAdmin.html">Đăng xuất</a>
+			</div>
+		</div>
+	</div>
+		<div class="clearfix"></div>
+	</div>
+
+		<div class="clearfix"></div>
+		<br/>
+        <div class="fix-delete">
+            <a href="./product.html"class="btn btn-success">Danh mục sản phẩm</a>
+
+        </div>
+        <div class="add">
+            <h2>Thêm sản phẩm</h1>
+    <form id="product-form" enctype="multipart/form-data">
+        <label for="name">Tên sản phẩm:</label>
+        <input type="text" id="name" class="form-control"name="name"  required>
+
+        <label for="name">Loại sản phẩm :</label>
+        <input type="text" id="name" class="form-control"name="name" required>
+
+		<label for="name">Giá sản phẩm :</label>
+        <input type="text" id="name"class="form-control" name="name" required>
+		
+        <label for="name">Số lượng :</label>
+        <input type="text" id="name"class="form-control" name="name" required>
+
+        <label for="description">Mô tả:</label>
+        <textarea id="description" class="form-control" name="description" required></textarea>
+
+		<label for="description">Tên khoa học:</label>
+        <textarea id="description" class="form-control" name="description" required></textarea>
+
+		<label for="description">Tên gọi khác:</label>
+        <textarea id="description" class="form-control" name="description" required></textarea>
+
+		<label for="description">Kích thước cây:</label>
+        <textarea id="description" class="form-control" name="description" required></textarea>
+
+		<label for="description">Độ khó:</label>
+        <textarea id="description" class="form-control" name="description" required></textarea>
+
+		<label for="description">Yêu cầu ánh sáng:</label>
+        <textarea id="description" class="form-control" name="description" required></textarea>
+
+		<label for="description">Nhu cầu nước:</label>
+        <textarea id="description" class="form-control" name="description" required></textarea>
+
+        <label for="image">Hình ảnh:</label>
+        <input type="file" id="image" class="form-control"name="image" accept="image/*" required><br>
+
+        <input type="submit" class="btn btn-primary" value="Thêm ">
+        <input type="submit" class="btn btn-secondary delete-button" onclick="deleteProduct()" value="Xóa">
+    </form>
+        </div>
+    </div>
+        
+		
+		
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+
+	  $(".nav").click(function(){
+	    $("#mySidenav").css('width','70px');
+	    $("#main").css('margin-left','70px');
+	    $(".logo").css('visibility', 'hidden');
+	    $(".logo span").css('visibility', 'visible');
+	     $(".logo span").css('margin-left', '-10px');
+	     $(".icon-a").css('visibility', 'hidden');
+	     $(".icons").css('visibility', 'visible');
+	     $(".icons").css('margin-left', '-8px');
+	      $(".nav").css('display','none');
+	      $(".nav2").css('display','block');
+	  });
+
+	$(".nav2").click(function(){
+	    $("#mySidenav").css('width','300px');
+	    $("#main").css('margin-left','300px');
+	    $(".logo").css('visibility', 'visible');
+	     $(".icon-a").css('visibility', 'visible');
+	     $(".icons").css('visibility', 'visible');
+	     $(".nav").css('display','block');
+	      $(".nav2").css('display','none');
+	 });
+
+	</script>
+
+</body>
+</html>

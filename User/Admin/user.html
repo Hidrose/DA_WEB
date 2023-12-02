@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/user.css">
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css"/>
+    <link rel="stylesheet"  type="text/css" href="./bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>Admin</title>
+</head>
+<body>
+    <script type ="text/javascript" src="./bootstrap/js/bootstrap.js"></script>
+	<script src="./main.js"></script>
+    <script src="./assets/js/fix_delete_user.js"></script>
+    
+    <div id="mySidenav" class="sidenav">
+        <div class="head-logo">
+		<p class="logo"><span>T</span>eam-15</p>
+        </div>
+	  
+		<a href="index.html"class="icon-a"><i class="fa fa-dashboard icons"></i>  Trang chủ</a>
+		<a href="./user.html"class="icon-a"><i class="fa fa-users icons"></i> Người dùng</a>
+		<a  href="product.html"class="icon-a"><i class="fa fa-list icons"></i> Sản phẩm  </a>
+	 	<a href="./donhang.html"class="icon-a"><i class="fa fa-shopping-bag icons"></i> Thống kê</a>
+	
+	  	
+		
+	
+
+	</div>
+	<div id="main">
+
+		<div class="head">
+			<div class="col-div-6">
+	<span style="font-size:25px;cursor:pointer; color: black;" class="nav"  >☰ Khách hàng</span>
+	<span style="font-size:25px;cursor:pointer; color: black;" class="nav2"  >☰ Khách hàng</span>
+    <p style="opacity: 0.5; font-size: 20px;">Thêm,sửa,khóa người dùng</p>
+	</div>
+		
+		<div class="col-div-6">
+		<div class="profile">
+
+			<a href="javascript:void(0)"><img style="width: 30px;"src="./assets/img/avata.png" class="pro-img"  /></a>
+			<p style="color:black">Admin</p>
+			<div class="dropdown-content">
+				
+				<a style="color:black"href="#">Cài đặt</a>
+				<a style="color:black" href="loginAdmin.html">Đăng xuất</a>
+			</div>
+		</div>
+	</div>
+		<div class="clearfix"></div>
+	</div>
+
+		<div class="clearfix"></div>
+		<br/>
+		
+		<div class="add-user">
+            <a href="./addUser.html"class="btn btn-primary">Thêm người dùng</a>
+        </div>
+        <div class="fix-lock-user">
+            <br>
+            <h2>Danh sách người dùng</h2>
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Tìm kiếm...">
+                <button class="search-button">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+            <br>
+            <form id="editForm">
+                <label for="userId"> ID:</label>
+                <input type="text" id="userId" name="userId" readonly>
+              
+                <label for="userName">Họ và tên:</label>
+                <input type="text" id="userName" name="userName">
+
+                
+                <label for="userPhoneNumber">Số điện thoại:</label>
+                <input type="text" id="userPhoneNumber" name="userPhoneNumber">
+              
+                <label for="userAddress">Địa chỉ:</label>
+                <input type="text" id="userAddress" name="userAddress">
+              
+                <label for="userStatus">Trạng thái:</label>
+                <select id="userStatus" name="userStatus">
+                  <option value="Active">Đang hoạt động</option>
+                  <option value="Blocked">Đang bị khóa</option>
+                </select>
+              
+              <button class="btn btn-primary" type="button" onclick="saveUser()">Lưu</button>
+              <button class="btn btn-secondary" type="reset" onclick="saveUser()">Hủy</button>
+              </form>
+              <table>
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Họ và tên</th>
+                    <th>Số điện thoại</th>
+                    <th>Địa chỉ</th>
+                    <th>Trạng thái</th>
+                    <th>Thao tác</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Populate this table with your user data -->
+                  <tr>
+                    <td>1</td>
+                    <td>Lê Duy Huy</td>
+                    <td>0129485682</td>
+                    <td>Bình chánh</td>
+                    <td>Đang hoạt động</td>
+                    <td><button class="btn btn-secondary" onclick="editUser(1)">Sửa</button></td>
+                    
+                  </tr>
+                  <tr>
+                  <td>2</td>
+                    <td>Hồ Quốc Khôi</td>
+                    <td>29742972398</td>
+                    <td>Quận 12</td>
+                    <td>Bị khóa</td>
+                    <td><button class="btn btn-secondary" onclick="editUser(2)">Sửa</button></td>
+                  </tr>
+                  <tr>
+                  <td>3</td>
+                  <td>Nguyễn Hoàng Hiếu</td>
+                  <td>012948324682</td>
+                  <td>Quận Gò Vấp</td>
+                  <td>Đang hoạt động</td>
+                  <td><button class="btn btn-secondary" onclick="editUser(3)">Sửa</button></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Hồ Xuân Thắng</td>
+                    <td>012923423832</td>
+                    <td>Quận 8</td>
+                    <td>Đang hoạt động</td>
+                    <td><button class="btn btn-secondary" onclick="editUser(4)">Sửa</button></td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Thanh Phong</td>
+                    <td>01242342334</td>
+                    <td>Quận Gò Vấp</td>
+                    <td>Bị khóa</td>
+                    <td><button class="btn btn-secondary" onclick="editUser(5)">Sửa</button></td>
+                  </tr>
+                  <!-- Add more rows as needed -->
+                </tbody>
+              </table>
+          
+        </div>
+    <script>
+       
+        let users = [
+    { id: 1, number: "0129485682" , name: "Lê Duy Huy", address: "Quận Bình Chánh", status: "Active" },
+    { id: 2, number: "29742972398", name: "Hồ Quốc Khôi", address: "Quận 12", status: "Blocked" },
+    { id: 3, number: "012948324682", name: "Nguyễn Hoàng Hiếu", address: "Quận Gò Vấp", status: "Active" },
+    { id: 4, number: "012923423832", name: "Hồ Xuân Thắng", address: "Quận 8", status: "Active" },
+    { id: 5, number: "01242342334", name: "Thanh Phong", address: "Quận Gò Vấp", status: "Blocked" }
+  ];
+
+  function renderTable() {
+    const tableBody = document.querySelector('#userTable tbody');
+    tableBody.innerHTML = '';
+
+    users.forEach(user => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${user.id}</td> 
+        <td>${user.name}</td>
+        <td>${user.number}</td>
+        <td>${user.address}</td>
+        <td>${user.status}</td>
+        <td><button onclick="editUser(${user.id})">Edit</button></td>
+      `;
+      tableBody.appendChild(row);
+    });
+  }
+
+  function editUser(userId) {
+    const userData = users.find(user => user.id === userId);
+
+    document.getElementById("userId").value = userData.id;
+    document.getElementById("userName").value = userData.name;
+    document.getElementById("userPhoneNumber").value = userData.number;
+    document.getElementById("userAddress").value = userData.address;
+    document.getElementById("userStatus").value = userData.status;
+
+    document.getElementById("editForm").style.display = "block";
+  }
+
+  function saveUser() {
+    const userId = document.getElementById("userId").value;
+    const updatedName = document.getElementById("userName").value;
+    const updatedNumber = document.getElementById("userPhoneNumber").value;
+    const updatedAddress = document.getElementById("userAddress").value;
+    const updatedStatus = document.getElementById("userStatus").value;
+
+    const userIndex = users.findIndex(user => user.id == userId);
+    if (userIndex !== -1) {
+      users[userIndex].name = updatedName;
+      users[userIndex].phoneNumber = updatedNumber;
+      users[userIndex].address = updatedAddress;
+      users[userIndex].status = updatedStatus;
+
+      renderTable();
+      document.getElementById("editForm").style.display = "none";
+
+    
+     }
+  }
+  
+
+
+  // Initial render
+  renderTable();
+    </script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+
+	  $(".nav").click(function(){
+	    $("#mySidenav").css('width','70px');
+	    $("#main").css('margin-left','70px');
+	    $(".logo").css('visibility', 'hidden');
+	    $(".logo span").css('visibility', 'visible');
+	     $(".logo span").css('margin-left', '-10px');
+	     $(".icon-a").css('visibility', 'hidden');
+	     $(".icons").css('visibility', 'visible');
+	     $(".icons").css('margin-left', '-8px');
+	      $(".nav").css('display','none');
+	      $(".nav2").css('display','block');
+	  });
+
+	$(".nav2").click(function(){
+	    $("#mySidenav").css('width','300px');
+	    $("#main").css('margin-left','300px');
+	    $(".logo").css('visibility', 'visible');
+	     $(".icon-a").css('visibility', 'visible');
+	     $(".icons").css('visibility', 'visible');
+	     $(".nav").css('display','block');
+	      $(".nav2").css('display','none');
+	 });
+
+	</script>
+
+</body>
+</html>
+
