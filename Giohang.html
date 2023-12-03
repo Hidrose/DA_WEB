@@ -21,7 +21,7 @@
          <div class="row">
              <!--LOGO-->
              <div class="col-sm-3 logo ">
-                 <a href="index.html"><img width="100" height="100" src="./images/image_XPK8tAeI_1699515318362_raw.png" alt="LOGO "></a>
+                 <a href="index.html"><img width="100" height="100" src="./assets/image/image_XPK8tAeI_1699515318362_raw.png" alt="LOGO "></a>
   
              </div>
               <!--LOGO-->
@@ -64,23 +64,19 @@
               </script>
             </div> <!--FORM-->
               
-              <!--CART-->
-              <div class=" col-sm-2 order-sm-2" >
-               <div class="dropdown-end p-3">
-                  <div class="hover-text icon-user">
-                   <h1 class="bi bi-person-circle" data-bs-toggle="collapse" href="#user" role="button" aria-expanded="false" aria-controls="user"></h1>
-                  </div> 
-                  <div class="collapse user" id="user">
-                   <ul class="dropdown-end">
-                       <h3></h3>
-                      <li><a class="dropdown-item-text" href="user.html">Xem Thông tin </a></li>
+               <!--CART-->
+            <div class=" col-sm-2 order-sm-2" >
+                <div class="dropdown-end p-3">
+                    <div class="hover-text">
+                     <a  href="userLogin.html">
+                        <Strong style="color: black;">Đăng Nhập</Strong> 
+                        <Strong ><a  style="color: black;" href="signup.html">/Đăng Kí</a></Strong> 
+                     </a>
                       
-                      <li>
-                       <a class="dropdown-item-text" href="index.html">Đăng Xuất </a></li>
-                   </ul>
-                  </div>
-           </div>        
-         </div> <!--CART-->
+                      
+                    </div> 
+             </div>           
+        </div> <!--CART-->
          
         </div>
         </div>
@@ -156,7 +152,7 @@
                 <div class="page-title text-center">
                   <ul class="nav-1 text-uppercase nav">
                      <li class="nav-item ">
-                        <a  class="nav-link"href="Giohang-user.html"> 
+                        <a  class="nav-link"href="Giohang.html"> 
                            <Strong style="color: black;">GIỎ HÀNG</Strong>
                            <span class="divider">
                               <i class="fa fa-angle-right"></i>
@@ -165,7 +161,7 @@
                         
                      </li>
                      <li class="nav-item">
-                         <a  class="nav-link "href="Thanhtoan.html">
+                         <a  class="nav-link  add-check "href="#">
                             <Strong style="color: black;">THANH TOÁN</Strong>
                             <span class="divider">
                               <i class="fa fa-angle-right"></i>
@@ -203,7 +199,7 @@
                               <div>
                                   <a class="remove"><i class="bi bi-x-circle icon-remove" ></i></a>
                                   
-                                    <a href="cay-luoi-ho.html" class="product-img"> <img src="images/luoi-ho-nga-voi-mowgarden.jpg"></a>
+                                    <a href="cay-luoi-ho.html" class="product-img"> <img src="./assets/image/Caydeban/caydeban4.jpg"></a>
                                    
                                     <a href="cay-luoi-ho.html"><i class="product-text">Cây Lưỡi Hổ Vương Miện chậu sứ để bàn Sansevireria Cylindrica</i></a>
                               </div>
@@ -240,9 +236,9 @@
                            <div>
                                <a class="remove"><i class="bi bi-x-circle icon-remove" ></i></a>
                                
-                                 <a href="cay-trau-ba.html" class="product-img"> <img src="images/cay-trau-ba-de-vuong-xanh.jpg"></a>
+                                 <a href="cay-trau-ba.html" class="product-img"> <img src="./assets/image/Caydeban/caydeban3.1.jpg"></a>
                                 
-                                 <a href="cay-trau-ba.html"><i class="product-text">Cây Lưỡi Hổ Vương Miện chậu sứ để bàn Sansevireria Cylindrica</i></a>
+                                 <a href="cay-trau-ba.html"><i class="product-text">Cây trầu bà đế vương xanh chậu mặt cool</i></a>
                            </div>
                         </td>                   
                      <td class="product-price" data-title="Giá">
@@ -277,10 +273,22 @@
           </div><!--Sanpham-->
       </section>
       <section>
+        <div class="toast-container position-fixed top-0 end-0 p-3">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <strong class="me-auto">Cảnh Báo</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+              <div class="toast-body">
+               Bạn cần đăng nhập trước khi thanh toán
+              </div>
+            </div>
+          </div>
          <div class="container p-5">
             <div class="row">
                <div class="text-check text-center ">
-                  <a class="btn btn-success add-check" href="Thanhtoan.html">
+                  <a class="btn btn-success add-check" href="#">
                   <span class="text-uppercase">Thanh Toán</span>
                    </a>
                </div>
@@ -293,7 +301,7 @@
       <div class="container">
        <div class="row">
            <div class="col-md-2 p-4">
-               <img width="90px" height="90px" src="images/image_XPK8tAeI_1699515318362_raw.png" alt="logo">
+               <img width="90px" height="90px" src="./assets/image/image_XPK8tAeI_1699515318362_raw.png" alt="logo">
                <p class="">Chúng tôi mong rằng có thể mang đến cho bạn một cảm giác, trải nghiệm thật là mới mẻ và xanh xao</p>
                <br>
                <img src="https://images.dmca.com/Badges/dmca-badge-w200-5x1-09.png?ID=599ee744-724b-42c8-8dc6-de873fceb19c" alt="DMCA.com Protection Status">
@@ -431,4 +439,29 @@
         }
     }
 </script>
+  <!--Them san pham -->
+  <script>
+    const toastTrigger = document.getElementById('liveToastBtn')
+    const toastLiveExample = document.getElementById('liveToast')
+  
+    if (toastTrigger) {
+    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+    toastTrigger.addEventListener('click', () => {
+    toastBootstrap.show()
+    })
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+      // Lấy tất cả các nút "Thêm vào giỏ hàng"
+      const addToCartButtons = document.querySelectorAll('.add-check');
+  
+      // Lặp qua mỗi nút và thêm sự kiện click
+      addToCartButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          // Hiển thị toast khi nút được nhấp
+          const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+          toastBootstrap.show();
+        });
+      });
+    });
+  </script>
 </html>

@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="index.css" >
+  <link rel="stylesheet" href="./assets/css/index.css" >
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Owl Carousel CSS -->
@@ -29,7 +29,7 @@
        <div class="row">
            <!--LOGO-->
            <div class="col-sm-3 logo ">
-               <a href="Dangnhap.html"><img width="100" height="100" src="./images/image_XPK8tAeI_1699515318362_raw.png" alt="LOGO "></a>
+               <a href="index.html"><img width="100" height="100" src="./assets/image/image_XPK8tAeI_1699515318362_raw.png" alt="LOGO "></a>
 
            </div>
             <!--LOGO-->
@@ -41,10 +41,11 @@
                    <!--QUAN_LI-->
                 <div class="d-flex  p-3 justify-content-center">
                     <!--LUA_CHON_1-->
+                    <script src="/js/search.js"></script>
                     <div class="flex "> 
                        <div class="flex-column flex-grow order-sm-2  ">
 
-                           <input type="search" class="search-field md-0  " value placeholder="Tìm kiếm danh mục, sản phẩm...." size="30" >
+                           <input type="search" class="search-field md-0  "   id="searchInput" value placeholder="Tìm kiếm danh mục, sản phẩm...." size="30" >
                         
                            <input type="hidden" name="post_type">
                            
@@ -52,44 +53,33 @@
                     </div>
                      </div> <!--LUA_CHON_1-->
                        <div class="flex-column">
-                        <button type="submit" class="submit-button">
+                        <button type="submit" class="submit-button"  id="searchBtn">
                            <i class="bi bi-search " style="color: antiquewhite;" ></i>
                         </button>
                        </div>
                  </div><!--QUAN_LI-->  
                </form>
-               <script>
-                  const onSearch = () =>{
-                     const input = document.querySelector("#search");
-                     const filter = input.value.toUpperCase();
-                     const list =document.querySelectorAll("#menu1 li");
-                     list.forEach((el) => {
-                        const text = el.textContent.toUpperCase();
-
-                      el.style.display = text.includes(filter)?"":"none";
-                     });
-                  };
-              </script>
+               <script src="./assets/js/search.js"></script>
             </div> <!--FORM-->
            
             
             <!--CART-->
             <div class=" col-sm-2 order-sm-2" >
-                <div class="dropdown-end p-3">
-                    <div class="hover-text icon-user">
-                     <h1 class="bi bi-person-circle" data-bs-toggle="collapse" href="#user" role="button" aria-expanded="false" aria-controls="user"></h1>
-                    </div> 
-                    <div class="collapse user" id="user">
-                     <ul class="dropdown-end">
-                         <h3></h3>
-                        <li><a class="dropdown-item-text" href="user.html">Xem Thông tin </a></li>
-                        
-                        <li>
-                         <a class="dropdown-item-text" href="./userLogin.html">Đăng Xuất </a></li>
-                     </ul>
-                    </div>
-             </div>              
-       </div> <!--CART-->
+               <div class="dropdown-end p-3">
+                   <div class="hover-text icon-user">
+                    <h1 class="bi bi-person-circle" data-bs-toggle="collapse" href="#user" role="button" aria-expanded="false" aria-controls="user"></h1>
+                   </div> 
+                   <div class="collapse user" id="user">
+                    <ul class="dropdown-end">
+                        <h3></h3>
+                       <li><a class="dropdown-item-text" href="user.html">Xem Thông tin </a></li>
+                       
+                       <li>
+                        <a class="dropdown-item-text" href="index.html">Đăng Xuất </a></li>
+                    </ul>
+                   </div>
+            </div>              
+      </div> <!--CART-->
        
       </div>
       </div>
@@ -111,7 +101,7 @@
                   <ul class="dropdown-end">
                      <li><a class="dropdown-item-text" href="Caytrongnha.html">Cây Để Trong Nhà </a></li>
                      <li><a class="dropdown-item-text" href="Cayvanphong.html">Cây Văn Phòng </a></li>
-                     <li><a class="dropdown-item-text" href="#">Cây Sen Đá</a></li>
+                     <li><a class="dropdown-item-text" href="Caysenda.html">Cây Sen Đá</a></li>
                      <li><a class="dropdown-item-text" href="#">Cây Xương Rồng</a></li>
                      <li><a class="dropdown-item-text" href="#">Tiểu Cảnh Terrarium </a></li>
                   </ul>
@@ -131,7 +121,7 @@
                    <a  class="nav-link "href="Caytrongnha.html"> <Strong style="color: black;">Cây Trong Nhà </Strong> </a>
                 </li>
                 <li class="nav-item">
-                   <a  class="nav-link"href="#"><Strong style="color: black;">Cây Ngoài Trời</Strong> </a>
+                   <a  class="nav-link"href="cayngoaitroi"><Strong style="color: black;">Cây Ngoài Trời</Strong> </a>
                 </li>
                 <li class="nav-item dropdown"><!--menu-->
                    <a class="nav-link  " data-bs-toggle="dropdown" href="#" role="button"> <Strong style="color: black;">Hướng Dẫn</Strong></a>
@@ -196,7 +186,7 @@
               <div class="col-12 col-sm-6 col-lg-3  ">
                <div class="card">
                   <div class="card-img text-center" >
-                     <img width="100%" height="200" style="background-image: url(./image/cay-canh-de-ban-400x400.jpg); ">
+                     <a href="Caydeban.html"><img width="100%" height="200" style="background-image: url(./assets/image/cay-canh-de-ban-400x400.jpg); "> </a>
                      <div class="card-img-overlay" style="background-color: rgba(61, 60, 60, 0.6);">
                      <a href="Caydeban.html"><strong class="card-text text-uppercase text-center" style="color:white">Cây Cảnh Để Bàn </strong></a>
                   </div>
@@ -213,13 +203,13 @@
                <div class="col-12 col-sm-6 col-lg-3 ">
                   <div class="card">
                      <div class="card-img text-center" title="cay canh de ban ">
-                        <img width="100%" height="200" src="./image/cay-van-phong400x400.jpg">
+                       <a href="Cayvanphong.html"> <img width="100%" height="200" src="./assets/image/cay-van-phong400x400.jpg"> </a>
                         <div class="card-img-overlay" style="background-color: rgba(61, 60, 60, 0.6);">
                        <a href="Cayvanphong.html"> <strong class="card-text text-uppercase text-center " style="color:white"> Cây Văn Phòng</strong></a>
                      </div>
                      <div class="card-body">
                         <div class="w-100">
-                           <a href="Cayvanphong.html">  <span class="text-uppercase" href="index.html" style="color:white"> Chi Tiết</span></a>
+                           <a href="Cayvanphong.html">  <span class="text-uppercase" style="color:white"> Chi Tiết</span></a>
                        </div>
                        </div>
                      </div>
@@ -229,13 +219,13 @@
               <div class="col-12 col-sm-6 col-lg-3 ">
                <div class="card">
                   <div class="card-img text-center" title="cay canh de ban ">
-                     <img width="100%" height="200" src="./image/cay-sen-da-255x255.jpg">
+                     <a href="cay-sen-da.html">   <img width="100%" height="200" src="./assets/image/cay-sen-da-255x255.jpg"></a>
                      <div class="card-img-overlay" style="background-color: rgba(61, 60, 60, 0.6);">
-                     <strong class="card-text text-uppercase text-center " style="color:white"> Cây Sen Đá</strong>
+                    <a href="cay-sen-da.html">  <strong class="card-text text-uppercase text-center " style="color:white"> Cây Sen Đá</strong></a>
                   </div>
                   <div class="card-body">
                      <div class="w-100">
-                        <span class="text-uppercase" href="index.html" style="color:white"> Chi Tiết</span>
+                         <a href="cay-sen-da.html">  <span class="text-uppercase"  style="color:white"> Chi Tiết</span></a>
                     </div>
                     </div>
                   </div>
@@ -245,13 +235,13 @@
                <div class="col-12 col-sm-6 col-lg-3 ">
                   <div class="card">
                      <div class="card-img text-center" >
-                        <img width="100%" height="200" src="./image/cay-kieng-la-trong-nha-400x400.jpg">
+                        <a href="Caytrongnha.html">   <img width="100%" height="200" src="./assets/image/cay-kieng-la-trong-nha-400x400.jpg"></a>
                         <div class="card-img-overlay" style="background-color: rgba(61, 60, 60, 0.6);">
-                        <strong class="card-text text-uppercase text-center" style="color:white"> Cây Kiểng Trong Nhà </strong>
+                        <a href="Caytrongnha.html"> <strong class="card-text text-uppercase text-center" style="color:white"> Cây Kiểng Trong Nhà </strong></a>
                      </div>
                      <div class="card-body">
                         <div class="w-100">
-                           <span class="text-uppercase" style="color:white"> Chi Tiết</span>
+                           <a href="Caytrongnha.html"><span class="text-uppercase" style="color:white" href="#"> Chi Tiết</span></a>
                        </div>
                        </div>
                      </div>
@@ -261,13 +251,13 @@
               <div class="col-12 col-sm-6 col-lg-3 ">
                <div class="card">
                   <div class="card-img text-center" title="Cây Phong Thủy ">
-                     <img width="100%" height="200"  src="./image/cay-phong-thuy-trong-nha-080220-02.jpg">
+                     <a href="#"><img width="100%" height="200"  src="./assets/image/cay-phong-thuy-trong-nha-080220-02.jpg"></a>
                      <div class="card-img-overlay" style="background-color: rgba(61, 60, 60, 0.6);">
-                     <strong class="card-text text-uppercase text-center " style="color:white"> Cây Phong Thủy</strong>
+                    <a href="#"> <strong class="card-text text-uppercase text-center " style="color:white"> Cây Phong Thủy</strong> </a>
                   </div>
                   <div class="card-body">
                   <div class="w-100">
-                     <span class="text-uppercase" href="index.html" style="color:white"> Chi Tiết</span>
+                    <a href="#"> <span class="text-uppercase" href="#" style="color:white"> Chi Tiết</span></a>
                  </div>
                  </div>
                   </div>
@@ -278,13 +268,13 @@
      <div class="col-12 col-sm-6 col-lg-3 ">
       <div class="card">
          <div class="card-img text-center" title="cay canh de ban ">
-            <img width="100%" height="200" src="./image/cay-thuy-sinh.jpg">
+             <a href="#"><img width="100%" height="200" src="./assets/image/cay-thuy-sinh.jpg"></a>
             <div class="card-img-overlay" style="background-color: rgba(61, 60, 60, 0.6);">
-            <strong class="card-text text-uppercase text-center " style="color:white"> Cây Thủy Sinh</strong>
+            <a href="#"><strong class="card-text text-uppercase text-center " style="color:white"> Cây Thủy Sinh</strong></a>
          </div>
          <div class="card-body">
             <div class="w-100">
-               <span class="text-uppercase" href="index.html" style="color:white"> Chi Tiết</span>
+               <a href="#"><span class="text-uppercase" href="#" style="color:white"> Chi Tiết</span> </a>
            </div>
            </div>
          </div>
@@ -294,13 +284,13 @@
   <div class="col-12 col-sm-6 col-lg-3 ">
       <div class="card">
          <div class="card-img text-center" title="cay canh de ban ">
-            <img width="100%" height="200" src="./image/xuong-rong-255x255.jpg">
+           <a href="#"> <img width="100%" height="200" src="./assets/image/xuong-rong-255x255.jpg"> </a>
             <div class="card-img-overlay" style="background-color: rgba(61, 60, 60, 0.6);">
-            <strong class="card-text text-uppercase text-center " style="color:white"> Cây Xương Rồng</strong>
+           <a href="#"> <strong class="card-text text-uppercase text-center " style="color:white"> Cây Xương Rồng</strong> </a>
          </div>
          <div class="card-body">
             <div class="w-100">
-               <span class="text-uppercase" href="index.html" style="color:white"> Chi Tiết</span>
+                   <a href="#"> <span class="text-uppercase" href="#" style="color:white"> Chi Tiết</span></a>
            </div>
            </div>
          </div>
@@ -310,13 +300,13 @@
   <div class="col-12 col-sm-6 col-lg-3 ">
    <div class="card">
       <div class="card-img text-center" title="cay canh de ban ">
-         <img width="100%" height="200" src="./image/Tieu-canh.jgp.jpg">
+        <a href="#"> <img width="100%" height="200" src="./assets/image/Tieu-canh.jgp.jpg"> </a>
          <div class="card-img-overlay" style="background-color: rgba(61, 60, 60, 0.6);">
-         <strong class="card-text text-uppercase text-center " style="color:white">Tiểu Cảnh Terrarium</strong>
+        <a href="#"> <strong class="card-text text-uppercase text-center " style="color:white">Tiểu Cảnh Terrarium</strong></a>
       </div>
       <div class="card-body">
          <div class="w-100">
-            <span class="text-uppercase" href="index.html" style="color:white"> Chi Tiết</span>
+            <a href="#"><span class="text-uppercase" href="#" style="color:white"> Chi Tiết</span></a>
         </div>
         </div>
       </div>
@@ -338,12 +328,12 @@
                    
                         <div class=card>
                            <div class="card-body-1">
-                              <img width="100%"  src="./image/Caydeban/25.jpg">
+                             <a href="#"> <img width="100%"  src="./assets/image/Caydeban/25.jpg"></a>
                               <div class="card-img-bottom">
                                  <div class="">
                                        <ul class="box">
                                           <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
-                                             <p>Cây bàng Singapore để bàn tiểu cảnh Uyên Ương</p>
+                                             <a href="#"><p>Cây bàng Singapore để bàn tiểu cảnh Uyên Ương</p></a>
                                           </div>
                                           <div class="price-box">
                                              <span class="price text-uppercase text-center" style="margin-right: 3rem;">
@@ -368,12 +358,12 @@
 
                   <div class=card>
                      <div class="card-body-1">
-                        <img width="100%"  src="./image/Caydeban/19.jpg">
+                        <a href="#"> <img width="100%"  src="./assets/image/Caydeban/19.jpg"></a>
                         <div class="card-img-bottom">
                            <div class="">
                                  <ul class="box">
                                     <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
-                                       <p>Cây cau tiểu trâm  mèo đi học chậu đất nung </p>
+                                       <a href="#">  <p>Cây cau tiểu trâm  mèo đi học chậu đất nung </p></a>
                                     </div>
                                     <div class="price-box">
                                        <span class="price text-uppercase text-center" style="margin-right: 3rem;">
@@ -401,12 +391,12 @@
                   
             <div class=card>
                <div class="card-body-1">
-                  <img width="100%"  src="./image/Caydeban/21.jpg">
+                  <a href="#">   <img width="100%"  src="./assets/image/Caydeban/21.jpg"></a>
                   <div class="card-img-bottom">
                      <div class="">
                            <ul class="box">
                               <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
-                                 <p>Cây kim ngân bính để bàn chậu sứ có hình</p>
+                          <a href="#">     <p>Cây kim ngân bính để bàn chậu sứ có hình</p> </a>
                               </div>
                               <div class="price-box">
                                  <span class="price text-uppercase text-center" style="margin-right: 3rem;">
@@ -431,7 +421,7 @@
       <!--Ban3-->
       <div class=card>
          <div class="card-body-1">
-            <img width="100%"  src="./image/Caydeban/22.jpg">
+            <img width="100%"  src="./assets/image/Caydeban/22.jpg">
             <div class="card-img-bottom">
                <div class="">
                      <ul class="box">
@@ -462,7 +452,7 @@
 
 <div class=card>
    <div class="card-body-1">
-      <img width="100%"  src="./image/Caydeban/20.jpg">
+      <img width="100%"  src="./assets/image/Caydeban/20.jpg">
       <div class="card-img-bottom">
          <div class="">
                <ul class="box">
@@ -492,7 +482,7 @@
 
 <div class=card>
    <div class="card-body-1">
-      <img width="100%"  src="./image/Caydeban/23.jpg">
+      <img width="100%"  src="./assets/image/Caydeban/23.jpg">
       <div class="card-img-bottom">
          <div class="">
                <ul class="box">
@@ -522,7 +512,7 @@
 
 <div class=card>
    <div class="card-body-1">
-      <img width="100%"  src="./image/Caydeban/24.jpg">
+      <img width="100%"  src="./assets/image/Caydeban/24.jpg">
       <div class="card-img-bottom">
          <div class="">
                <ul class="box">
@@ -606,7 +596,7 @@
             <div class=" col-12 col-lg-3 col-sm-6">    
                <div class=card>
                   <div class="card-body-2">
-                     <a href="co-lan-chi.html"><img width="100%"  src="./image/Caydeban/caydeban5.jpg"></a>
+                     <a href="co-lan-chi.html"><img width="100%"  src="./assets/image/Caydeban/caydeban5.jpg"></a>
                      <div class="card-img-bottom">
                         <div class="">
                               <ul class="box">
@@ -638,7 +628,7 @@
             <div class=" col-12 col-lg-3 col-sm-6">    
                <div class=card>
                   <div class="card-body-2">
-                     <a href="cay-luoi-ho.html"><img width="100%"  src="./image/Caydeban/caydeban4.jpg"></a>
+                     <a href="cay-luoi-ho.html"><img width="100%"  src="./assets/image/Caydeban/caydeban4.jpg"></a>
                      <div class="card-img-bottom">
                         <div class="">
                               <ul class="box">
@@ -672,7 +662,7 @@
                <div class=card>
                   <div class="card-body-2">
                      <div>
-                    <a href="cay-trau-ba.html"> <img width="100%"  src="./image/Caydeban/caydeban3.1.jpg"></a>
+                    <a href="cay-trau-ba.html"> <img width="100%"  src="./assets/image/Caydeban/caydeban3.1.jpg"></a>
                      <div class="tools  text-uppercase text-center" >
                        
                      </div>
@@ -706,12 +696,12 @@
             <div class=" col-12 col-lg-3 col-sm-6">    
                <div class=card>
                   <div class="card-body-2">
-                     <img width="100%"  src="./image/Caydeban/banchay-canhdeban1.jpg">
+                     <a herf="#"><img width="100%"  src="./assets/image/Caydeban/banchay-canhdeban1.jpg"></a>
                      <div class="card-img-bottom">
                         <div class="">
                               <ul class="box">
                                  <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
-                                    <p>Cây kim ngân ba thân để bàn chậu sứ gấu BearBrick</p>
+                                    <a herf="#"> <p>Cây kim ngân ba thân để bàn chậu sứ gấu BearBrick</p></a>
                                  </div>
                                  <div class="price-box">
                                     <span class="price text-uppercase text-center" style="margin-right: 3rem;">
@@ -737,12 +727,11 @@
                  <div class=" col-12 col-lg-3 col-sm-6">    
                   <div class=card>
                   <div class="card-body-2">
-                     <img width="100%"  src="./image/Caydeban/caydeban2.jpg">
-                     <div class="card-img-bottom">
+                    <a herf="#"> <img width="100%"  src="./assets/image/Caydeban/caydeban2.jpg"></a>
                         <div class="">
                               <ul class="box">
                                  <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
-                                    <p>Cây kim ngân một thân để bàn chậu sứ</p>
+                                    <a herf="#"><p>Cây kim ngân một thân để bàn chậu sứ</p></a>
                                  </div>
                                  <div class="price-box">
                                     <span class="price text-uppercase text-center" style="margin-right: 3rem;">
@@ -763,7 +752,7 @@
                      </div>
                   </div>
                </div>
-              </div><!--Ban5--> 
+             <!--Ban5--> 
            
 
           
@@ -771,12 +760,12 @@
             <div class=" col-12 col-lg-3 col-sm-6">    
                <div class=card>
                   <div class="card-body-2">
-                     <img width="100%"  src="./image/Caydeban/caydeban6.jpg">
+                     <a herf="#"><img width="100%"  src="./assets/image/Caydeban/caydeban6.jpg"> </a>
                      <div class="card-img-bottom">
                         <div class="">
                               <ul class="box">
                                  <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
-                                    <p>Cây trầu bà cột chậu xi măng trụ vuông</p>
+                                    <a herf="#"><p>Cây trầu bà cột chậu xi măng trụ vuông</p> </a>
                                  </div>
                                  <div class="price-box">
                                     <span class="price text-uppercase text-center" style="margin-right: 3rem;">
@@ -802,12 +791,12 @@
             <div class=" col-12 col-lg-3 col-sm-6">    
                <div class=card>
                   <div class="card-body-2">
-                     <img width="100%"  src="./image/Caydeban/caydeban7.jpg">
+                      <a herf="#"><img width="100%"  src="./assets/image/Caydeban/caydeban7.jpg"> </a>
                      <div class="card-img-bottom">
                         <div class="">
                               <ul class="box">
                                  <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
-                                    <p>Cây ngũ gia bì cẩm thạch nhỏ chậu ươm</p>
+                                    <a herf="#"> <p>Cây ngũ gia bì cẩm thạch nhỏ chậu ươm</p> </a>
                                  </div>
                                  <div class="price-box">
                                     <span class="price text-uppercase text-center" style="margin-right: 3rem;">
@@ -833,12 +822,12 @@
             <div class=" col-12 col-lg-3 col-sm-6">    
                <div class=card>
                   <div class="card-body-2">
-                     <img width="100%"  src="./image/Caydeban/caydeban8.jpg">
+                     <a herf="#"> <img width="100%"  src="./assets/image/Caydeban/caydeban8.jpg"></a>
                      <div class="card-img-bottom">
                         <div class="">
                               <ul class="box">
                                  <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
-                                    <p>Cây hồng môn cỡ nhỏ chậu sứ trắng</p>
+                                      <a herf="#"> <p>Cây hồng môn cỡ nhỏ chậu sứ trắng</p></a>
                                  </div>
                                  <div class="price-box">
                                     <span class="price text-uppercase text-center" style="margin-right: 3rem;">
@@ -861,7 +850,6 @@
                      </div>
             </div><!--Ban8-->
          </div>
-
          <div class="text-center  p-3">
                <a class="btn-see" href="Caydeban.html">
                  Xem Thêm
@@ -883,12 +871,12 @@
             <div class=" col-12 col-lg-3 col-sm-6">    
                <div class=card>
                   <div class="card-body-3">
-                     <img width="100%"  src="./image/vanphong/1.jpg">
+                     <a herf="#"> <img width="100%"  src="./assets/image/vanphong/1.jpg"></a>
                      <div class="card-img-bottom">
                         <div class="">
                               <ul class="box">
                                  <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
-                                    <p>Cây kim ngân ba thân để bàn chậu sứ gấu BearBrick</p>
+                                   <a herf="#">  <p>Cây phú quý chậu sứ thổ cẩm </p></a>
                                  </div>
                                  <div class="price-box">
                                     <span class="price text-uppercase text-center" style="margin-right: 3rem;">
@@ -914,17 +902,17 @@
             <div class=" col-12 col-lg-3 col-sm-6">    
                <div class=card>
                   <div class="card-body-3">
-                     <img width="100%"  src="./image/vanphong/2.jpg">
+                    <a herf="#">  <img width="100%"  src="./assets/image/vanphong/2.jpg"> </a>
                      <div class="card-img-bottom">
                         <div class="">
                               <ul class="box">
                                  <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
-                                    <p>Cây kim ngân một thân để bàn chậu sứ</p>
+                                     <a herf="#"> <p>Cây Hạnh Phúc </p> </a>
                                  </div>
                                  <div class="price-box">
                                     <span class="price text-uppercase text-center" style="margin-right: 3rem;">
                                        <bdi>
-                                          450.000₫
+                                          100.000₫
                                        </bdi>
                                     </span>
                                  </div>
@@ -944,7 +932,7 @@
                <div class=card>
                   <div class="card-body-3">
                      <div>
-                     <img width="100%"  src="./image/vanphong/3.jpg">
+                    <a herf="#">  <img width="100%"  src="./assets/image/vanphong/3.jpg">  </a>
                      <div class="tools  text-uppercase text-center" >
                      </div>
                   </div>
@@ -952,12 +940,12 @@
                         <div class="">
                               <ul class="box">
                                  <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
-                                    <p>Cây trầu bà đế vương xanh chậu mặt cool</p>
+                                   <a herf="#">   <p>Cây Hạnh Phúc 2 Tầng</p>   </a>
                                  </div>
                                  <div class="price-box">
                                     <span class="price text-uppercase text-center" style="margin-right: 3rem;">
                                        <bdi>
-                                          120.000₫
+                                          320.000₫
                                        </bdi>
                                     </span>
                                  </div>
@@ -977,12 +965,12 @@
             <div class=" col-12 col-lg-3 col-sm-6">    
                <div class=card>
                   <div class="card-body-3">
-                     <img width="100%"  src="./image/vanphong/4.jpg">
+                     <a herf="#">   <img width="100%"  src="./assets/image/vanphong/4.jpg">  </a>
                      <div class="card-img-bottom">
                         <div class="">
                               <ul class="box">
                                  <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
-                                    <p> Cây cỏ lan chi để bàn chậu sứ mặt cười </p>
+                                    <a herf="#">  <p> Cây Đuôi Công Vân Vàng</p> </a>
                                  </div>
                                  <div class="price-box">
                                     <span class="price text-uppercase text-center" style="margin-right: 3rem;">
@@ -1006,12 +994,12 @@
             <div class=" col-12 col-lg-3 col-sm-6">    
                <div class=card>
                   <div class="card-body-3">
-                     <img width="100%"  src="./image/vanphong/5.jpg">
+                    <a herf="#">  <img width="100%"  src="./assets/image/vanphong/5.jpg">  </a>
                      <div class="card-img-bottom">
                         <div class="">
                               <ul class="box">
                                  <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
-                                    <p>Cây cỏ lan chi để bàn chậu sứ mặt cười</p>
+                                    <a herf="#"> <p>Cây Hạnh Phúc Dáng  To</p> </a>
                                  </div>
                                  <div class="price-box">
                                     <span class="price text-uppercase text-center" style="margin-right: 3rem;">
@@ -1035,12 +1023,12 @@
             <div class=" col-12 col-lg-3 col-sm-6">    
                <div class=card>
                   <div class="card-body-3">
-                     <img width="100%"  src="./image/vanphong/6.jpg">
+                      <a herf="#"> <img width="100%"  src="./assets/image/vanphong/6.jpg"> </a>
                      <div class="card-img-bottom">
                         <div class="">
                               <ul class="box">
                                  <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
-                                    <p>Cây trầu bà cột chậu xi măng trụ vuông</p>
+                                    <a herf="#"> <p>Cây Kim Ngân Củ To</p>  </a>
                                  </div>
                                  <div class="price-box">
                                     <span class="price text-uppercase text-center" style="margin-right: 3rem;">
@@ -1064,17 +1052,17 @@
             <div class=" col-12 col-lg-3 col-sm-6">    
                <div class=card>
                   <div class="card-body-3">
-                     <img width="100%"  src="./image/vanphong/7.jpg">
+                     <a herf="#"> <img width="100%"  src="./assets/image/vanphong/7.jpg">  </a>
                      <div class="card-img-bottom">
                         <div class="">
                               <ul class="box">
                                  <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
-                                    <p>Cây ngũ gia bì cẩm thạch nhỏ chậu ươm</p>
+                                    <a herf="#"> <p>Cây Kim Ngân Đơn Thân Lớn</p>  </a>
                                  </div>
                                  <div class="price-box">
                                     <span class="price text-uppercase text-center" style="margin-right: 3rem;">
                                        <bdi>
-                                          100.000₫
+                                          550.000₫
                                        </bdi>
                                     </span>
                                  </div>
@@ -1093,12 +1081,12 @@
             <div class=" col-12 col-lg-3 col-sm-6">    
                <div class=card>
                   <div class="card-body-3">
-                     <img width="100%"  src="./image/vanphong/12.jpg">
+                      <a herf="#"><img width="100%"  src="./assets/image/vanphong/12.jpg">  </a>
                      <div class="card-img-bottom">
                         <div class="">
                               <ul class="box">
                                  <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
-                                    <p>Cây hồng môn cỡ nhỏ chậu sứ trắng</p>
+                                    <a herf="#"><p>Cây Phát Tài 1 gốc to</p>  </a>
                                  </div>
                                  <div class="price-box">
                                     <span class="price text-uppercase text-center" style="margin-right: 3rem;">
@@ -1140,7 +1128,7 @@
             <div id="myCarousel-1" class="owl-carousel owl-theme" style="z-index: 0;">
                <div class=card>
                   <div class="card-body-4">
-                     <img width="100%"  src="./image/Thongtin1.jpg">
+                     <img width="100%"  src="./assets/image/Thongtin1.jpg">
                      <div class="card-img-bottom">
                         <div class="">
                               <div class="box">
@@ -1157,7 +1145,7 @@
 
             <div class=card>
                <div class="card-body-4">
-                  <img width="100%" height="210" src="./image/thongtin2.jpg">
+                  <img width="100%" height="210" src="./assets/image/thongtin2.jpg">
                   <div class="card-img-bottom">
                      <div class="">
                            <div class="box">
@@ -1174,7 +1162,7 @@
 
          <div class=card>
             <div class="card-body-4">
-               <img width="100%"  src="./image/thongtin3.jpg">
+               <img width="100%"  src="./assets/image/thongtin3.jpg">
                <div class="card-img-bottom">
                   <div class="">
                         <div class="box">
@@ -1191,7 +1179,7 @@
 
       <div class=card>
          <div class="card-body-4">
-            <img width="100%"  src="./image/thongtin4.jpg">
+            <img width="100%"  src="./assets/image/thongtin4.jpg">
             <div class="card-img-bottom">
                <div class="">
                      <div class="box">
@@ -1208,7 +1196,7 @@
 
    <div class=card>
       <div class="card-body-4">
-         <img width="100%"  height="200"   src="./image/thongtin5.jpg">
+         <img width="100%"  height="200"   src="./assets/image/thongtin5.jpg">
          <div class="card-img-bottom">
             <div class="">
                   <div class="box">
@@ -1225,7 +1213,7 @@
 
 <div class=card>
    <div class="card-body-4">
-      <img width="100%" height="200" src="./image/thongtin6.jpg">
+      <img width="100%" height="200" src="./assets/image/thongtin6.jpg">
       <div class="card-img-bottom">
          <div class="">
                <div class="box">
@@ -1275,7 +1263,7 @@
       <div class="container">
        <div class="row">
            <div class="col-md-2 p-4">
-               <img width="90px" height="90px" src="images/image_XPK8tAeI_1699515318362_raw.png" alt="logo">
+               <img width="90px" height="90px" src="./assets/image/image_XPK8tAeI_1699515318362_raw.png" alt="logo">
                <p class="">Chúng tôi mong rằng có thể mang đến cho bạn một cảm giác, trải nghiệm thật là mới mẻ và xanh xao</p>
                <br>
                <img src="https://images.dmca.com/Badges/dmca-badge-w200-5x1-09.png?ID=599ee744-724b-42c8-8dc6-de873fceb19c" alt="DMCA.com Protection Status">
@@ -1299,7 +1287,7 @@
            <div class="col-md-3 p-4">
                <h4 style="text-align: center;">LIÊN HỆ</h4>
                <ul class="list-menu fs-5" style="margin-left: 35%;">
-                   <li class="li_menu"><a href="/" title="Hotline 1: 1 ">Hotline 1: 1</a></li>
+                   <li class="li_menu"><a href="/" title="Hotline 1: 1 ">Hotline 1: 1 </a></li>
                    <li class="li_menu"><a href="/" title="Hotline 2: 2">Hotline 2: 2</a></li>
                    <li class="li_menu"><a href="/" title="Hotline 3: 3">Hotline 3: 3</a></li>
                    <li class="li_menu"><a href="/" title="Email:">Email:</a></li>
@@ -1381,5 +1369,6 @@
         });
       });
     </script>
+      
 </body>
 </html>
