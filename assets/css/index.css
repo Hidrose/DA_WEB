@@ -25,7 +25,11 @@ header{
     border-bottom-right-radius: 5px;
 }
 .bg-1{
+<<<<<<< HEAD
     background-image: url(../image/bg_top.jpg);
+=======
+    background-image: url(/assets/image/bg_top.jpg);
+>>>>>>> f07bd9f5c548e1d05affa60aeb49967ef04ac4ac
 }
 .nav-right{
     margin-left: 100px;
@@ -115,7 +119,11 @@ a:link{
     color: green;
 }
 .bg-trangchu{
+<<<<<<< HEAD
     background-image: url(../image/bg-trangchu.jpg);
+=======
+    background-image: url(/assets/image/bg-trangchu.jpg);
+>>>>>>> f07bd9f5c548e1d05affa60aeb49967ef04ac4ac
     width: 98%;
     height: 600px;
     background-position-x: center;
@@ -125,7 +133,11 @@ a:link{
     background-position: 50% 75%;
 }
 .bg-caydeban{
+<<<<<<< HEAD
     background-image: url(../image/danh-muc-cay-canh-de-ban.jpg);
+=======
+    background-image: url(/assets/image/danh-muc-cay-canh-de-ban.jpg);
+>>>>>>> f07bd9f5c548e1d05affa60aeb49967ef04ac4ac
     background-size: cover;
     max-width: 150%;
     height: 300px;
@@ -138,7 +150,11 @@ a:link{
 }
 /*cây tronh nhà   */
 .bg-caytrongnha{
+<<<<<<< HEAD
         background-image: url(../image/bg-trongnha.jpg);
+=======
+        background-image: url(/assets/image/bg-trongnha.jpg);
+>>>>>>> f07bd9f5c548e1d05affa60aeb49967ef04ac4ac
         background-size: cover;
         max-width: 150%;
         height: 300px;
@@ -416,7 +432,11 @@ a{
     margin: 0px;
 }
 .bg-bot{
+<<<<<<< HEAD
     background-image: url(../image/backbackcaidmm3.jpg);
+=======
+    background-image: url(/assets/image/backbackcaidmm3.jpg);
+>>>>>>> f07bd9f5c548e1d05affa60aeb49967ef04ac4ac
     background-repeat: no-repeat;
     background-size: cover;
    
