@@ -1,0 +1,343 @@
+.body ul{
+    list-style: none;
+    padding:0px;
+    margin: 0px;
+}
+
+.body ul>li>a{
+    text-decoration: none;
+    color: black;
+}
+
+.dinh {
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 1;
+    right: 20rem;
+    background-color: #fff;
+}
+.body-mid{
+    padding-top: 1000px;
+}
+.bg-1{
+    background-image: url(/User/assets/image/bg_top.jpg);
+}
+.nav-right{
+    margin-left: 100px;
+}
+#menu1 .dropdown-end{
+    position: absolute;
+    border: 1px solid black;
+    background-color: #fff;
+    width: 17.2%;
+    border-bottom: 1px solid black;
+    padding:0;
+}
+#menu1 .dropdown-end li{
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid black;
+   
+}
+.nav{
+    padding-top:7px;
+}
+.dropdown-menu li{
+    border-bottom: 1px solid black;
+}
+.dropdown-menu li:last-child
+{
+    border-bottom: 0;
+}
+
+h3{
+    color:green;
+} 
+
+.dropdown:hover >.dropdown-menu {
+    display: block;
+    margin-top: 0.125rem;
+}
+.dropdown-item{
+    color: black;
+    transition: color 0.3 ease;
+    text-decoration: none;
+}
+
+.dropdown-item:hover {
+    color: green;
+}
+
+.card{
+    margin-top: 20px;
+    margin-left: 5px;
+}
+.card div span{
+    border: 1px solid #fff;
+    border-radius: 2px;
+    padding: 5px 15px;
+    background: rgba(41, 41, 38, 0.856);
+    font-size: 13px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    
+}
+a:link{
+    text-decoration: none
+}
+.card-body{
+    display: flex;
+    position: absolute;
+    top:60px;
+    left:98px;
+    opacity: 0;
+}
+.card:hover .card-body{
+    opacity: 1;
+
+}
+.card-body:hover div span{
+    background-color: green;
+}
+
+.hover-text:hover strong {
+    color: green;
+}
+.bg-trangchu{
+    background-image: url(/User/assets/image/bg-trangchu.jpg);
+    width: 98%;
+    height: 1000px;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    clear: both; 
+    background-position: 49% 75%;
+}
+.submit-button{
+    background-color: green;
+    width: 65px;
+    height: 30px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.title-box .price-box{
+    box-sizing: border-box;
+}
+.price-box .price{
+    background-color: white;
+    display: block;
+    color: green;
+
+}
+.price{
+    line-height: 1;
+   
+}
+.price  bdi{
+    font-size: 20px;
+}
+.card{
+    border: none;
+}
+.card-hover{
+    display: flex;
+    position: absolute
+    
+}
+.card-body-1{
+    transition: all 1.0s;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.card:hover > .card-body-1{
+     transform: scale(1.15);
+    background-image: rgba(0, 0, 0, 0.6);;
+}
+.card-hover{
+    position: absolute(card-img-overlay);
+    display: flex;
+    bottom: 140px;
+    left:72px;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.card:hover  .card-hover{
+    opacity: 1;
+    transform: scaleZ(1.2);
+   
+}
+.card-hover:hover div span{
+    background-color: green;
+}
+.card-hover-2{
+    position: absolute;
+    display: flex;
+    bottom: 100px;
+    left: 6em;
+    opacity: 0;
+    transition: all 1s;
+}
+.card:hover.card-hover-2{
+    opacity: 1;
+    transform: scaleZ(1.2);
+   
+}
+.card-hover-2:hover div span{
+    background-color: green;
+}
+.card-body-2{
+    transition: all 1.0s;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-top: 10px;
+    border-radius: 2rem;
+}
+.card:hover > .card-body-2{
+    transform: scale(1.15);
+   background-image: rgba(0, 0, 0, 0.6);
+}
+
+
+.image-tool-1{
+    position: absolute;
+    bottom: 12em;
+
+    opacity: 0;
+    right: 0.5em;
+}
+.h-10{
+    height: 10%!important;
+}
+.hover-in strong{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.hover-in{
+    transform: translateY(100%) translateZ(0);
+}
+.card:hover .show-on{
+    opacity: 1;
+}
+.nav-item :hover 
+
+
+.footer ul{
+    list-style: none;
+    padding:0px;
+    margin: 0px;
+}
+.bg-bot{
+    background-image: url(/User/asset/images/backbackcaidmm3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+    
+}
+.footer ul>li>a{
+    text-decoration: none;
+    color: white;
+}
+.box40{
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    display: inline-block;
+}
+#backtop{
+    width: 50px;
+    height: 50px;
+    background: rgb(71, 255, 71);
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    bottom: 40px;
+    right: 20px;
+    position: fixed;
+}
+.is-divider {
+    width: 30px;
+    height: 2px;
+    margin-bottom: 0.5em;
+    margin-top: 0.25em;
+    background-color: yellowgreen;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+div.stars {
+    width: 270px;
+    display: inline-block;
+  }
+   
+  input.star { display: none; }
+   
+  label.star {
+    float: right;
+    padding: 5px;
+    font-size: 10px;
+    color: #444;
+    transition: all .2s;
+  }
+   
+  input.star:checked ~ label.star:before {
+    content: '\f005';
+    color: rgb(69, 196, 10);
+    transition: all .25s;
+  }
+   
+  input.star-5:checked ~ label.star:before {
+    color: rgb(35, 208, 15);
+    text-shadow: 0 0 20px rgb(75, 117, 6);
+  }
+   
+  input.star-1:checked ~ label.star:before { color: rgb(9, 96, 2); }
+   
+  label.star:hover { transform: rotate(-15deg) scale(1.3); }
+   
+  label.star:before {
+    content: '\f006';
+    font-family: FontAwesome;
+  }
+  ::marker {
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px !important;
+    text-align: start !important;
+    text-align-last: start !important;
+}
+/* Thêm Sản Phẩm  */
+.me-auto{
+    padding-left: 20px;
+    color:green;
+}
+.toast-header i{
+    color:green;
+}
+.toast{
+   border-left: 5px solid green;
+   animation-duration: .3s;
+}

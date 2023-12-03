@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="./assets/css/product.css" />
+    <link rel="stylesheet" href="./assets/css/order.css" />
+    <link rel="stylesheet" href="./assets/css/order.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./bootstrap/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Yêu cầu</title>
+  </head>
+  <body>
+    <style>
+      .detail-container {
+        display: flex;
+        justify-content: space-between;
+        width: 800px; /* Điều chỉnh theo nhu cầu */
+        margin-left: 50px; /* Điều chỉnh theo nhu cầu */
+      }
+
+      .user-info {
+        flex: 0 0 60%; /* Điều chỉnh theo nhu cầu */
+        padding: 20px;
+        border: 1px solid black;
+      }
+
+      .product-info {
+        flex: 0 0 35%; /* Điều chỉnh theo nhu cầu */
+        padding: 20px;
+        border: 1px solid black;
+      }
+
+      /* Thêm kiểu CSS cho ảnh sản phẩm, chỉ là ví dụ */
+      .product-image {
+        max-width: 50%;
+        height: auto;
+      }
+    </style>
+    <script type="text/javascript" src="./bootstrap/js/bootstrap.js"></script>
+    <script src="./assets/js/order.js"></script>
+    <script src="./main.js"></script>
+    <script src="./assets/js/fix_delete.js"></script>
+    <div id="mySidenav" class="sidenav">
+      <div class="head-logo">
+        <p class="logo"><span>T</span>eam-15</p>
+      </div>
+
+      <a href="index.html" class="icon-a"
+        ><i class="fa fa-dashboard icons"></i> Trang chủ</a
+      >
+      <a href="./user.html" class="icon-a"
+        ><i class="fa fa-users icons"></i> Người dùng</a
+      >
+      <a href="product.html" class="icon-a"
+        ><i class="fa fa-list icons"></i> Sản phẩm
+      </a>
+      <a href="./donhang.html" class="icon-a"
+        ><i class="fa fa-shopping-bag icons"></i> Thống kê</a
+      >
+    </div>
+    <div id="main">
+      <div class="head">
+        <div class="col-div-6">
+          <span
+            style="font-size: 25px; cursor: pointer; color: black"
+            class="nav"
+            >☰ Yêu cầu
+          </span>
+          <span
+            style="font-size: 25px; cursor: pointer; color: #000000"
+            class="nav2"
+            >☰ Yêu cầu
+          </span>
+          <p style="font-size: 20px; opacity: 0.5">Chi tiết đơn hàng</p>
+        </div>
+
+        <div class="col-div-6">
+          <div class="profile">
+            <a href="javascript:void(0)"
+              ><img
+                style="width: 30px"
+                src="./assets/img/avata.png"
+                class="pro-img"
+            /></a>
+            <p style="color: black">Admin</p>
+            <div class="dropdown-content">
+              <a style="color: black" href="#">Cài đặt</a>
+              <a style="color: black" href="loginAdmin.html">Đăng xuất</a>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="clearfix"></div>
+      <br />
+
+      <a href="./donhang.html" class="btn btn-warning thong-ke"
+        >Quản lý đơn hàng</a
+      >
+      <br />
+      <br />
+      <div style="width: 500px; margin-left: 50px" class="detail-product">
+        <h2>Chi tiết đơn hàng</h2>
+        <div class="detail-container">
+          <div class="user-info">
+            <p>Mã đơn hàng: 1</p>
+            <p>Họ và tên : Nguyễn Anh A</p>
+            <p>Địa chỉ: Hoàng Văn Thụ , Tân Bình , TPHCM</p>
+            <p>Số điện thoại : 02394204424</p>
+            <p>Ngày đặt : 10/9/2022</p>
+            <p>Trạng thái đơn hàng: Chưa xác nhận</p>
+          </div>
+          <div class="product-info">
+            <p>Loại sản phẩm : Sen đá</p>
+            <p>Tên sản phẩm: Sen đá</p>
+            <img
+              class="product-image"
+              src="./assets/img/senda.jpg"
+              alt="Product Image"
+            />
+            <p>Số lượng : 20</p>
+            <p>Thành tiền : 1,000,000 VNĐ</p>
+          </div>
+        </div>
+      </div>
+      <br />
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(".nav").click(function () {
+        $("#mySidenav").css("width", "70px");
+        $("#main").css("margin-left", "70px");
+        $(".logo").css("visibility", "hidden");
+        $(".logo span").css("visibility", "visible");
+        $(".logo span").css("margin-left", "-10px");
+        $(".icon-a").css("visibility", "hidden");
+        $(".icons").css("visibility", "visible");
+        $(".icons").css("margin-left", "-8px");
+        $(".nav").css("display", "none");
+        $(".nav2").css("display", "block");
+      });
+
+      $(".nav2").click(function () {
+        $("#mySidenav").css("width", "300px");
+        $("#main").css("margin-left", "300px");
+        $(".logo").css("visibility", "visible");
+        $(".icon-a").css("visibility", "visible");
+        $(".icons").css("visibility", "visible");
+        $(".nav").css("display", "block");
+        $(".nav2").css("display", "none");
+      });
+    </script>
+  </body>
+</html>
