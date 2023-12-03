@@ -21,7 +21,7 @@
     padding-top: 1000px;
 }
 .bg-1{
-    background-image: url(./image/bg_top.jpg);
+    background-image: url(/User/assets/image/bg_top.jpg);
 }
 .nav-right{
     margin-left: 100px;
@@ -106,7 +106,7 @@ a:link{
     color: green;
 }
 .bg-trangchu{
-    background-image: url(./image/bg-trangchu.jpg);
+    background-image: url(/User/assets/image/bg-trangchu.jpg);
     width: 98%;
     height: 1000px;
     background-position-x: center;
@@ -236,7 +236,7 @@ a:link{
     margin: 0px;
 }
 .bg-bot{
-    background-image: url(./images/backbackcaidmm3.jpg);
+    background-image: url(/User/asset/images/backbackcaidmm3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
    
