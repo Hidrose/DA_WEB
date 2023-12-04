@@ -30,9 +30,8 @@
              </div>
               <!--LOGO-->
   
-             <!--FORM-->
-            
-            <div class=" col-sm-6 order-sm-1">
+              <!--FORM-->
+              <div class=" col-sm-7 order-sm-1">
                <form class="searchform" method="get" role="search" >
                    <!--QUAN_LI-->
                 <div class="d-flex  p-3 justify-content-center">
@@ -40,32 +39,26 @@
                     <div class="flex "> 
                        <div class="flex-column flex-grow order-sm-2  ">
 
-                           <input type="search" class="search-field md-0  " value placeholder="Tìm kiếm danh mục, sản phẩm...." size="30" >
+                           <input type="search" id="searchInput" name="search" class="search-field md-0  " value placeholder="Tìm kiếm danh mục, sản phẩm...." size="30" >
                         
                            <input type="hidden" name="post_type">
+                            <div id="searchResultsContainer" class="search-results">
+                           <ul id="searchResultsList"><li></li></ul>
+                        </div>
                            
                          
                     </div>
                      </div> <!--LUA_CHON_1-->
                        <div class="flex-column">
                         <button type="submit" class="submit-button">
-                           <i class="bi bi-search" style="color: antiquewhite;"></i>
+                           <i class="bi bi-search " style="color: antiquewhite;" ></i>
                         </button>
+                       
+                       
                        </div>
                  </div><!--QUAN_LI-->  
                </form>
-               <script>
-                  const onSearch = () =>{
-                     const input = document.querySelector("#search");
-                     const filter = input.value.toUpperCase();
-                     const list =document.querySelectorAll("#menu1 li");
-                     list.forEach((el) => {
-                        const text = el.textContent.toUpperCase();
-
-                      el.style.display = text.includes(filter)?"":"none";
-                     });
-                  };
-              </script>
+               <script src="./assets/js/search.js"></script>
             </div> <!--FORM-->
               
               <!--CART-->
