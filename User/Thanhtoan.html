@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="thong-tin-cay.css">
+    <link rel="stylesheet" href="assets/css/thong-tin-cay.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="index.css" >
+  <link rel="stylesheet" href="assets/css/index.css" >
+  <link rel="stylesheet" href="assets/css/GioHang.css" >
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -19,48 +20,41 @@
        <div class="row">
            <!--LOGO-->
            <div class="col-sm-3 logo ">
-               <a href="Dangnhap.html"><img width="100" height="100" src="./images/image_XPK8tAeI_1699515318362_raw.png" alt="LOGO "></a>
+               <a href="index-user.html"><img width="100" height="100" src="./assets/image/image_XPK8tAeI_1699515318362_raw.png" alt="LOGO "></a>
 
            </div>
             <!--LOGO-->
 
-            <!--FORM-->
-            
-            <div class=" col-sm-7 order-sm-1">
-               <form class="searchform" method="get" role="search" >
-                   <!--QUAN_LI-->
-                <div class="d-flex  p-3 justify-content-center">
-                    <!--LUA_CHON_1-->
-                    <div class="flex "> 
-                       <div class="flex-column flex-grow order-sm-2  ">
+          <!--FORM-->
+          <div class=" col-sm-7 order-sm-1">
+            <form class="searchform" method="get" role="search" >
+                <!--QUAN_LI-->
+             <div class="d-flex  p-3 justify-content-center">
+                 <!--LUA_CHON_1-->
+                 <div class="flex "> 
+                    <div class="flex-column flex-grow order-sm-2  ">
 
-                           <input type="search" class="search-field md-0  " value placeholder="Tìm kiếm danh mục, sản phẩm...." size="30" >
+                        <input type="search" id="searchInput" name="search" class="search-field md-0  " value placeholder="Tìm kiếm danh mục, sản phẩm...." size="30" >
+                     
+                        <input type="hidden" name="post_type">
+                         <div id="searchResultsContainer" class="search-results">
+                        <ul id="searchResultsList"><li></li></ul>
+                     </div>
                         
-                           <input type="hidden" name="post_type">
-                           
-                         
+                      
+                 </div>
+                  </div> <!--LUA_CHON_1-->
+                    <div class="flex-column">
+                     <button type="submit" class="submit-button">
+                        <i class="bi bi-search " style="color: antiquewhite;" ></i>
+                     </button>
+                    
+                    
                     </div>
-                     </div> <!--LUA_CHON_1-->
-                       <div class="flex-column">
-                        <button type="submit" class="submit-button">
-                           <i class="bi bi-search " style="color: antiquewhite;" ></i>
-                        </button>
-                       </div>
-                 </div><!--QUAN_LI-->  
-               </form>
-               <script>
-                  const onSearch = () =>{
-                     const input = document.querySelector("#search");
-                     const filter = input.value.toUpperCase();
-                     const list =document.querySelectorAll("#menu1 li");
-                     list.forEach((el) => {
-                        const text = el.textContent.toUpperCase();
-
-                      el.style.display = text.includes(filter)?"":"none";
-                     });
-                  };
-              </script>
-            </div> <!--FORM-->
+              </div><!--QUAN_LI-->  
+            </form>
+            <script src="./assets/js/search.js"></script>
+         </div> <!--FORM-->
            
             
             <!--CART-->
@@ -99,9 +93,9 @@
                  </ul>
                  <div class="collapse menu1" id="menu1">
                   <ul class="dropdown-end">
-                     <li><a class="dropdown-item-text" href="Caytrongnha.html">Cây Để Trong Nhà </a></li>
-                     <li><a class="dropdown-item-text" href="Cayvanphong.html">Cây Văn Phòng </a></li>
-                     <li><a class="dropdown-item-text" href="#">Cây Sen Đá</a></li>
+                     <li><a class="dropdown-item-text" href="Caytrongnha-user.html">Cây Để Trong Nhà </a></li>
+                     <li><a class="dropdown-item-text" href="Cayvanphong-user.html">Cây Văn Phòng </a></li>
+                     <li><a class="dropdown-item-text" href="Caysenda-user.html">Cây Sen Đá</a></li>
                      <li><a class="dropdown-item-text" href="#">Cây Xương Rồng</a></li>
                      <li><a class="dropdown-item-text" href="#">Tiểu Cảnh Terrarium </a></li>
                   </ul>
@@ -114,19 +108,19 @@
            <div class="col-sm-9">
               <ul class="nav text-uppercase">
                <li class="nav-item ">
-                  <a  class="nav-link"href="index.html"> <Strong style="color: black;">Trang Chủ</Strong></a> 
+                  <a  class="nav-link"href="index-user.html"> <Strong style="color: black;">Trang Chủ</Strong></a> 
                   
                </li>
                <li class="nav-item">
-                   <a  class="nav-link "href="Caytrongnha.html"> <Strong style="color: black;">Cây Trong Nhà </Strong> </a>
+                   <a  class="nav-link "href="Caytrongnha-user.html"> <Strong style="color: black;">Cây Trong Nhà </Strong> </a>
                 </li>
                 <li class="nav-item">
-                   <a  class="nav-link"href="#"><Strong style="color: black;">Cây Ngoài Trời</Strong> </a>
+                   <a  class="nav-link"href="cayngoaitroi-user.html"><Strong style="color: black;">Cây Ngoài Trời</Strong> </a>
                 </li>
                 <li class="nav-item dropdown"><!--menu-->
                    <a class="nav-link  " data-bs-toggle="dropdown" href="#" role="button"> <Strong style="color: black;">Hướng Dẫn</Strong></a>
                    <ul class="dropdown-menu">
-                   <li><a class="dropdown-item" href="thong-tin-cay.html">Thông Tin Cây </a></li>
+                   <li><a class="dropdown-item" href="#">Thông Tin Cây </a></li>
                    <li><a class="dropdown-item" href="#">Cách Chăm Sóc Cây </a></li>
                    <li><a class="dropdown-item" href="#">Cảm Hứng và Ý Tưởng</a></li>
                    </ul>
@@ -148,7 +142,40 @@
   <div class="p-5"></div>
   <div class="p-5"></div>
   <div class="p-1"></div>
-    <section class="body" style="background-color: rgb(247, 236, 220);">
+  <section>
+         <div class="container">
+             <div class="row">
+               <div class="col-sm-3"></div>
+               <div class=col-sm-9>
+                <div class="page-title text-center">
+                  <ul class="nav-1 text-uppercase nav">
+                     <li class="nav-item ">
+                        <a  class="nav-link"href="Giohang-user.html"> 
+                           <Strong style="color: black;">GIỎ HÀNG</Strong>
+                           <span class="divider">
+                              <i class="fa fa-angle-right"></i>
+                           </span>
+                        </a> 
+                        
+                     </li>
+                     <li class="nav-item">
+                         <a  class="nav-link  add-check "href="#">
+                            <Strong style="color: black;">THANH TOÁN</Strong>
+                            <span class="divider">
+                              <i class="fa fa-angle-right"></i>
+                           </span>
+                            </a>
+                      </li>
+                      <li class="nav-item">
+                         <a  class="nav-link"href="#"><Strong style="color: black;">HOÀN THÀNH</Strong> </a>
+                      </li>
+                  </ul>
+               </div>
+                   </div>
+                </div>
+             </div>
+      </section>
+    <section class="body">
         <div class="container" >
             <div class="mb-3 p-4" style="border-style: dashed ;">
                 <label for="basic-url" class="form-label">Nếu bạn có mã giảm giá, vui lòng điền vào phía bên dưới.</label>
@@ -162,49 +189,49 @@
                     <h4><b>THANH TOÁN VÀ GIAO HÀNG</b></h4>
                     <div class="check-out-option">
                     <div class="form-check p-3">
-                     <input class="form-check-input" type="radio" name="check-out">
+                     <input class="form-check-input " type="radio" name="check-out" checked>
                      <label class="form-check-label" for="check-out">
                        <strong>Sử Dụng Địa Chỉ Của Tài Khoản</strong>
                      </label>
                    </div>
-                   <div class="form-check p-3 collapse">
-                     <input class="form-check-input" type="radio" name="check-out"   data-bs-toggle="collapse" href="#check-out" role="button" aria-expanded="false" aria-controls="check-out">
-                     <label class="form-check-label" for="check-out">
-                       <strong>Sử Dụng Địa Chỉ Mới</strong>
-                     </label>
-                   </div>
                   </div>
-                  <div class="selection-from " id="check-out" >
-                    <div class="mb-3 p-3">
-                        <label for="name" class="form-label">Họ và tên *</label>
-                        <div class="input-group">
-                          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" placeholder="Họ tên của người nhận">
-                        </div>
-                      </div>
-                      <div class="mb-3 p-3">
-                        <label for="phone-number" class="form-label">Số điện thoại *</label>
-                        <div class="input-group">
-                          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" placeholder="Số điện thoại của người nhận ">
-                        </div>
-                      </div>
-                      <div class="mb-3 p-3">
-                        <label for="basic-url" class="form-label">Địa chỉ email *</label>
-                        <div class="input-group">
-                          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" placeholder="Email của của người nhận ">
-                        </div>
-                      </div>
-                      <div class="mb-3 p-3">
-                        <label for="basic-url" class="form-label">Địa chỉ *</label>
-                        <div class="input-group">
-                          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" placeholder="Ví dụ: Số 69, đường 420, Quận Cam, Thành phố Hồ Chí Minh">
-                        </div>
-                      </div>
-                      <p><b>THÔNG TIN BỔ SUNG</b></p>
+                  <div class="form-check p-3 ">
+                    <input class="form-check-input" type="radio" name="check-out"   data-bs-toggle="collapse" href="#check-out" role="button" aria-expanded="false" aria-controls="check-out">
+                    <label class="form-check-label" for="check-out">
+                      <strong>Sử Dụng Địa Chỉ Mới</strong>
+                    </label>
+                    <div class="selection-from dropdown collpase" id="check-out" >
+                     <div class="mb-3 p-3 dropdown-item">
+                         <label for="name" class="form-label">Họ và tên *</label>
+                         <div class="input-group">
+                           <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" placeholder="Họ tên của người nhận">
+                         </div>
+                       </div>
+                       <div class="mb-3 p-3  dropdown-item">
+                         <label for="phone-number" class="form-label">Số điện thoại *</label>
+                         <div class="input-group">
+                           <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" placeholder="Số điện thoại của người nhận ">
+                         </div>
+                       </div>
+                       <div class="mb-3 p-3  dropdown-item">
+                         <label for="basic-url" class="form-label">Địa chỉ email *</label>
+                         <div class="input-group">
+                           <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" placeholder="Email của của người nhận ">
+                         </div>
+                       </div>
+                       <div class="mb-3 p-3  dropdown-item">
+                         <label for="basic-url" class="form-label">Địa chỉ *</label>
+                         <div class="input-group">
+                           <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" placeholder="Ví dụ: Số 69, đường 420, Quận Cam, Thành phố Hồ Chí Minh">
+                         </div>
+                       </div>
+                 </div>
+                  </div>
+                <p><b>THÔNG TIN BỔ SUNG</b></p>
                 <div class="mb-3">
                     <label for="note" class="form-label">Ghi chú đơn hàng (tùy chọn)</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn."></textarea>
                   </div>
-                </div>
                </div>
                 <div class="col-lg-4 p-5" style="border: 2px solid #224229;">
                     <table>
