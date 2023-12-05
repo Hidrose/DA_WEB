@@ -23,72 +23,71 @@
 
 </head>
 <body>
-    <header class="dinh container-fluid"> 
-        <div class="container">
-         <div class="row">
-             <!--LOGO-->
-             <div class="col-sm-3 logo ">
-                 <a href="index-user.html"><img width="90px" height="90px" src="./assets/image/image_XPK8tAeI_1699515318362_raw.png" alt="logo"></a>
-  
-             </div>
-              <!--LOGO-->
-  
-             
-            <!--FORM-->
-            <div class=" col-sm-7 order-sm-1">
-               <form class="searchform" method="get" role="search" >
-                   <!--QUAN_LI-->
-                <div class="d-flex  p-3 justify-content-center">
-                    <!--LUA_CHON_1-->
-                    <div class="flex "> 
-                       <div class="flex-column flex-grow order-sm-2  ">
+   <header class="dinh container-fluid"> 
+      <div class="container">
+       <div class="row">
+           <!--LOGO-->
+           <div class="col-sm-3 logo ">
+               <a href="index-user.html"><img width="100" height="100" src="./assets/image/image_XPK8tAeI_1699515318362_raw.png" alt="LOGO "></a>
 
-                           <input type="search" id="searchInput" name="search" class="search-field md-0  " value placeholder="Tìm kiếm danh mục, sản phẩm...." size="30" >
+           </div>
+            <!--LOGO-->
+
+           <!--FORM-->
+           <div class=" col-sm-7 order-sm-1">
+            <form class="searchform" method="get" role="search" >
+                <!--QUAN_LI-->
+             <div class="d-flex  p-3 justify-content-center">
+                 <!--LUA_CHON_1-->
+                 <div class="flex "> 
+                    <div class="flex-column flex-grow order-sm-2  ">
+
+                        <input type="search" id="searchInput" name="search" class="search-field md-0  " value placeholder="Tìm kiếm danh mục, sản phẩm...." size="30" >
+                     
+                        <input type="hidden" name="post_type">
+                         <div id="searchResultsContainer" class="search-results">
+                        <ul id="searchResultsList"><li></li></ul>
+                     </div>
                         
-                           <input type="hidden" name="post_type">
-                            <div id="searchResultsContainer" class="search-results">
-                           <ul id="searchResultsList"><li></li></ul>
-                        </div>
-                           
-                         
+                      
+                 </div>
+                  </div> <!--LUA_CHON_1-->
+                    <div class="flex-column">
+                     <button type="submit" class="submit-button" id="searchBtn"> 
+                        <i class="bi bi-search " style="color: antiquewhite;" ></i>
+                     </button>
+                    
+                    
                     </div>
-                     </div> <!--LUA_CHON_1-->
-                       <div class="flex-column">
-                        <button type="submit" class="submit-button">
-                           <i class="bi bi-search " style="color: antiquewhite;" ></i>
-                        </button>
+              </div><!--QUAN_LI-->  
+            </form>
+            <script src="./assets/js/search-user.js"></script>
+         </div> <!--FORM-->
+           
+            
+            <!--CART-->
+            <div class=" col-sm-2 order-sm-2" >
+               <div class="dropdown-end p-3">
+                   <div class="hover-text icon-user">
+                    <h1 class="bi bi-person-circle" data-bs-toggle="collapse" href="#user" role="button" aria-expanded="false" aria-controls="user"></h1>
+                   </div> 
+                   <div class="collapse user" id="user">
+                    <ul class="dropdown-end">
+                        <h3></h3>
+                       <li><a class="dropdown-item-text" href="user.html">Xem Thông tin </a></li>
                        
-                       
-                       </div>
-                 </div><!--QUAN_LI-->  
-               </form>
-               <script src="./assets/js/search-user.js"></script>
-            </div> <!--FORM-->
-             
-              
-              <!--CART-->
-              <div class=" col-sm-2 order-sm-2" >
-                <div class="dropdown-end p-3">
-                    <div class="hover-text icon-user">
-                     <h1 class="bi bi-person-circle" data-bs-toggle="collapse" href="#user" role="button" aria-expanded="false" aria-controls="user"></h1>
-                    </div> 
-                    <div class="collapse user" id="user">
-                     <ul class="dropdown-end">
-                         <h3></h3>
-                        <li><a class="dropdown-item-text" href="user.html">Xem Thông tin </a></li>
-                        
-                        <li>
-                         <a class="dropdown-item-text" href="index.html">Đăng Xuất </a></li>
-                     </ul>
-                    </div>
-             </div>          
-         </div>
-               <!--CART-->
-         
-        </div>
-        </div>
-       <div class="p-3"></div>
-       <nav class="navbar navbar-expand-lg navbar-light bg-1 ">
+                       <li>
+                        <a class="dropdown-item-text" href="index.html">Đăng Xuất </a></li>
+                    </ul>
+                   </div>
+            </div>              
+      </div> <!--CART-->
+       
+      </div>
+      </div>
+     <div class="p-3"></div>
+    
+      <nav class="navbar navbar-expand-lg navbar-light bg-1 ">
          <div class="container-fluid">
            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
              <span class="navbar-toggler-icon"></span>
@@ -128,7 +127,8 @@
            </div>
          </div>
        </nav>
-    </header><!--END-->
+   
+  </header><!--END-->
     <div class="div p-5"></div>
     <div class="div p-5"></div>
     <bewteen>
