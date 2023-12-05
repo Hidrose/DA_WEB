@@ -58,7 +58,7 @@ label.btn {
 }
 
 html:not(.dark-style) .account-settings-links .list-group-item.active {
-    background: transparent !important;
+    background: #8df17f !important;
 }
 
 .account-settings-multiselect~.select2-container {
@@ -165,3 +165,4 @@ width: 20%;
  table th{
     cursor:auto;
  }
+ 

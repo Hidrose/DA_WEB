@@ -36,43 +36,36 @@
            </div>
             <!--LOGO-->
 
-            <!--FORM-->
-            
-            <div class=" col-sm-7 order-sm-1">
-               <form class="searchform" method="get" role="search" >
-                   <!--QUAN_LI-->
-                <div class="d-flex  p-3 justify-content-center">
-                    <!--LUA_CHON_1-->
-                    <div class="flex "> 
-                       <div class="flex-column flex-grow order-sm-2  ">
+           <!--FORM-->
+           <div class=" col-sm-7 order-sm-1">
+            <form class="searchform" method="get" role="search" >
+                <!--QUAN_LI-->
+             <div class="d-flex  p-3 justify-content-center">
+                 <!--LUA_CHON_1-->
+                 <div class="flex "> 
+                    <div class="flex-column flex-grow order-sm-2  ">
 
-                           <input type="search" class="search-field md-0  " value placeholder="Tìm kiếm danh mục, sản phẩm...." size="30" >
+                        <input type="search" id="searchInput" name="search" class="search-field md-0  " value placeholder="Tìm kiếm danh mục, sản phẩm...." size="30" >
+                     
+                        <input type="hidden" name="post_type">
+                         <div id="searchResultsContainer" class="search-results">
+                        <ul id="searchResultsList"><li></li></ul>
+                     </div>
                         
-                           <input type="hidden" name="post_type">
-                           
-                         
+                      
+                 </div>
+                  </div> <!--LUA_CHON_1-->
+                    <div class="flex-column">
+                     <button type="submit" class="submit-button">
+                        <i class="bi bi-search " style="color: antiquewhite;" ></i>
+                     </button>
+                    
+                    
                     </div>
-                     </div> <!--LUA_CHON_1-->
-                       <div class="flex-column">
-                        <button type="submit" class="submit-button">
-                           <i class="bi bi-search " style="color: antiquewhite;" ></i>
-                        </button>
-                       </div>
-                 </div><!--QUAN_LI-->  
-               </form>
-               <script>
-                  const onSearch = () =>{
-                     const input = document.querySelector("#search");
-                     const filter = input.value.toUpperCase();
-                     const list =document.querySelectorAll("#menu1 li");
-                     list.forEach((el) => {
-                        const text = el.textContent.toUpperCase();
-
-                      el.style.display = text.includes(filter)?"":"none";
-                     });
-                  };
-              </script>
-            </div> <!--FORM-->
+              </div><!--QUAN_LI-->  
+            </form>
+            <script src="./assets/js/search.js"></script>
+         </div> <!--FORM-->
            
             
             <!--CART-->
@@ -92,66 +85,46 @@
       </div>
       </div>
      <div class="p-3"></div>
-    <div class="container-fluid bg-1">
-       <div class="row nav-right">
-           <div class="col-sm-3 ">
-             <div class="d-flex" >
-              <div class="" >
-                 <ul class="nav-justified nav p-1 bg-success" >
-                   <h5 style="color: white;" class="bi bi-list p-2 " data-bs-toggle="collapse" href="#menu1" role="button" aria-expanded="false" aria-controls="menu1"></h5>   
-                    <li class="nav-item1">
-                    <a class="nav-link active text-uppercase" data-bs-toggle="collapse" href="#menu1" role="button" aria-expanded="false" aria-controls="menu1">
-                      <Strong style="color: white;"> Danh sách sản phẩm  </Strong> 
-                     </a> 
-                    </li>
-                 </ul>
-                 <div class="collapse menu1" id="menu1">
-                  <ul class="dropdown-end">
-                     <li><a class="dropdown-item-text" href="Caytrongnha.html">Cây Để Trong Nhà </a></li>
-                     <li><a class="dropdown-item-text" href="Cayvanphong.html">Cây Văn Phòng </a></li>
-                     <li><a class="dropdown-item-text" href="#">Cây Sen Đá</a></li>
-                     <li><a class="dropdown-item-text" href="#">Cây Xương Rồng</a></li>
-                     <li><a class="dropdown-item-text" href="#">Tiểu Cảnh Terrarium </a></li>
-                  </ul>
-                 </div>
-              </div>
-             </div>          
-             </div><!--LIST-->
-              
-             
-           <div class="col-sm-9">
-              <ul class="nav text-uppercase">
-               <li class="nav-item ">
-                  <a  class="nav-link"href="index.html"> <Strong style="color: black;">Trang Chủ</Strong></a> 
-                  
-               </li>
+     <nav class="navbar navbar-expand-lg navbar-light bg-1 ">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse navbar-text text-uppercase" id="navbarText" >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"><Strong style="color: black;">Trang Chủ</Strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Caytrongnha.html"><Strong style="color: black;">Cây Trong Nhà</Strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cayngoaitroi.html"><Strong style="color: black;">Cây Ngoài Trời</Strong></a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="Caysenda.html"><Strong style="color: black;">Cây Sen Đá</Strong></a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="#"><Strong style="color: black;">Cây Thủy Sinh</Strong></a>
+             </li>
+            <li class="nav-item dropdown"><!--menu-->
+               <a class="nav-link  " data-bs-toggle="dropdown" href="#" role="button"> <Strong style="color: black;">Hướng Dẫn</Strong></a>
+               <ul class="dropdown-menu">
+               <li><a class="dropdown-item" href="#">Thông Tin Cây </a></li>
+               <li><a class="dropdown-item" href="#">Cách Chăm Sóc Cây </a></li>
+               <li><a class="dropdown-item" href="#">Cảm Hứng và Ý Tưởng</a></li>
+               </ul>
+               </li><!--menu-->
                <li class="nav-item">
-                   <a  class="nav-link "href="Caytrongnha.html"> <Strong style="color: black;">Cây Trong Nhà </Strong> </a>
-                </li>
-                <li class="nav-item">
-                   <a  class="nav-link"href="cayngoaitroi"><Strong style="color: black;">Cây Ngoài Trời</Strong> </a>
-                </li>
-                <li class="nav-item dropdown"><!--menu-->
-                   <a class="nav-link  " data-bs-toggle="dropdown" href="#" role="button"> <Strong style="color: black;">Hướng Dẫn</Strong></a>
-                   <ul class="dropdown-menu">
-                   <li><a class="dropdown-item" href="thong-tin-cay.html">Thông Tin Cây </a></li>
-                   <li><a class="dropdown-item" href="#">Cách Chăm Sóc Cây </a></li>
-                   <li><a class="dropdown-item" href="#">Cảm Hứng và Ý Tưởng</a></li>
-                   </ul>
-                   </li><!--menu-->
-                   <li class="nav-item">
-                       <a  class="nav-link  "href="#"> <Strong style="color: black;">Liên Hệ</Strong> </a>
-                    </li>
-                    <li class="nav-item">
-                       <a  class="nav-link "href="Giohang.html">
-                          <i width="500%" class="bi bi-cart-plus" style="color: black;"></i>
-                          <Strong style="color: green;">Giỏ Hàng</Strong>
-                       </a>
-                    </li>
-                </ul>
-           </div><!--Liet_ke-->
-       </div><!--Luoi-->
-    </div><!--nav-->
+                  <a  class="nav-link "href="Giohang.html">
+                     <i width="500%" class="bi bi-cart-plus" style="color: black;"></i>
+                     <Strong style="color: green;">Giỏ Hàng</Strong>
+                  </a>
+               </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header><!--END-->
   <div class="p-5"></div>
   
@@ -166,7 +139,7 @@
             type="text"
             id="username"
             class="form-control"
-            placeholder="Tên truy cập"
+            placeholder="Họ và tên"
             required
           /><br />
 
@@ -194,9 +167,25 @@
             placeholder="Xác nhận mật khẩu"
             required
           />
+          <br />
+           
+          <input
+          type="text"
+          id="number"
+          class="form-control"
+          placeholder="Số điện thoại"
+          required
+        />
+        <br />
 
-          <a style="padding-left: 2px" href="./userLogin.html">Đăng nhập</a
-          ><br />
+        <input
+          type="text"
+          id="diachi"
+          class="form-control"
+          placeholder="Địa chỉ giao hàng"
+          required
+        />
+        <br />
 
           <button
             style="margin-top: 20px"
@@ -223,29 +212,29 @@
              </div>
              <div class="col-md-3  p-4" >
                  <h4 style="text-align: center;">VỀ CHÚNG TÔI</h4>
-                 <ul class="list-menu " style="margin-left: 30%;">
-                     <li class="li_menu"><a href="/" title="Giới thiệu">Giới thiệu</a></li>
-                     <li class="li_menu"><a href="/" title="Liên hệ">Liên hệ</a></li>
-                     <li class="li_menu"><a href="/" title="Chính sách bảo mật">Chính sách bảo mật</a></li>
-                     <li class="li_menu"><a href="/" title="Chính sách bảo hành">Chính sách bảo hành</a></li>
-                     <li class="li_menu"><a href="/" title="Phương thức thanh toán">Phương thức thanh tóan</a></li>
-                     <li class="li_menu"><a href="/" title="Phương thức vận chuyển">Phương thức vận chuyển</a></li>
-                 </ul>
-                 <br>
-                 <img style="margin-left: 30% ;" width="150" height="56" src="https://mowgarden.com/wp-content/uploads/2021/04/logo-da-thong-bao-voi-bo-cong-thuong.png" alt="images">
-                 
-             </div>
-             <div class="col-md-3 p-4">
-                 <h4 style="text-align: center;">LIÊN HỆ</h4>
-                 <ul class="list-menu fs-5" style="margin-left: 35%;">
-                     <li class="li_menu"><a href="/" title="Hotline 1: 1 ">Hotline 1: 1 </a></li>
-                     <li class="li_menu"><a href="/" title="Hotline 2: 2">Hotline 2: 2</a></li>
-                     <li class="li_menu"><a href="/" title="Hotline 3: 3">Hotline 3: 3</a></li>
-                     <li class="li_menu"><a href="/" title="Email:">Email:</a></li>
-                     <li class="li_menu"><a href="/" title="Địa chỉ">Địa chỉ</a></li>
-                     <br>
-                     
-                 </ul>
+                 <ul class="list-menu fs-5" style="margin-left: 30%;">
+                  <li class="li_menu"><a href="#" title="Giới thiệu">Giới thiệu</a></li>
+                  <li class="li_menu"><a href="#" title="Liên hệ">Liên hệ</a></li>
+                  <li class="li_menu"><a href="#" title="Chính sách bảo mật">Chính sách bảo mật</a></li>
+                  <li class="li_menu"><a href="#" title="Chính sách bảo hành">Chính sách bảo hành</a></li>
+                  <li class="li_menu"><a href="#" title="Phương thức thanh toán">Phương thức thanh tóan</a></li>
+                  <li class="li_menu"><a href="#" title="Phương thức vận chuyển">Phương thức vận chuyển</a></li>
+              </ul>
+              <br>
+              <img style="margin-left: 30% ;" width="150" height="56" src="https://mowgarden.com/wp-content/uploads/2021/04/logo-da-thong-bao-voi-bo-cong-thuong.png" alt="images">
+              
+          </div>
+          <div class="col-md-3 p-4">
+              <h4 style="text-align: center;">LIÊN HỆ</h4>
+              <ul class="list-menu fs-5" style="margin-left: 35%;">
+                  <li class="li_menu"><a href="#" title="Hotline 1: 1 ">Hotline 1: 1</a></li>
+                  <li class="li_menu"><a href="#" title="Hotline 2: 2">Hotline 2: 2</a></li>
+                  <li class="li_menu"><a href="#" title="Hotline 3: 3">Hotline 3: 3</a></li>
+                  <li class="li_menu"><a href="#" title="Email:">Email:</a></li>
+                  <li class="li_menu"><a href="#" title="Địa chỉ">Địa chỉ</a></li>
+                  <br>
+                  
+              </ul>
                  
              </div>
              <div class="col-md-4 p-4 text-center">

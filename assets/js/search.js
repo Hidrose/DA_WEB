@@ -1,10 +1,9 @@
 // Giả sử dữ liệu sản phẩm của bạn được lưu trữ trong một mảng
 const products = [
-    { name: 'HERMES', link: './hermes.html' },
-    { name: 'Gucci', link: './gucci.html' },
-    { name: 'VALENTINO', link: './gucci.html' },
-    { name: 'Chanel', link: './gucci.html' },
-    
+    { name: 'Cây để bàn', link: './Caydeban.html' },
+    { name: 'Cây ngoài trời', link: './cayngoaitroi.html' },
+    { name: 'Cây văn phòng', link: './Cayvanphong.html' },
+    { name: 'Cây sen đá', link: './Caysenda.html' },
     // Thêm nhiều sản phẩm hơn nếu cần
 ];
 

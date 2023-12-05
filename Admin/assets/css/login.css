@@ -6,10 +6,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('../img/bg-dangnhap.jpg') no-repeat center center fixed;
+    background: url('../img/bg-trangchu.jpg') no-repeat center center fixed;
     background-size: cover;
     font-family: "Lato", sans-serif;
     }
+
 .auth-form-control{
         width: 400px;
         padding: 16px;

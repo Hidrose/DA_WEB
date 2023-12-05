@@ -1,3 +1,22 @@
+/* responsive */
+/* Các CSS này dành cho toàn bộ website và desktop */
+body {
+    background: #fff;
+    color: 333;
+ }
+ 
+ 
+ /* Dành cho điện thoại */
+ @media all and (max-width: 480px) {
+ 
+ 
+ }
+ 
+ 
+ /* Dành cho máy tính bảng */
+ @media all and (max-width: 1024px) {
+ 
+ }
 .body ul{
     list-style: none;
     padding:0px;
@@ -84,9 +103,7 @@ h3{
     cursor: pointer;
     
 }
-a:link{
-    text-decoration: none
-}
+
 .card-body{
     display: flex;
     position: absolute;
@@ -101,7 +118,9 @@ a:link{
 .card-body:hover div span{
     background-color: green;
 }
-
+a:link{
+    text-decoration: none;
+}
 .hover-text:hover strong {
     color: green;
 }
@@ -124,6 +143,10 @@ a:link{
 }
 .title-box .price-box{
     box-sizing: border-box;
+}
+.title-box>a{
+    text-decoration: none;
+   color:#444;
 }
 .price-box .price{
     background-color: white;

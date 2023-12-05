@@ -5,7 +5,26 @@ body{
 header{
     max-height: 1500px;
 }
+/* responsive */
+/* Các CSS này dành cho toàn bộ website và desktop */
+body {
+    background: #fff;
+    color: 333;
+ }
+ 
+ 
+ /* Dành cho điện thoại */
+ @media all and  (max-width: 320px) {
+    
+ 
+ }
+ 
+ 
+ /* Dành cho máy tính bảng */
+ @media all and   (max-width: 1024px) {
 
+ 
+ }
 .dinh {
     position: fixed;
     top:0;
@@ -13,6 +32,7 @@ header{
     z-index: 3;
     right: 20rem;
     background-color: #fff;
+    max-width: 100%;
 }
 .body-mid{
     padding-top: 1000px;
@@ -24,12 +44,23 @@ header{
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+/* navbar */
 .bg-1{
-<<<<<<< HEAD
     background-image: url(../image/bg_top.jpg);
-=======
-    background-image: url(/assets/image/bg_top.jpg);
->>>>>>> f07bd9f5c548e1d05affa60aeb49967ef04ac4ac
+    max-width: 100%;
+    max-height: 90%;
+}
+
+.navbar-text ul li {
+   font-size: 1.1em;
+   color: black;
+}
+.navbar-text{
+    display:flex;
+    justify-content:space-between ;
+}
+.navbar-text ul{
+    padding-left: 0.2em;
 }
 .nav-right{
     margin-left: 100px;
@@ -48,6 +79,39 @@ header{
     border-bottom: 1px solid black;
    
 }
+/* Search */
+.search-results {
+    z-index: 2;
+    background-color: white;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    width:262px;
+    display: none;
+    border-radius: 3px;
+    position:fixed;
+    
+    }
+    .search-results ul {
+        list-style-type: none;
+        padding: 10px;
+    }
+    .search-results ul li {
+        list-style-type: none;
+        padding: 10px;
+        border-bottom: 1px solid black;
+    }
+    .search-results ul li:last-child {
+        border-bottom: 0;
+    }
+   /* Lọc */
+   .product-list .cat-item {
+   }
+   .product-list li{
+    list-style-type: none;
+   }
+   #searchForm ul{
+    list-style: disc;
+   }
 .nav{
     padding-top:7px;
 }
@@ -88,17 +152,14 @@ h3{
 }
 .card div span{
     border: 1px solid #fff;
-    border-radius: 2px;
     padding: 5px 15px;
     background: rgba(41, 41, 38, 0.856);
     font-size: 13px;
-    border: none;
-    outline: none;
+  
     cursor: pointer;
-    
 }
 a:link{
-    text-decoration: none
+    text-decoration: none;
 }
 .card-body{
     display: flex;
@@ -119,11 +180,9 @@ a:link{
     color: green;
 }
 .bg-trangchu{
-<<<<<<< HEAD
+
     background-image: url(../image/bg-trangchu.jpg);
-=======
-    background-image: url(/assets/image/bg-trangchu.jpg);
->>>>>>> f07bd9f5c548e1d05affa60aeb49967ef04ac4ac
+
     width: 98%;
     height: 600px;
     background-position-x: center;
@@ -133,11 +192,10 @@ a:link{
     background-position: 50% 75%;
 }
 .bg-caydeban{
-<<<<<<< HEAD
-    background-image: url(../image/danh-muc-cay-canh-de-ban.jpg);
-=======
-    background-image: url(/assets/image/danh-muc-cay-canh-de-ban.jpg);
->>>>>>> f07bd9f5c548e1d05affa60aeb49967ef04ac4ac
+
+    background: rgba(0,0,0,0.5) url(../image/danh-muc-cay-canh-de-ban.jpg) ;
+    background-blend-mode: darken;
+    
     background-size: cover;
     max-width: 150%;
     height: 300px;
@@ -148,13 +206,44 @@ a:link{
     background-position: 50% 20% ; 
    
 }
+/* Sen da */
+
+.bg-senda{
+    background:   rgba(0, 0, 0, 0.4) url(../image/bg-senda.jpg);
+    background-blend-mode: darken;
+
+    background-size: cover;
+    max-width: 150%;
+    height: 300px;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    clear: both; 
+    background-position: 50% 41% ; 
+}
+/* cây văn phòng */
+.bg-vanphong{
+
+    background:   rgba(0, 0, 0, 0.4) url(../image/bg-vanphong.jpg);
+    background-blend-mode: darken;
+    background-size: cover;
+    max-width: 150%;
+    height: 300px;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    clear: both; 
+    background-position: 50% 0 ; 
+  
+
+}
+
 /*cây tronh nhà   */
 .bg-caytrongnha{
-<<<<<<< HEAD
-        background-image: url(../image/bg-trongnha.jpg);
-=======
-        background-image: url(/assets/image/bg-trongnha.jpg);
->>>>>>> f07bd9f5c548e1d05affa60aeb49967ef04ac4ac
+
+        background:   rgba(0, 0, 0, 0.4) url(../image/bg-trongnha.jpg);
+        background-blend-mode: darken;
+
         background-size: cover;
         max-width: 150%;
         height: 300px;
@@ -163,7 +252,7 @@ a:link{
         background-repeat: no-repeat;
         clear: both; 
         background-position: 50% 41% ; 
-        background-color: rgba(0, 0, 0, 0.078);   
+      
     
 }
 
@@ -262,9 +351,7 @@ a{
 .price  bdi{
     font-size: 20px;
 }
-.card{
-    border: none;
-}
+
 .card-hover{
     display: flex;
     position: absolute
@@ -279,26 +366,8 @@ a{
     margin-right: 20px;
     margin-top: 10px;
 }
-.card:hover > .card-body-1{
-     transform: scale(1.15);
-    background-image: rgba(0, 0, 0, 0.6);;
-}
-.card-hover{
-    position: absolute(card-img-overlay);
-    display: flex;
-    bottom: 140px;
-    left:72px;
-    opacity: 0;
-    transition: all 0.5s;
-}
-.card:hover  .card-hover{
-    opacity: 1;
-    transform: scaleZ(1.2);
-   
-}
-.card-hover:hover div span{
-    background-color: green;
-}
+
+
 .card-hover-2{
     position: absolute;
     display: flex;
@@ -307,14 +376,8 @@ a{
     opacity: 0;
     transition: all 1s;
 }
-.card:hover.card-hover-2{
-    opacity: 1;
-    transform: scaleZ(1.2);
-   
-}
-.card-hover-2:hover div span{
-    background-color: green;
-}
+
+
 .card-body-2{
     transition: all 1.0s;
     overflow: hidden;
@@ -323,12 +386,8 @@ a{
     cursor: pointer;
     margin-right: 20px;
     margin-top: 10px;
-    border-radius: 2rem;
 }
-.card:hover > .card-body-2{
-    transform: scale(1.15);
-   background-image: rgba(0, 0, 0, 0.6);
-}
+
 
 
 .image-tool-1{
@@ -341,17 +400,7 @@ a{
 .h-10{
     height: 10%!important;
 }
-.hover-in strong{
-    text-align: center;
-    margin-bottom: 10px;
-}
-.hover-in{
-    transform: translateY(100%) translateZ(0);
-}
-.card:hover .show-on{
-    opacity: 1;
-}
-  
+
 .card-body-3{
     transition: all 1.0s;
     overflow: hidden;
@@ -362,10 +411,7 @@ a{
     margin-top: 10px;
     
 }
-.card:hover > .card-body-3{
-    transform: scale(1.15);
-   background-image: rgba(0, 0, 0, 0.6);
-}
+
 .tools{
     white-space: nowrap;
     width: 100%
@@ -432,11 +478,9 @@ a{
     margin: 0px;
 }
 .bg-bot{
-<<<<<<< HEAD
+
     background-image: url(../image/backbackcaidmm3.jpg);
-=======
-    background-image: url(/assets/image/backbackcaidmm3.jpg);
->>>>>>> f07bd9f5c548e1d05affa60aeb49967ef04ac4ac
+
     background-repeat: no-repeat;
     background-size: cover;
    
@@ -550,6 +594,7 @@ div.stars {
     width: 12%;
     border-bottom: 1px solid black;
     padding:0;
+    z-index: 1;
 }
 #user .dropdown-end li{
     list-style: none;

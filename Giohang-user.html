@@ -8,6 +8,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="assets/css/GioHang.css" >
+  <link rel="stylesheet" href="./assets/css/index.css" >
+  <link rel="stylesheet" href="assets/css/product-user.css" >
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" rel="stylesheet">
   <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -21,128 +23,103 @@
          <div class="row">
              <!--LOGO-->
              <div class="col-sm-3 logo ">
-                 <a href="index.html"><img width="100" height="100" src="./images/image_XPK8tAeI_1699515318362_raw.png" alt="LOGO "></a>
+                 <a href="index.html"><img width="100" height="100" src="./assets/image/image_XPK8tAeI_1699515318362_raw.png" alt="LOGO "></a>
   
              </div>
               <!--LOGO-->
   
              <!--FORM-->
-            
             <div class=" col-sm-7 order-sm-1">
-               <form class="searchform" method="get" role="search" >
-                   <!--QUAN_LI-->
-                <div class="d-flex  p-3 justify-content-center">
-                    <!--LUA_CHON_1-->
-                    <div class="flex "> 
-                       <div class="flex-column flex-grow order-sm-2  ">
+              <form class="searchform" method="get" role="search" >
+                  <!--QUAN_LI-->
+               <div class="d-flex  p-3 justify-content-center">
+                   <!--LUA_CHON_1-->
+                   <div class="flex "> 
+                      <div class="flex-column flex-grow order-sm-2  ">
 
-                           <input type="search" class="search-field md-0  " value placeholder="Tìm kiếm danh mục, sản phẩm...." size="30" >
-                        
-                           <input type="hidden" name="post_type">
-                           
-                         
-                    </div>
-                     </div> <!--LUA_CHON_1-->
-                       <div class="flex-column">
-                        <button type="submit" class="submit-button">
-                           <i class="bi bi-search" style="color:antiquewhite"></i>
-                        </button>
+                          <input type="search" id="searchInput" name="search" class="search-field md-0  " value placeholder="Tìm kiếm danh mục, sản phẩm...." size="30" >
+                       
+                          <input type="hidden" name="post_type">
+                           <div id="searchResultsContainer" class="search-results">
+                          <ul id="searchResultsList"></ul>
                        </div>
-                 </div><!--QUAN_LI-->  
-               </form>
-               <script>
-                  const onSearch = () =>{
-                     const input = document.querySelector("#search");
-                     const filter = input.value.toUpperCase();
-                     const list =document.querySelectorAll("#menu1 li");
-                     list.forEach((el) => {
-                        const text = el.textContent.toUpperCase();
-
-                      el.style.display = text.includes(filter)?"":"none";
-                     });
-                  };
-              </script>
-            </div> <!--FORM-->
-              
-              <!--CART-->
-              <div class=" col-sm-2 order-sm-2" >
-               <div class="dropdown-end p-3">
-                  <div class="hover-text icon-user">
-                   <h1 class="bi bi-person-circle" data-bs-toggle="collapse" href="#user" role="button" aria-expanded="false" aria-controls="user"></h1>
-                  </div> 
-                  <div class="collapse user" id="user">
-                   <ul class="dropdown-end">
-                       <h3></h3>
-                      <li><a class="dropdown-item-text" href="user.html">Xem Thông tin </a></li>
+                          
+                        
+                   </div>
+                    </div> <!--LUA_CHON_1-->
+                      <div class="flex-column">
+                       <button type="submit" class="submit-button">
+                          <i class="bi bi-search " style="color: antiquewhite;" ></i>
+                       </button>
                       
-                      <li>
-                       <a class="dropdown-item-text" href="index.html">Đăng Xuất </a></li>
-                   </ul>
-                  </div>
-           </div>        
-         </div> <!--CART-->
+                      
+                      </div>
+                </div><!--QUAN_LI-->  
+              </form>
+              <script src="./assets/js/search-user.js"></script>
+           </div> <!--FORM-->
+              
+             <!--CART-->
+            <div class=" col-sm-2 order-sm-2" >
+               <div class="dropdown-end p-3">
+                   <div class="hover-text icon-user">
+                    <h1 class="bi bi-person-circle" data-bs-toggle="collapse" href="#user" role="button" aria-expanded="false" aria-controls="user"></h1>
+                   </div> 
+                   <div class="collapse user" id="user">
+                    <ul class="dropdown-end">
+                        <h3></h3>
+                       <li><a class="dropdown-item-text" href="user.html">Xem Thông tin </a></li>
+                       
+                       <li>
+                        <a class="dropdown-item-text" href="index.html">Đăng Xuất </a></li>
+                    </ul>
+                   </div>
+            </div>              
+      </div> <!--CART-->
          
         </div>
         </div>
    
-      <div class="container-fluid bg-1">
-         <div class="row nav-right">
-             <div class="col-sm-3 ">
-               <div class="d-flex" >
-                <div class="" >
-                   <ul class="nav-justified nav p-1 bg-success" >
-                     <h5 style="color: white;" class="bi bi-list p-2 "></h5>   
-                      <li class="nav-item1">
-                      <a class="nav-link active text-uppercase" data-bs-toggle="collapse" href="#menu1" role="button" aria-expanded="false" aria-controls="menu1"> <Strong style="color: white;"> Danh sách sản phẩm  </Strong> </a> 
-                      </li>
-                   </ul>
-                   <div class="collapse menu1" id="menu1">
-                    <ul class="dropdown-end">
-                       <li><a class="dropdown-item-text" href="Caytrongnha.html">Cây Để Trong Nhà </a></li>
-                       <li><a class="dropdown-item-text" href="Cayvanphong.html">Cây Văn Phòng </a></li>
-                       <li><a class="dropdown-item-text" href="#">Cây Sen Đá</a></li>
-                       <li><a class="dropdown-item-text" href="#">Cây Xương Rồng</a></li>
-                       <li><a class="dropdown-item-text" href="#">Tiểu Cảnh Terrarium </a></li>
-                    </ul>
-                   </div>
-                </div>
-               </div>          
-               </div><!--LIST-->
-                
-               
-             <div class="col-sm-9">
-                <ul class="nav text-uppercase">
-                 <li class="nav-item ">
-                    <a  class="nav-link"href="index.html"> <Strong style="color: black;">Trang Chủ</Strong></a> 
-                    
+        <nav class="navbar navbar-expand-lg navbar-light bg-1 ">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse navbar-text text-uppercase" id="navbarText" >
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index-user.html"><Strong style="color: black;">Trang Chủ</Strong></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Caytrongnha-user.html"><Strong style="color: black;">Cây Trong Nhà</Strong></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="cayngoaitroi-user.html"><Strong style="color: black;">Cây Ngoài Trời</Strong></a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link" href="Caysenda-user.html"><Strong style="color: black;">Cây Sen Đá</Strong></a>
                  </li>
                  <li class="nav-item">
-                     <a  class="nav-link "href="Caytrongnha.html"> <Strong style="color: black;">Cây Trong Nhà  </Strong> </a>
-                  </li>
-                  <li class="nav-item">
-                     <a  class="nav-link"href="Cayngoaitroi.html"><Strong style="color: black;">Cây Ngoài Trời </Strong> </a>
-                  </li>
-                  <li class="nav-item dropdown"><!--menu-->
-                     <a class="nav-link  " data-bs-toggle="dropdown" href="#" role="button"> <Strong style="color: black;">Hướng Dẫn</Strong></a>
-                     <ul class="dropdown-menu">
-                     <li><a class="dropdown-item" href="thong-tin-cay.html">Thông Tin Cây </a></li>
-                     <li><a class="dropdown-item" href="#">Cách Chăm Sóc Cây </a></li>
-                     <li><a class="dropdown-item" href="#">Cảm Hứng và Ý Tưởng</a></li>
-                     </ul>
-                     </li><!--menu-->
-                     <li class="nav-item">
-                         <a  class="nav-link  "href="#"> <Strong style="color: black;">Liên Hệ</Strong> </a>
-                      </li>
-                      <li class="nav-item">
-                         <a  class="nav-link "href="#">
-                            <i width="500%" class="bi bi-cart-plus" style="color: black;"></i>
-                            <Strong style="color: green;">Giỏ Hàng</Strong>
-                         </a>
-                      </li>
-                  </ul>
-             </div><!--Liet_ke-->
-         </div><!--Luoi-->
-      </div><!--nav-->
+                   <a class="nav-link" href="#"><Strong style="color: black;">Cây Thủy Sinh</Strong></a>
+                 </li>
+                <li class="nav-item dropdown"><!--menu-->
+                   <a class="nav-link  " data-bs-toggle="dropdown" href="#" role="button"> <Strong style="color: black;">Hướng Dẫn</Strong></a>
+                   <ul class="dropdown-menu">
+                   <li><a class="dropdown-item" href="#">Thông Tin Cây </a></li>
+                   <li><a class="dropdown-item" href="#">Cách Chăm Sóc Cây </a></li>
+                   <li><a class="dropdown-item" href="#">Cảm Hứng và Ý Tưởng</a></li>
+                   </ul>
+                   </li><!--menu-->
+                   <li class="nav-item">
+                      <a  class="nav-link "href="Giohang-user.html">
+                         <i width="500%" class="bi bi-cart-plus" style="color: black;"></i>
+                         <Strong style="color: green;">Giỏ Hàng</Strong>
+                      </a>
+                   </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
     </header><!--END-->
     <div class="p-5"></div>
     <div class="p-4"></div>
@@ -165,7 +142,7 @@
                         
                      </li>
                      <li class="nav-item">
-                         <a  class="nav-link "href="Thanhtoan.html">
+                         <a  class="nav-link  add-check "href="Thanhtoan.html">
                             <Strong style="color: black;">THANH TOÁN</Strong>
                             <span class="divider">
                               <i class="fa fa-angle-right"></i>
@@ -173,7 +150,7 @@
                             </a>
                       </li>
                       <li class="nav-item">
-                         <a  class="nav-link"href="#"><Strong style="color: black;">HOÀN THÀNH</Strong> </a>
+                         <a  class="nav-link"href="Thanhtoan.html"><Strong style="color: black;">HOÀN THÀNH</Strong> </a>
                       </li>
                   </ul>
                </div>
@@ -181,68 +158,46 @@
                 </div>
              </div>
       </section>
-      
-      <section class="p-4"> 
-         <div class="container-md">
-            <div class="row ">
-               <div class="col-7 cart-auto">
-              <from class="cart-auto">
-               <div class="">
-                  <table class="shop-table" cellspacing="0"  >
-                     <thead>
-                       <tr>
-                         <th class="product" >Sản Phẩm </th>
-                         <th class="price-1">Giá</th>
-                         <th class="quantity-1">Số Lượng </th>
-                         <th class="total-1">Tạm Tính </th>
-                       </tr>
-                     </thead>
-                     <tbody>
-                      <tr class="">
-                           <td>
-                              <div>
-                                  <a class="remove"><i class="bi bi-x-circle icon-remove" ></i></a>
-                                  
-                                    <a href="cay-luoi-ho.html" class="product-img"> <img src="images/luoi-ho-nga-voi-mowgarden.jpg"></a>
-                                   
-                                    <a href="cay-luoi-ho.html"><i class="product-text">Cây Lưỡi Hổ Vương Miện chậu sứ để bàn Sansevireria Cylindrica</i></a>
-                              </div>
-                           </td>                   
-                        <td class="product-price" data-title="Giá">
-                           <span class="price text-uppercase text-center" style="margin-right: 3rem;">
-                              <bdi>
-                                 120.000₫
-                              </bdi>
-                           </span>
-                        </td>
-                        <td class="product-quality" data-title="Số lượng ">
-                           
-                  <div class="quantity">
-                     <input type="button" class="minus-button" value="-" onclick="decreaseValue()">
-                     <input type="number" class="text-button" value="1" size="4" min="1" max step="1" id="quantityInput" oninput="validateInput()">
-                     <input type="button" class="plus-button" value="+" onclick="increaseValue()">
-                  </div>
-
-
-                          </div>
-                        </td>
-                        <td class="product-total">
-                           <span class="price text-uppercase text-center" style="margin-right: 3rem;">
-                              <bdi>
-                                 120.000₫
-                              </bdi>
-                           </span>
-                        </td>
-                        
-                      </tr>
-                      <tr class="">
+       <!-- Modal cho phần hỏi xóa sản phẩm -->
+       <script src="./assets/js/fix_delete.js"></script>
+       <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+          
+          <div class="modal-content1">
+          <p>Bạn có chắc chắn muốn xóa sản phẩm này?</p>
+        </div>
+        <div class="confirm d-flex justify-content-center">
+            <button style="width: 30%;padding-right: 10px;" id="cancel-delete" class="btn btn-secondary close ">Có</button>
+          <button style="width: 30%;padding-left: 10px;" id="confirm-delete" class="btn btn-success close">Không</button>
+         
+        </div>
+      </div>
+      </div>
+    <section class="p-4"> 
+      <div class="container-md">
+         <div class="row ">
+            <div class="col-7 cart-auto">
+           <from class="cart-auto">
+            <div class="">
+               <table class="shop-table" cellspacing="0"  >
+                  <thead>
+                    <tr>
+                      <th class="product" >Sản phẩm </th>
+                      <th class="price-1">Giá</th>
+                      <th class="quantity-1">Số lượng </th>
+                      <th class="total-1">Tạm Tính</th>
+                      <th class="total-1">Xóa sản phẩm</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                   <tr class="">
                         <td>
                            <div>
-                               <a class="remove"><i class="bi bi-x-circle icon-remove" ></i></a>
+                             
                                
-                                 <a href="cay-trau-ba.html" class="product-img"> <img src="images/cay-trau-ba-de-vuong-xanh.jpg"></a>
+                                 <a href="cay-luoi-ho.html" class="product-img"> <img src="./assets/image/Caydeban/caydeban4.jpg"></a>
                                 
-                                 <a href="cay-trau-ba.html"><i class="product-text">Cây Lưỡi Hổ Vương Miện chậu sứ để bàn Sansevireria Cylindrica</i></a>
+                                 <a href="cay-luoi-ho.html"><i class="product-text">Cây Lưỡi Hổ Vương Miện chậu sứ để bàn Sansevireria Cylindrica</i></a>
                            </div>
                         </td>                   
                      <td class="product-price" data-title="Giá">
@@ -253,11 +208,15 @@
                         </span>
                      </td>
                      <td class="product-quality" data-title="Số lượng ">
-                        <div class=quantity>
-                           <input type="button" class="minus-button" value="-" onclick="decreaseValue2()">
-                           <input type="number" class="text-button quantityInput" value="1" size="4" min="1" max step="1" id="quantityInput2" oninput="validateInput2()">
-                           <input type="button" class="plus-button" value="+" onclick="increaseValue2()">
-                        </div>
+                        
+               <div class="quantity">
+                  <input type="button" class="minus-button" value="-" onclick="decreaseValue()">
+                  <input type="number" class="text-button" value="1" size="4" min="1" max step="1" id="quantityInput" oninput="validateInput()">
+                  <input type="button" class="plus-button" value="+" onclick="increaseValue()">
+               </div>
+
+
+                       </div>
                      </td>
                      <td class="product-total">
                         <span class="price text-uppercase text-center" style="margin-right: 3rem;">
@@ -266,17 +225,62 @@
                            </bdi>
                         </span>
                      </td>
-                     
+                     <td class="remove">  <a class=" delete-button "><i class="fa-solid fa-trash-can"></i></a></td>
                    </tr>
-                     </tbody>
-                   </table>
-               </div>
-              </from>
-               </div>
+                   <tr class="">
+                     <td>
+                        <div>
+                           
+                            
+                              <a href="cay-trau-ba.html" class="product-img"> <img src="./assets/image/Caydeban/caydeban3.1.jpg"></a>
+                             
+                              <a href="cay-trau-ba.html"><i class="product-text">Cây trầu bà đế vương xanh chậu mặt cool</i></a>
+                        </div>
+                     </td>                   
+                  <td class="product-price" data-title="Giá">
+                     <span class="price text-uppercase text-center" style="margin-right: 3rem;">
+                        <bdi>
+                           120.000₫
+                        </bdi>
+                     </span>
+                  </td>
+                  <td class="product-quality" data-title="Số lượng ">
+                     <div class=quantity>
+                        <input type="button" class="minus-button" value="-" onclick="decreaseValue2()">
+                        <input type="number" class="text-button quantityInput" value="1" size="4" min="1" max step="1" id="quantityInput2" oninput="validateInput2()">
+                        <input type="button" class="plus-button" value="+" onclick="increaseValue2()">
+                     </div>
+                  </td>
+                  <td class="product-total">
+                     <span class="price text-uppercase text-center" style="margin-right: 3rem;">
+                        <bdi>
+                           120.000₫
+                        </bdi>
+                     </span>
+                  </td>
+                  <td class="remove">  <a class=" delete-button "><i class="fa-solid fa-trash-can"></i></a></td>
+                </tr>
+                  </tbody>
+                </table>
             </div>
-          </div><!--Sanpham-->
-      </section>
+           </from>
+            </div>
+         </div>
+       </div><!--Sanpham-->
+   </section>
       <section>
+        <div class="toast-container position-fixed top-0 end-0 p-3">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <strong class="me-auto">Cảnh Báo</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+              <div class="toast-body">
+               Bạn cần đăng nhập trước khi thanh toán
+              </div>
+            </div>
+          </div>
          <div class="container p-5">
             <div class="row">
                <div class="text-check text-center ">
@@ -293,7 +297,7 @@
       <div class="container">
        <div class="row">
            <div class="col-md-2 p-4">
-               <img width="90px" height="90px" src="images/image_XPK8tAeI_1699515318362_raw.png" alt="logo">
+               <img width="90px" height="90px" src="./assets/image/image_XPK8tAeI_1699515318362_raw.png" alt="logo">
                <p class="">Chúng tôi mong rằng có thể mang đến cho bạn một cảm giác, trải nghiệm thật là mới mẻ và xanh xao</p>
                <br>
                <img src="https://images.dmca.com/Badges/dmca-badge-w200-5x1-09.png?ID=599ee744-724b-42c8-8dc6-de873fceb19c" alt="DMCA.com Protection Status">
@@ -302,29 +306,29 @@
            </div>
            <div class="col-md-3  p-4" >
                <h4 style="text-align: center;">VỀ CHÚNG TÔI</h4>
-               <ul class="list-menu " style="margin-left: 30%;">
-                   <li class="li_menu"><a href="/" title="Giới thiệu">Giới thiệu</a></li>
-                   <li class="li_menu"><a href="/" title="Liên hệ">Liên hệ</a></li>
-                   <li class="li_menu"><a href="/" title="Chính sách bảo mật">Chính sách bảo mật</a></li>
-                   <li class="li_menu"><a href="/" title="Chính sách bảo hành">Chính sách bảo hành</a></li>
-                   <li class="li_menu"><a href="/" title="Phương thức thanh toán">Phương thức thanh tóan</a></li>
-                   <li class="li_menu"><a href="/" title="Phương thức vận chuyển">Phương thức vận chuyển</a></li>
-               </ul>
-               <br>
-               <img style="margin-left: 30% ;" width="150" height="56" src="https://mowgarden.com/wp-content/uploads/2021/04/logo-da-thong-bao-voi-bo-cong-thuong.png" alt="images">
-               
-           </div>
-           <div class="col-md-3 p-4">
-               <h4 style="text-align: center;">LIÊN HỆ</h4>
-               <ul class="list-menu fs-5" style="margin-left: 35%;">
-                   <li class="li_menu"><a href="/" title="Hotline 1: 1 ">Hotline 1: 1</a></li>
-                   <li class="li_menu"><a href="/" title="Hotline 2: 2">Hotline 2: 2</a></li>
-                   <li class="li_menu"><a href="/" title="Hotline 3: 3">Hotline 3: 3</a></li>
-                   <li class="li_menu"><a href="/" title="Email:">Email:</a></li>
-                   <li class="li_menu"><a href="/" title="Địa chỉ">Địa chỉ</a></li>
-                   <br>
-                   
-               </ul>
+               <ul class="list-menu fs-5" style="margin-left: 30%;">
+                <li class="li_menu"><a href="#" title="Giới thiệu">Giới thiệu</a></li>
+                <li class="li_menu"><a href="#" title="Liên hệ">Liên hệ</a></li>
+                <li class="li_menu"><a href="#" title="Chính sách bảo mật">Chính sách bảo mật</a></li>
+                <li class="li_menu"><a href="#" title="Chính sách bảo hành">Chính sách bảo hành</a></li>
+                <li class="li_menu"><a href="#" title="Phương thức thanh toán">Phương thức thanh tóan</a></li>
+                <li class="li_menu"><a href="#" title="Phương thức vận chuyển">Phương thức vận chuyển</a></li>
+            </ul>
+            <br>
+            <img style="margin-left: 30% ;" width="150" height="56" src="https://mowgarden.com/wp-content/uploads/2021/04/logo-da-thong-bao-voi-bo-cong-thuong.png" alt="images">
+            
+        </div>
+        <div class="col-md-3 p-4">
+            <h4 style="text-align: center;">LIÊN HỆ</h4>
+            <ul class="list-menu fs-5" style="margin-left: 35%;">
+                <li class="li_menu"><a href="#" title="Hotline 1: 1 ">Hotline 1: 1</a></li>
+                <li class="li_menu"><a href="#" title="Hotline 2: 2">Hotline 2: 2</a></li>
+                <li class="li_menu"><a href="#" title="Hotline 3: 3">Hotline 3: 3</a></li>
+                <li class="li_menu"><a href="#" title="Email:">Email:</a></li>
+                <li class="li_menu"><a href="#" title="Địa chỉ">Địa chỉ</a></li>
+                <br>
+                
+            </ul>
                
            </div>
            <div class="col-md-4 p-4 text-center">
@@ -431,4 +435,29 @@
         }
     }
 </script>
+  <!--Them san pham -->
+  <script>
+    const toastTrigger = document.getElementById('liveToastBtn')
+    const toastLiveExample = document.getElementById('liveToast')
+  
+    if (toastTrigger) {
+    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+    toastTrigger.addEventListener('click', () => {
+    toastBootstrap.show()
+    })
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+      // Lấy tất cả các nút "Thêm vào giỏ hàng"
+      const addToCartButtons = document.querySelectorAll('.add-check');
+  
+      // Lặp qua mỗi nút và thêm sự kiện click
+      addToCartButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          // Hiển thị toast khi nút được nhấp
+          const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+          toastBootstrap.show();
+        });
+      });
+    });
+  </script>
 </html>

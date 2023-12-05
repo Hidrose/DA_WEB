@@ -25,14 +25,13 @@
          <div class="row">
              <!--LOGO-->
              <div class="col-sm-3 logo ">
-                 <a href="index.html"><img width="100" height="100" src="./images/image_XPK8tAeI_1699515318362_raw.png" alt="LOGO "></a>
+                 <a href="index.html"><img width="100" height="100" src="./assets/image/image_XPK8tAeI_1699515318362_raw.png" alt="LOGO "></a>
   
              </div>
               <!--LOGO-->
   
              <!--FORM-->
-            
-            <div class=" col-sm-6 order-sm-1">
+            <div class=" col-sm-7 order-sm-1">
                <form class="searchform" method="get" role="search" >
                    <!--QUAN_LI-->
                 <div class="d-flex  p-3 justify-content-center">
@@ -40,41 +39,35 @@
                     <div class="flex "> 
                        <div class="flex-column flex-grow order-sm-2  ">
 
-                           <input type="search" class="search-field md-0  " value placeholder="Tìm kiếm danh mục, sản phẩm...." size="30" >
+                           <input type="search" id="searchInput" name="search" class="search-field md-0  " value placeholder="Tìm kiếm danh mục, sản phẩm...." size="30" >
                         
                            <input type="hidden" name="post_type">
+                            <div id="searchResultsContainer" class="search-results">
+                           <ul id="searchResultsList"><li></li></ul>
+                        </div>
                            
                          
                     </div>
                      </div> <!--LUA_CHON_1-->
                        <div class="flex-column">
                         <button type="submit" class="submit-button">
-                           <i class="bi bi-search" style="color: antiquewhite;"></i>
+                           <i class="bi bi-search " style="color: antiquewhite;" ></i>
                         </button>
+                       
+                       
                        </div>
                  </div><!--QUAN_LI-->  
                </form>
-               <script>
-                  const onSearch = () =>{
-                     const input = document.querySelector("#search");
-                     const filter = input.value.toUpperCase();
-                     const list =document.querySelectorAll("#menu1 li");
-                     list.forEach((el) => {
-                        const text = el.textContent.toUpperCase();
-
-                      el.style.display = text.includes(filter)?"":"none";
-                     });
-                  };
-              </script>
+               <script src="./assets/js/search.js"></script>
             </div> <!--FORM-->
               
               <!--CART-->
               <div class=" col-sm-2 order-sm-2" >
                  <div class="dropdown-end p-3">
                      <div class="hover-text">
-                      <a  href="Dangnhap.html">
+                      <a  href="userLogin.html">
                          <Strong style="color: black;">Đăng Nhập</Strong> 
-                         <Strong ><a  style="color: black;" href="Huy.html">/Đăng Kí</a></Strong> 
+                         <Strong ><a  style="color: black;" href="signup.html">/Đăng Kí</a></Strong> 
                       </a>
                        
                        
@@ -85,64 +78,46 @@
         </div>
         </div>
        <div class="p-3"></div>
-      <div class="container-fluid bg-1">
-         <div class="row nav-right">
-             <div class="col-sm-3 ">
-               <div class="d-flex" >
-                <div class="" >
-                   <ul class="nav-justified nav p-1 bg-success" >
-                     <h5 style="color: white;" class="bi bi-list p-2 "></h5>   
-                      <li class="nav-item1">
-                      <a class="nav-link active text-uppercase" data-bs-toggle="collapse" href="#menu1" role="button" aria-expanded="false" aria-controls="menu1"> <Strong style="color: white;"> Danh sách sản phẩm  </Strong> </a> 
-                      </li>
-                   </ul>
-                   <div class="collapse menu1" id="menu1">
-                    <ul class="dropdown-end">
-                       <li><a class="dropdown-item-text" href="Caytrongnha.html">Cây Để Trong Nhà </a></li>
-                       <li><a class="dropdown-item-text" href="#">Cây Văn Phòng </a></li>
-                       <li><a class="dropdown-item-text" href="#">Cây Sen Đá</a></li>
-                       <li><a class="dropdown-item-text" href="#">Cây Xương Rồng</a></li>
-                       <li><a class="dropdown-item-text" href="#">Tiểu Cảnh Terrarium </a></li>
-                    </ul>
-                   </div>
-                </div>
-               </div>          
-               </div><!--LIST-->
-                
-               
-             <div class="col-sm-9">
-                <ul class="nav text-uppercase">
-                 <li class="nav-item ">
-                    <a  class="nav-link"href="index.html"> <Strong style="color: black;">Trang Chủ</Strong></a> 
-                    
-                 </li>
-                 <li class="nav-item">
-                     <a  class="nav-link "href="Caytrongnha.html"> <Strong style="color: black;">Cây Trong Nhà </Strong> </a>
-                  </li>
-                  <li class="nav-item">
-                     <a  class="nav-link"href="#"><Strong style="color: black;">Cây Ngoài Trời</Strong> </a>
-                  </li>
-                  <li class="nav-item dropdown"><!--menu-->
-                     <a class="nav-link   " data-bs-toggle="dropdown" href="#" role="button"> <Strong style="color: black;">Hướng Dẫn</Strong></a>
-                     <ul class="dropdown-menu">
-                     <li><a class="dropdown-item" href="thong-tin-cay.html">Thông Tin Cây </a></li>
-                     <li><a class="dropdown-item" href="#">Cách Chăm Sóc Cây </a></li>
-                     <li><a class="dropdown-item" href="#">Cảm Hứng và Ý Tưởng</a></li>
-                     </ul>
-                     </li><!--menu-->
-                     <li class="nav-item">
-                         <a  class="nav-link  "href="#"> <Strong style="color: black;">Liên Hệ</Strong> </a>
-                      </li>
-                      <li class="nav-item">
-                         <a  class="nav-link "href="Giohang.html">
-                            <i width="500%" class="bi bi-cart-plus" style="color: black;"></i>
-                            <Strong style="color: green;">Giỏ Hàng</Strong>
-                         </a>
-                      </li>
+       <nav class="navbar navbar-expand-lg navbar-light bg-1 ">
+         <div class="container-fluid">
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse navbar-text text-uppercase" id="navbarText" >
+             <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+               <li class="nav-item">
+                 <a class="nav-link active" aria-current="page" href="index.html"><Strong style="color: black;">Trang Chủ</Strong></a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link" href="Caytrongnha.html"><Strong style="color: black;">Cây Trong Nhà</Strong></a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link" href="cayngoaitroi.html"><Strong style="color: black;">Cây Ngoài Trời</Strong></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="Caysenda.html"><Strong style="color: black;">Cây Sen Đá</Strong></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><Strong style="color: black;">Cây Thủy Sinh</Strong></a>
+                </li>
+               <li class="nav-item dropdown"><!--menu-->
+                  <a class="nav-link  " data-bs-toggle="dropdown" href="#" role="button"> <Strong style="color: black;">Hướng Dẫn</Strong></a>
+                  <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Thông Tin Cây </a></li>
+                  <li><a class="dropdown-item" href="#">Cách Chăm Sóc Cây </a></li>
+                  <li><a class="dropdown-item" href="#">Cảm Hứng và Ý Tưởng</a></li>
                   </ul>
-             </div><!--Liet_ke-->
-         </div><!--Luoi-->
-      </div><!--nav-->
+                  </li><!--menu-->
+                  <li class="nav-item">
+                     <a  class="nav-link "href="Giohang.html">
+                        <i width="500%" class="bi bi-cart-plus" style="color: black;"></i>
+                        <Strong style="color: green;">Giỏ Hàng</Strong>
+                     </a>
+                  </li>
+             </ul>
+           </div>
+         </div>
+       </nav>
     </header><!--END-->
     <div class="p-5"></div>
     <div class="p-5"></div>
@@ -179,6 +154,135 @@
               <h3 >Cây Trong Nhà</h3>
               <span class="bg-image"></span>
            </div>
+           <div class="sidebar row">
+            <!--Search-->
+               <div class="sidebar">
+                  <div class="sidebar-list" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                     <i class="bi bi-sliders"></i>
+                     <strong>CHỌN DANH MỤC</strong>
+                  </div>
+          <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header "> <!--FROM SEARCH-->
+              <!--FORM-->
+              <div class=" col-12">
+               <form class="searchform" method="get" role="search" >
+                   <!--QUAN_LI-->
+                <div class="d-flex  p-3 justify-content-center">
+                    <!--LUA_CHON_1-->
+                    <div class="flex "> 
+                       <div class="flex-column flex-grow order-sm-2  ">
+
+                           <input type="search" id="searchInput" name="search" class="search-field md-0  " value placeholder="Tìm kiếm danh mục, sản phẩm...." size="30" >
+                        
+                           <input type="hidden" name="post_type">
+                            <div id="searchResultsContainer" class="search-results">
+                           <ul id="searchResultsList"><li></li></ul>
+                        </div>
+                           
+                         
+                    </div>
+                     </div> <!--LUA_CHON_1-->
+                       <div class="flex-column">
+                        <button type="submit" class="submit-button" id="searchBtn">
+                           <i class="bi bi-search " style="color: antiquewhite;" ></i>
+                        </button>
+                       
+                       
+                       </div>
+                 </div><!--QUAN_LI-->  
+               </form>
+               <script src="./assets/js/search.js"></script>
+            </div> <!--FORM-->
+         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div><!--FROM SEARCH-->
+        <div class="offcanvas-body">
+         <div><!--Danh mục cây-->
+           <strong class="text-uppercase" style="font-size: 1.5em;">DANH MỤC </strong>
+           <div class="is-divider"></div>
+           <form id="searchForm">
+            <div> <!--Lựa chọn sp-->
+              <ul class="product-list text-uppercase">
+               <li class="cat-item"  data-bs-toggle="collapse" data-bs-target="#menuSearch" aria-controls="menuSearch" aria-expanded="false" aria-label="Toggle navigation">
+                  <a href="Cayntrongnha.html">Cây Trong Nhà</a>
+                  <i class="fa fa-angle-down"></i>
+                  </li>
+                  <li>
+                  <ul class="collapse" id="menuSearch">
+                        <div style="margin-left: -20px;">
+                          <input type="checkbox" id="category1" name="category" value="category1">
+                          <label for="category1">Cây để Bàn</label>
+                        </div>
+              
+                           <div style="margin-left: -20px;">
+                          <input type="checkbox" id="category2" name="category" value="category2">
+                          <label for="category2">Cây sen đá</label>
+                        </div>
+
+                        <div style="margin-left: -20px;">
+                           <input type="checkbox" id="category2" name="category" value="category2">
+                           <label for="category2">Cây Kiểng lá</label>
+                         </div>
+
+                         <div style="margin-left: -20px;">
+                           <input type="checkbox" id="category2" name="category" value="category2">
+                           <label for="category2">Cây Văn Phòng</label>
+                         </div>
+
+                         <div style="margin-left: -20px;">
+                           <input type="checkbox" id="category2" name="category" value="category2">
+                           <label for="category2">Cây Phong Thủy</label>
+                         </div>  
+                  </ul>
+               </li>
+              </ul>
+           </div>
+         </form>
+          </div>
+
+          <div><!--Giá Cả-->
+            <strong class="text-uppercase" style="font-size: 1.5em;">LỌC THEO GIÁ</strong>
+            <div class="is-divider"></div>
+            <form id="searchForm">
+               <ul class="price-list text-uppercase">
+                  <div style="margin-left: 8px;">
+                     <input type="checkbox" id="priceRange1" name="priceRange" value="range1">
+                     <label for="priceRange1">Dưới 100.000đ</label>
+                   </div>
+         
+                   <div style="margin-left: 8px;">
+                     <input type="checkbox" id="priceRange2" name="priceRange" value="range2">
+                     <label for="priceRange2">100.000đ - 500.000đ</label>
+                   </div>
+                   <div style="margin-left: 8px;">
+                     <input type="checkbox" id="priceRange3" name="priceRange" value="range3">
+                     <label for="priceRange3">500.000đ - 1.000.000đ</label>
+                   </div>
+         
+                   <div style="margin-left: 8px;">
+                     <input type="checkbox" id="priceRange4" name="priceRange" value="range4">
+                     <label for="priceRange4">Trên 1.000.000đ</label>
+                   </div>
+
+                   
+                   <div style="margin-left: 8px;">
+                     <label for="priceRange5">Từ</label>
+                     <input type="text" id="priceRange4" name="priceRange" placeholder="0Đ" size="10">
+                     <label for="priceRange4">Đến</label>
+                     <input type="text" id="priceRange4" name="priceRange" placeholder=""  size="10">
+                   </div>
+               </ul>
+          </form>
+           </div>
+           <div class="text-check ">
+            <a class="btn btn-success" href="Caydeban-user.html">
+            <span class="text-uppercase">Tìm Kiếm</span>
+             </a>
+         </div>
+               </div>
+           <!--Search-->
+           </div>
+               </div>
+               </div>
            </div>
            <div class="row row-cols-md-auto">
              
@@ -186,7 +290,7 @@
                  <div class=card>
                     <div class="card-body-2">
                        <div>
-                      <a href="cay-trau-ba.html"> <img width="100%"  src="./image/Caydeban/caydeban3.1.jpg"></a>
+                      <a href="cay-trau-ba.html"> <img width="100%"  src="./assets/image/Caydeban/caydeban3.1.jpg"></a>
                        <div class="tools  text-uppercase text-center" >
                          
                        </div>
@@ -221,7 +325,7 @@
               <div class=" col-12 col-lg-3 col-sm-4">    
                  <div class=card>
                     <div class="card-body-2">
-                     <a href="co-lan-chi.html"> <img width="100%"  src="./image/Caydeban/caydeban5.jpg"></a>
+                     <a href="co-lan-chi.html"> <img width="100%"  src="./assets/image/Caydeban/caydeban5.jpg"></a>
                        <div class="card-img-bottom">
                           <div class="">
                                 <ul class="box">
@@ -251,7 +355,7 @@
               <div class=" col-12 col-lg-3 col-sm-4">    
                  <div class=card>
                     <div class="card-body-2">
-                     <a href="cay-luoi-ho.html"><img width="100%"  src="./image/Caydeban/caydeban4.jpg"></a>
+                     <a href="cay-luoi-ho.html"><img width="100%"  src="./assets/image/Caydeban/caydeban4.jpg"></a>
                        <div class="card-img-bottom">
                           <div class="">
                                 <ul class="box">
@@ -281,7 +385,7 @@
               <div class=" col-12 col-lg-3 col-sm-4">    
                <div class=card>
                   <div class="card-body-2">
-                     <img width="100%"  src="https://mowgarden.com/wp-content/uploads/2023/03/cay-phat-tai-nui-chau-da-mai-wax-1-800x960.jpg">
+                     <img width="100%"  src="./assets/image/caytrongnha4.jpg">
                      <div class="card-img-bottom">
                         <div class="">
                               <ul class="box">
@@ -313,7 +417,7 @@
             <div class=" col-12 col-lg-3 col-sm-4">    
                <div class=card>
                   <div class="card-body-2">
-                     <img width="100%"  src="https://mowgarden.com/wp-content/uploads/2023/03/9-cay-kim-ngan-3-than-nho-de-ban-1-800x960.jpg">
+                     <img width="100%"  src="./assets/image/caytrongnha3.jpg">
                      <div class="card-img-bottom">
                         <div class="">
                               <ul class="box">
@@ -343,7 +447,7 @@
               <div class=" col-12 col-lg-3 col-sm-4">    
                  <div class=card>
                     <div class="card-body-2">
-                       <img width="100%"  src="https://mowgarden.com/wp-content/uploads/2023/03/7-cay-bang-singapore-nho-de-ban-chau-su-1-800x960.jpg">
+                       <img width="100%"  src="./assets/image/caytrongnha2.jpg">
                        <div class="card-img-bottom">
                           <div class="">
                                 <ul class="box">
@@ -373,7 +477,7 @@
               <div class=" col-12 col-lg-3 col-sm-4">    
                  <div class=card>
                     <div class="card-body-2">
-                       <img width="100%"  src="https://mowgarden.com/wp-content/uploads/2023/03/3-cay-van-loc-son-chau-gom-1-800x960.jpg">
+                       <img width="100%"  src="./assets/image/caytrongnha1.jpg">
                        <div class="card-img-bottom">
                           <div class="">
                                 <ul class="box">
@@ -403,7 +507,7 @@
               <div class=" col-12 col-lg-3 col-sm-4">    
                  <div class=card>
                     <div class="card-body-2">
-                       <img width="100%"  src="./image/Caydeban/caydeban8.jpg">
+                       <img width="100%"  src="./assets/image/Caydeban/caydeban8.jpg">
                        <div class="card-img-bottom">
                           <div class="">
                                 <ul class="box">
@@ -433,7 +537,7 @@
               <div class=" col-12 col-lg-3 col-sm-4">    
                <div class=card>
                   <div class="card-body-2">
-                     <img width="100%"  src="https://mowgarden.com/wp-content/uploads/2021/04/cay-ngu-gia-bi-xanh-mini-chau-uom-800x960.jpg">
+                     <img width="100%"  src="./assets/image/caytrongnha5.jpg">
                      <div class="card-img-bottom">
                         <div class="">
                               <ul class="box">
@@ -497,38 +601,38 @@
         <div class="container">
          <div class="row">
              <div class="col-md-2 p-4">
-                 <img width="90px" height="90px" src="images/image_XPK8tAeI_1699515318362_raw.png" alt="logo">
+               <a href="index.html"><img width="90px" height="90px" src="./assets/image/image_XPK8tAeI_1699515318362_raw.png" alt="logo"></a>
                  <p class="">Chúng tôi mong rằng có thể mang đến cho bạn một cảm giác, trải nghiệm thật là mới mẻ và xanh xao</p>
                  <br>
-                 <img src="https://images.dmca.com/Badges/dmca-badge-w200-5x1-09.png?ID=599ee744-724b-42c8-8dc6-de873fceb19c" alt="DMCA.com Protection Status">
+                 <img src="./assets/image/footer1.png" alt="DMCA.com Protection Status">
                  <br><br>
                  <h5><strong>Công ty TNHH một thành viên Khôi Hồ Quốc</strong></h5>
              </div>
              <div class="col-md-3  p-4" >
                  <h4 style="text-align: center;">VỀ CHÚNG TÔI</h4>
-                 <ul class="list-menu " style="margin-left: 30%;">
-                     <li class="li_menu"><a href="/" title="Giới thiệu">Giới thiệu</a></li>
-                     <li class="li_menu"><a href="/" title="Liên hệ">Liên hệ</a></li>
-                     <li class="li_menu"><a href="/" title="Chính sách bảo mật">Chính sách bảo mật</a></li>
-                     <li class="li_menu"><a href="/" title="Chính sách bảo hành">Chính sách bảo hành</a></li>
-                     <li class="li_menu"><a href="/" title="Phương thức thanh toán">Phương thức thanh tóan</a></li>
-                     <li class="li_menu"><a href="/" title="Phương thức vận chuyển">Phương thức vận chuyển</a></li>
-                 </ul>
-                 <br>
-                 <img style="margin-left: 30% ;" width="150" height="56" src="https://mowgarden.com/wp-content/uploads/2021/04/logo-da-thong-bao-voi-bo-cong-thuong.png" alt="images">
-                 
-             </div>
-             <div class="col-md-3 p-4">
-                 <h4 style="text-align: center;">LIÊN HỆ</h4>
-                 <ul class="list-menu fs-5" style="margin-left: 35%;">
-                     <li class="li_menu"><a href="/" title="Hotline 1: 1 ">Hotline 1: 1</a></li>
-                     <li class="li_menu"><a href="/" title="Hotline 2: 2">Hotline 2: 2</a></li>
-                     <li class="li_menu"><a href="/" title="Hotline 3: 3">Hotline 3: 3</a></li>
-                     <li class="li_menu"><a href="/" title="Email:">Email:</a></li>
-                     <li class="li_menu"><a href="/" title="Địa chỉ">Địa chỉ</a></li>
-                     <br>
-                     
-                 </ul>
+                 <ul class="list-menu fs-5" style="margin-left: 30%;">
+                  <li class="li_menu"><a href="#" title="Giới thiệu">Giới thiệu</a></li>
+                  <li class="li_menu"><a href="#" title="Liên hệ">Liên hệ</a></li>
+                  <li class="li_menu"><a href="#" title="Chính sách bảo mật">Chính sách bảo mật</a></li>
+                  <li class="li_menu"><a href="#" title="Chính sách bảo hành">Chính sách bảo hành</a></li>
+                  <li class="li_menu"><a href="#" title="Phương thức thanh toán">Phương thức thanh tóan</a></li>
+                  <li class="li_menu"><a href="#" title="Phương thức vận chuyển">Phương thức vận chuyển</a></li>
+              </ul>
+              <br>
+              <img style="margin-left: 30% ;" width="150" height="56" src="./assets/image/footer2.png" alt="images">
+              
+          </div>
+          <div class="col-md-3 p-4">
+              <h4 style="text-align: center;">LIÊN HỆ</h4>
+              <ul class="list-menu fs-5" style="margin-left: 35%;">
+                  <li class="li_menu"><a href="#" title="Hotline 1: 1 ">Hotline 1: 1</a></li>
+                  <li class="li_menu"><a href="#" title="Hotline 2: 2">Hotline 2: 2</a></li>
+                  <li class="li_menu"><a href="#" title="Hotline 3: 3">Hotline 3: 3</a></li>
+                  <li class="li_menu"><a href="#" title="Email:">Email:</a></li>
+                  <li class="li_menu"><a href="#" title="Địa chỉ">Địa chỉ</a></li>
+                  <br>
+                  
+              </ul>
                  
              </div>
              <div class="col-md-4 p-4 text-center">

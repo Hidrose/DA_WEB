@@ -7,7 +7,7 @@
     <title>Cây lưỡi hổ vương miện</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="thong-tin-cay.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!-- Owl Carousel CSS -->
@@ -34,9 +34,8 @@
              </div>
               <!--LOGO-->
  
-                         <!--FORM-->
-            
-            <div class=" col-sm-7 order-sm-1">
+                          <!--FORM-->
+             <div class=" col-sm-7 order-sm-1">
                 <form class="searchform" method="get" role="search" >
                     <!--QUAN_LI-->
                  <div class="d-flex  p-3 justify-content-center">
@@ -44,9 +43,12 @@
                      <div class="flex "> 
                         <div class="flex-column flex-grow order-sm-2  ">
  
-                            <input type="search" class="search-field md-0  " value placeholder="Tìm kiếm danh mục, sản phẩm...." size="30" >
+                            <input type="search" id="searchInput" name="search" class="search-field md-0  " value placeholder="Tìm kiếm danh mục, sản phẩm...." size="30" >
                          
                             <input type="hidden" name="post_type">
+                             <div id="searchResultsContainer" class="search-results">
+                            <ul id="searchResultsList"><li></li></ul>
+                         </div>
                             
                           
                      </div>
@@ -55,30 +57,21 @@
                          <button type="submit" class="submit-button">
                             <i class="bi bi-search " style="color: antiquewhite;" ></i>
                          </button>
+                        
+                        
                         </div>
                   </div><!--QUAN_LI-->  
                 </form>
-                <script>
-                   const onSearch = () =>{
-                      const input = document.querySelector("#search");
-                      const filter = input.value.toUpperCase();
-                      const list =document.querySelectorAll("#menu1 li");
-                      list.forEach((el) => {
-                         const text = el.textContent.toUpperCase();
- 
-                       el.style.display = text.includes(filter)?"":"none";
-                      });
-                   };
-               </script>
+                <script src="./assets/js/search.js"></script>
              </div> <!--FORM-->
               
               <!--CART-->
               <div class=" col-sm-2 order-sm-2 p-3" >
                  <div class="dropdown-end">
                      <div>
-                      <a  class="hover-text" href="Dangnhap.html">
+                      <a  class="hover-text" href="userLogin.html">
                          <Strong style="color: black;">Đăng Nhập</Strong> 
-                         <Strong ><a  style="color: black;" href="Huy.html">/Đăng Kí</a></Strong> 
+                         <Strong ><a  style="color: black;" href="signup.html">/Đăng Kí</a></Strong> 
                       </a>
                        
                        
@@ -89,43 +82,28 @@
         </div>
         </div>
         <div class="p-3"></div>
-      <div class="container-fluid bg-1">
-         <div class="row nav-right">
-             <div class="col-sm-3 ">
-               <div class="d-flex" >
-                <div class="" >
-                   <ul class="nav-justified nav p-1 bg-success" >
-                     <h5 style="color: white;" class="bi bi-list p-2 "></h5>   
-                      <li class="nav-item">
-                      <a class="nav-link active text-uppercase" data-bs-toggle="collapse" href="#menu1" role="button" aria-expanded="false" aria-controls="menu1"> <Strong style="color: white;"> Danh sách sản phẩm  </Strong> </a> 
-                      </li>
-                   </ul>
-                   <div class="collapse" id="menu1">
-                    <ul class="dropdown-end">
-                        <li><a class="dropdown-item-text" href="Caytrongnha.html">Cây Để Trong Nhà </a></li>
-                        <li><a class="dropdown-item-text" href="#">Cây Văn Phòng </a></li>
-                        <li><a class="dropdown-item-text" href="Caysenda.html">Cây Sen Đá</a></li>
-                        <li><a class="dropdown-item-text" href="#">Cây Xương Rồng</a></li>
-                        <li><a class="dropdown-item-text" href="#">Tiểu Cảnh Terrarium </a></li>
-                    </ul>
-                   </div>
-                </div>
-               </div>          
-               </div><!--LIST-->
-                
-               
-             <div class="col-sm-9">
-                <ul class="nav text-uppercase">
-                 <li class="nav-item ">
-                    <a  class="nav-link"href="index.html"> <Strong style="color: black;">Trang Chủ</Strong></a> 
-                    
-                 </li>
-                 <li class="nav-item">
-                     <a  class="nav-link "href="Caytrongnha.html"> <Strong style="color: black;">Cây Trong Nhà </Strong> </a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-1 ">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse navbar-text text-uppercase" id="navbarText" >
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html"><Strong style="color: black;">Trang Chủ</Strong></a>
                   </li>
                   <li class="nav-item">
-                     <a  class="nav-link"href="cayngoaitroi.html"><Strong style="color: black;">Cây Ngoài Trời</Strong> </a>
+                    <a class="nav-link" href="Caytrongnha.html"><Strong style="color: black;">Cây Trong Nhà</Strong></a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="cayngoaitroi.html"><Strong style="color: black;">Cây Ngoài Trời</Strong></a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="Caysenda-.html"><Strong style="color: black;">Cây Sen Đá</Strong></a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link" href="#"><Strong style="color: black;">Cây Thủy Sinh</Strong></a>
+                   </li>
                   <li class="nav-item dropdown"><!--menu-->
                      <a class="nav-link  " data-bs-toggle="dropdown" href="#" role="button"> <Strong style="color: black;">Hướng Dẫn</Strong></a>
                      <ul class="dropdown-menu">
@@ -135,18 +113,15 @@
                      </ul>
                      </li><!--menu-->
                      <li class="nav-item">
-                         <a  class="nav-link  "href="#"> <Strong style="color: black;">Liên Hệ</Strong> </a>
-                      </li>
-                      <li class="nav-item">
-                         <a  class="nav-link "href="#">
-                            <i width="500%" class="bi bi-cart-plus" style="color: black;"></i>
-                            <Strong style="color: green;">Giỏ Hàng</Strong>
-                         </a>
-                      </li>
-                  </ul>
-             </div><!--Liet_ke-->
-         </div><!--Luoi-->
-      </div><!--nav-->
+                        <a  class="nav-link "href="Giohang.html">
+                           <i width="500%" class="bi bi-cart-plus" style="color: black;"></i>
+                           <Strong style="color: green;">Giỏ Hàng</Strong>
+                        </a>
+                     </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
     </header><!--END-->
     <div class="p-5"></div>
     <div class="p-5"></div>
@@ -381,7 +356,7 @@
                                 </label>
                               </div>
                           </div>
-                          <span class="p-2 text-white bg-success" ;"><b>GỬI ĐI</b></span>
+                          <a href="#"><span class="p-2 text-white bg-success" >GỬI ĐI</span></a>
                           <br><br>
                         </div>
                         </div>
@@ -397,15 +372,15 @@
                          </div>
                              <div class="row" id="product-list">
                                 <div  id="myCarousel" class="owl-carousel owl-theme" style="z-index: 0;">
-
+                                 
                                       <div class=card>
+                                         <a href="#"> <img width="100%"  src="./assets/image/Caydeban/25.jpg"></a>
                                          <div class="card-body-1">
-                                            <a href="#"><img width="100%"  src="./assets/image/Caydeban/25.jpg"></a>
                                             <div class="card-img-bottom">
                                                <div class="">
                                                      <ul class="box">
                                                         <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
-                                                         <a href="#">  <p>Cây bàng Singapore để bàn tiểu cảnh Uyên Ương</p></a>
+                                                           <a href="#"><p>Cây bàng Singapore để bàn tiểu cảnh Uyên Ương</p></a>
                                                         </div>
                                                         <div class="price-box">
                                                            <span class="price text-uppercase text-center" style="margin-right: 3rem;">
@@ -414,204 +389,204 @@
                                                               </bdi>
                                                            </span>
                                                         </div>
+                                                        <div  class="add-product mx-auto pt-3  ">     
+                                                           <button type="button" class="btn btn-success py-2  " >
+                                                              <i class="bi bi-cart"></i>
+                                                              THÊM VÀO GIỎ HÀNG
+                                                           </button>
+                                                          </div>
                                                      </ul>
-                                               </div>
-                                            </div>
-                                            <div class="w-100 image-tool-1 h-10 text-center show-on hover-in" >
-                                               <!--Thêm Sản Phẩm -->
-                                               <div  class="add-product">
-                                                <button type="button" class="btn btn-success py-2" >THÊM VÀO GIỎ HÀNG</button>
-                                               
                                                </div>
                                             </div>
                                          </div> 
                                    </div>
                                 <!--Ban1-->
               
-                                <div class=card>
-                                    <div class="card-body-1">
-                                      <a href="#"> <img width="100%"  src="./assets/image/Caydeban/19.jpg"></a>
-                                       <div class="card-img-bottom">
-                                          <div class="">
-                                                <ul class="box">
-                                                   <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
-                                                     <a href="#"> <p>Cây cau tiểu trâm  mèo đi học chậu đất nung </p></a>
-                                                   </div>
-                                                   <div class="price-box">
-                                                      <span class="price text-uppercase text-center" style="margin-right: 3rem;">
-                                                         <bdi>
-                                                            250.000₫
-                                                         </bdi>
-                                                      </span>
-                                                   </div>
-                                                </ul>
-                                          </div>
-                                       </div>
-                                       <div class="w-100 image-tool-1 h-10 text-center show-on hover-in" >
-                                          <!--Thêm Sản Phẩm -->
-                                          <div  class="add-product">
-                                           <button type="button" class="btn btn-success py-2" >THÊM VÀO GIỎ HÀNG</button>
-                                          
-                                          </div>
-                                       </div>
-                                    </div>
-                                    
-                              </div>
-                           <!--Ban2-->
-               
-               
-                                 
-                           <div class=card>
-                              <div class="card-body-1">
-                                <a href="#"> <img width="100%"  src="./assets/image/Caydeban/21.jpg"></a>
-                                 <div class="card-img-bottom">
-                                    <div class="">
-                                          <ul class="box">
-                                             <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
-                                              <a href="#">  <p>Cây kim ngân bính để bàn chậu sứ có hình</p></a>
-                                             </div>
-                                             <div class="price-box">
-                                                <span class="price text-uppercase text-center" style="margin-right: 3rem;">
-                                                   <bdi>
-                                                      250.000₫
-                                                   </bdi>
-                                                </span>
-                                             </div>
-                                          </ul>
-                                    </div>
-                                 </div>
-                                 <div class="w-100 image-tool-1 h-10 text-center show-on hover-in" >
-                                    <!--Thêm Sản Phẩm -->
-                                    <div  class="add-product">
-                                     <button type="button" class="btn btn-success py-2" >THÊM VÀO GIỎ HÀNG</button>
-                                    
-                                    </div>
-                                 </div>
-                              </div>
-                              
-                        </div>
-                     <!--Ban3-->
-                     <div class=card>
-                        <div class="card-body-1">
-                          <a href="#"> <img width="100%"  src="./assets/image/Caydeban/22.jpg"></a>
-                           <div class="card-img-bottom">
-                              <div class="">
-                                    <ul class="box">
-                                       <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
-                                         <a href="#"><p>Cây kim tiền để bàn tiểu cảnh ông bà chậu sứ </p></a> 
-                                       </div>
-                                       <div class="price-box">
-                                          <span class="price text-uppercase text-center" style="margin-right: 3rem;">
-                                             <bdi>
-                                                220.000₫
-                                             </bdi>
-                                          </span>
-                                       </div>
-                                    </ul>
-                              </div>
-                           </div>
-                           <div class="w-100 image-tool-1 h-10 text-center show-on hover-in" >
-                              <!--Thêm Sản Phẩm -->
-                              <div  class="add-product">
-                               <button type="button" class="btn btn-success py-2" >THÊM VÀO GIỎ HÀNG</button>
-                              
-                              </div>
-                           </div>
-                        </div>
-                       
-                  </div>
-               <!--Ban4-->
-               
-               <div class=card>
-                  <div class="card-body-1">
-                   <a href="#">  <img width="100%"  src="./assets/image/Caydeban/20.jpg"></a>
-                     <div class="card-img-bottom">
-                        <div class="">
-                              <ul class="box">
-                                 <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
-                                  <a href="#">  <p>Cây kim tiền để bàn chậu men sứ </p></a>
-                                 </div>
-                                 <div class="price-box">
-                                    <span class="price text-uppercase text-center" style="margin-right: 3rem;">
-                                       <bdi>
-                                          350.000₫
-                                       </bdi>
-                                    </span>
-                                 </div>
-                              </ul>
-                        </div>
-                     </div>
-                     <div class="w-100 image-tool-1 h-10 text-center show-on hover-in" >
-                        <!--Thêm Sản Phẩm -->
-                        <div  class="add-product">
-                         <button type="button" class="btn btn-success py-2" >THÊM VÀO GIỎ HÀNG</button>
-                        
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <!--Ban5-->
-               
-               <div class=card>
-                  <div class="card-body-1">
-                    <a href="#"> <img width="100%"  src="./assets/image/Caydeban/23.jpg"></a>
-                     <div class="card-img-bottom">
-                        <div class="">
-                              <ul class="box">
-                                 <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
-                                  <a href="#">  <p>Cây cỏ lan chi để bàn chậu gốm trắng </p></a>
-                                 </div>
-                                 <div class="price-box">
-                                    <span class="price text-uppercase text-center" style="margin-right: 3rem;">
-                                       <bdi>
-                                          125.000₫
-                                       </bdi>
-                                    </span>
-                                 </div>
-                              </ul>
-                        </div>
-                     </div>
-                     <div class="w-100 image-tool-1 h-10 text-center show-on hover-in" >
-                        <!--Thêm Sản Phẩm -->
-                        <div  class="add-product">
-                         <button type="button" class="btn btn-success py-2" >THÊM VÀO GIỎ HÀNG</button>
-                        
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <!--Ban6-->
-               
-               <div class=card>
-                  <div class="card-body-1">
-                    <a href="#"><img width="100%"  src="./assets/image/Caydeban/24.jpg"></a> 
-                     <div class="card-img-bottom">
-                        <div class="">
-                              <ul class="box">
-                                 <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
-                                  <a href="#">  <p>Cây lưỡi hổ xanh mini ‘Black Gold’ chậu sứ</p></a>
-                                 </div>
-                                 <div class="price-box">
-                                    <span class="price text-uppercase text-center" style="margin-right: 3rem;">
-                                       <bdi>
-                                          115.000₫
-                                       </bdi>
-                                    </span>
-                                 </div>
-                              </ul>
-                        </div>
-                     </div>
-                     <div class="w-100 image-tool-1 h-10 text-center show-on hover-in" >
-                        <!--Thêm Sản Phẩm -->
-                        <div  class="add-product">
-                         <button type="button" class="btn btn-success py-2" >THÊM VÀO GIỎ HÀNG</button>
-                        
-                        </div>
-                     </div>
-                     
-                  </div>
-               </div>
-               <!--Ban7-->
+                                <div class=card> 
+                                   <a href="#"> <img width="100%"  src="./assets/image/Caydeban/19.jpg"></a>
+                                   <div class="card-body-1">
+                                      <div class="card-img-bottom">
+                                         <div class="">
+                                               <ul class="box">
+                                                  <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
+                                                     <a href="#">  <p>Cây cau tiểu trâm  mèo đi học chậu đất nung </p></a>
+                                                  </div>
+                                                  <div class="price-box">
+                                                     <span class="price text-uppercase text-center" style="margin-right: 3rem;">
+                                                        <bdi>
+                                                           250.000₫
+                                                        </bdi>
+                                                     </span>
+                                                  </div>
+                                                  <div  class="add-product mx-auto pt-3  ">     
+                                                     <button type="button" class="btn btn-success py-2  " >
+                                                        <i class="bi bi-cart"></i>
+                                                        THÊM VÀO GIỎ HÀNG
+                                                     </button>
+                                                    </div>
+                                               </ul>
+                                         </div>
+                                      </div>
+                                   </div>
+                                   
+                             </div>
+                          <!--Ban2-->
+              
+              
+                                
+                          <div class=card>
+                             <a href="#">   <img width="100%"  src="./assets/image/Caydeban/21.jpg"></a>
+                             <div class="card-body-1"> 
+                                <div class="card-img-bottom">
+                                   <div class="">
+                                         <ul class="box">
+                                            <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
+                                        <a href="#">     <p>Cây kim ngân bính để bàn chậu sứ có hình</p> </a>
+                                            </div>
+                                            <div class="price-box">
+                                               <span class="price text-uppercase text-center" style="margin-right: 3rem;">
+                                                  <bdi>
+                                                     250.000₫
+                                                  </bdi>
+                                               </span>
+                                            </div>
+                                            <div  class="add-product mx-auto pt-3  ">     
+                                               <button type="button" class="btn btn-success py-2  " >
+                                                  <i class="bi bi-cart"></i>
+                                                  THÊM VÀO GIỎ HÀNG
+                                               </button>
+                                              </div>
+                                         </ul>
+                                   </div>
+                                </div>
+                             </div>  
+                       </div>
+                    <!--Ban3-->
+                    <div class=card>
+                       <img width="100%"  src="./assets/image/Caydeban/22.jpg">
+                       <div class="card-body-1">
+                          
+                          <div class="card-img-bottom">
+                             <div class="">
+                                   <ul class="box">
+                                      <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
+                                         <p>Cây kim tiền để bàn tiểu cảnh ông bà chậu sứ </p>
+                                      </div>
+                                      <div class="price-box">
+                                         <span class="price text-uppercase text-center" style="margin-right: 3rem;">
+                                            <bdi>
+                                               220.000₫
+                                            </bdi>
+                                         </span>
+                                      </div>
+                                      <div  class="add-product mx-auto pt-3  ">     
+                                         <button type="button" class="btn btn-success py-2  " >
+                                            <i class="bi bi-cart"></i>
+                                            THÊM VÀO GIỎ HÀNG
+                                         </button>
+                                        </div>
+                                   </ul>
+                             </div>
+                          </div>
+                       </div>
+                      
+                 </div>
+              <!--Ban4-->
+              
+              <div class=card>
+                 <img width="100%"  src="./assets/image/Caydeban/20.jpg">
+                 <div class="card-body-1">
+                    
+                    <div class="card-img-bottom">
+                       <div class="">
+                             <ul class="box">
+                                <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
+                                   <p>Cây kim tiền để bàn chậu men sứ </p>
+                                </div>
+                                <div class="price-box">
+                                   <span class="price text-uppercase text-center" style="margin-right: 3rem;">
+                                      <bdi>
+                                         350.000₫
+                                      </bdi>
+                                   </span>
+                                </div>
+                                <div  class="add-product mx-auto pt-3  ">     
+                                   <button type="button" class="btn btn-success py-2  " >
+                                      <i class="bi bi-cart"></i>
+                                      THÊM VÀO GIỎ HÀNG
+                                   </button>
+                                  </div>
+                             </ul>
+                       </div>
+                    </div>
+                   
+                 </div>
+              </div>
+              <!--Ban5-->
+              
+              <div class=card>
+                 <img width="100%"  src="./assets/image/Caydeban/23.jpg">
+                 <div class="card-body-1">
+                    
+                    <div class="card-img-bottom">
+                       <div class="">
+                             <ul class="box">
+                                <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
+                                   <p>Cây cỏ lan chi để bàn chậu gốm trắng </p>
+                                </div>
+                                <div class="price-box">
+                                   <span class="price text-uppercase text-center" style="margin-right: 3rem;">
+                                      <bdi>
+                                         125.000₫
+                                      </bdi>
+                                   </span>
+                                </div>
+                                <div  class="add-product mx-auto pt-3  ">     
+                                   <button type="button" class="btn btn-success py-2  " >
+                                      <i class="bi bi-cart"></i>
+                                      THÊM VÀO GIỎ HÀNG
+                                   </button>
+                                  </div>
+                             </ul>
+                       </div>
+                    </div>
+                  
+                 </div>
+              </div>
+              <!--Ban6-->
+              
+              <div class=card>
+                 <img width="100%"  src="./assets/image/Caydeban/24.jpg">
+                 <div class="card-body-1">
+                   
+                    <div class="card-img-bottom">
+                       <div class="">
+                             <ul class="box">
+                                <div class="title-box text-uppercase text-center" style="margin-right: 2rem;">
+                                   <p>Cây lưỡi hổ xanh mini ‘Black Gold’ chậu sứ</p>
+                                </div>
+                                <div class="price-box">
+                                   <span class="price text-uppercase text-center" style="margin-right: 3rem;">
+                                      <bdi>
+                                         115.000₫
+                                      </bdi>
+                                   </span>
+                                </div>
+                                <div  class="add-product mx-auto pt-3  ">     
+                                   <button type="button" class="btn btn-success py-2  " >
+                                      <i class="bi bi-cart"></i>
+                                      THÊM VÀO GIỎ HÀNG
+                                   </button>
+                                  </div>
+                             </ul>
+                       </div>
+                    </div>
+                 
+                    </div>
+                    
+                 </div>
+              </div>
+              <!--Ban7-->
               
               
               
@@ -626,7 +601,7 @@
                                     navText: [], // Custom navigation icons
                                     responsive: {
                                       0: {
-                                        items: 1 // Number of cards shown in the carousel for smaller screens
+                                        items: 2 // Number of cards shown in the carousel for smaller screens
                                       },
                                       768: {
                                         items: 2 // Number of cards shown in the carousel for medium screens
@@ -713,7 +688,7 @@
         <div class="container">
          <div class="row">
              <div class="col-md-2 p-4">
-                 <img width="90px" height="90px" src="./assets/image/image_XPK8tAeI_1699515318362_raw.png" alt="logo">
+                 <a href="index"><img width="90px" height="90px" src="./assets/image/image_XPK8tAeI_1699515318362_raw.png" alt="logo"></a>
                  <p class="fs-5">Chúng tôi mong rằng có thể mang đến cho bạn một cảm giác, trải nghiệm thật là mới mẻ và xanh xao</p>
                  <br>
                  <img src="https://images.dmca.com/Badges/dmca-badge-w200-5x1-09.png?ID=599ee744-724b-42c8-8dc6-de873fceb19c" alt="DMCA.com Protection Status">

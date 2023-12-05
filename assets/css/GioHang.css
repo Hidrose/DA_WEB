@@ -193,6 +193,11 @@ input[type='button']{
 .text-check a{
     border-radius: 100px;
 }
+.remove i{
+    align-content: center;
+  color: red;
+ 
+}
 .footer ul{
     list-style: none;
     padding:0px;
@@ -296,13 +301,13 @@ div.stars {
 /*  */
 .me-auto{
     padding-left: 20px;
-    color:#FFEB3B;
+    color:red;
 }
 .toast-header i{
-    color :#FFEB3B;
+    color :red;
 }
 .toast{
-   border-left: 5px solid #FFEB3B;
+   border-left: 5px solid red;
    animation-duration: .3s;
 }
 /* USER */
